@@ -35,7 +35,8 @@ function pie(container, title, data) {
                 formatter: function () {
                     return Math.round(this.percentage * 100) / 100 + ' %';
                 },
-                distance: -30
+                distance: -30,
+                color: "white"
             }
         }
     };

@@ -8,6 +8,6 @@
     border: 0;
 }
 
-text {
-    text-shadow: initial !important;
+.pie .highcharts-data-labels text {
+    text-shadow: black 0px 0px 6px, black 0px 0px 3px !important;
 }
