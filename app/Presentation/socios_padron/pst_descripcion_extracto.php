@@ -1,0 +1,19 @@
+<?php
+
+App::uses('pst_selectarray', 'Presentation');
+
+class pst_descripcion_extracto extends pst_selectarray {
+
+    public function __construct($settings) {
+        $this->options = array(
+            'SUBSIDIO POR INUNDACION BIEN INMUEBLE COMERCIAL' => 'SUBSIDIO POR INUNDACION BIEN INMUEBLE COMERCIAL',
+            'SUBSIDIO POR INUNDACION BIEN INMUEBLE PARTICULAR' => 'SUBSIDIO POR INUNDACION BIEN INMUEBLE PARTICULAR',
+            'SUBSIDIO POR INUNDACION BIEN MUEBLE COMERCIAL' => 'SUBSIDIO POR INUNDACION BIEN MUEBLE COMERCIAL',
+            'SUBSIDIO POR INUNDACION BIEN MUEBLE PARTICULAR' => 'SUBSIDIO POR INUNDACION BIEN MUEBLE PARTICULAR',
+            'SUBSIDIO POR INUNDACION LEY 1575' => 'SUBSIDIO POR INUNDACION LEY 1575',
+            'SUBSIDIO POR INUNDACION LEY 1575 INMUEBLE' => 'SUBSIDIO POR INUNDACION LEY 1575 INMUEBLE',
+        );
+        parent::__construct($settings);
+    }
+
+}

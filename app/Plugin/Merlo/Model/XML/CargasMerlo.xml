@@ -1,0 +1,76 @@
+<CargasMerlo>
+  
+    <search_list file="CargasMerloSL.php">
+        <searchfield name="identificacion" label="Indentificación" />
+        <searchfield name="time" label="Fecha" presentation="DATERANGE" />
+    
+        <table>
+            <column>
+                <listfield name="identificacion" label="Indentificación" />
+            </column>
+            <column>
+                <listfield name="time" label="Fecha" presentation="DATE" />
+            </column>
+            <column>
+                <listfield name="position" label="Posición" presentation="GOOGLEMAP" classparams="{'list': true}" />
+            </column>
+            <column>
+                <listfield name="pregunta_1" label="Pregunta 1" />
+            </column>
+            <column>
+                <listfield name="pregunta_2" label="Pregunta 2" />
+            </column>
+            <column>
+                <listfield name="pregunta_3" label="Pregunta 3" />
+            </column>
+            <column>
+                <listfield name="pregunta_4" label="Pregunta 4" />
+            </column>
+            <column>
+                <listfield name="pregunta_5" label="Pregunta 5" />
+            </column>
+            <column>
+                <listfield name="pregunta_6" label="Pregunta 6" />
+            </column>
+            <column>
+                <listfield name="pregunta_7" label="Pregunta 7" />
+            </column>
+            <column>
+                <listfield name="pregunta_8" label="Pregunta 8" />
+            </column>
+            <column>
+                <listfield name="pregunta_9" label="Pregunta 9" />
+            </column>
+            <column>
+                <listfield name="pregunta_10" label="Pregunta 10" />
+            </column>
+            <column>
+                <listfield name="pregunta_11" label="Pregunta 11" />
+            </column>
+        </table>
+    </search_list>
+  
+    <tablemaint file="ArbolesMaint.php">
+        <fieldset title="Descripción" columns="2" id="ubicacion">
+            <field name="identificacion" label="Indentificación" />
+            <field name="time" label="Fecha" presentation="DATERANGE" />
+        </fieldset> 
+        <fieldset title="Posición" columns="1" id="position">
+            <field name="position" label="" presentation="GOOGLEMAP" />
+        </fieldset> 
+        <fieldset title="Respuestas" columns="3" id="espacio"> 
+            <field name="pregunta_1" label="Pregunta 1" />
+            <field name="pregunta_2" label="Pregunta 2" />
+            <field name="pregunta_3" label="Pregunta 3" />
+            <field name="pregunta_4" label="Pregunta 4" />
+            <field name="pregunta_5" label="Pregunta 5" />
+            <field name="pregunta_6" label="Pregunta 6" />
+            <field name="pregunta_7" label="Pregunta 7" />
+            <field name="pregunta_8" label="Pregunta 8" />
+            <field name="pregunta_9" label="Pregunta 9" />
+            <field name="pregunta_10" label="Pregunta 10" />
+            <field name="pregunta_11" label="Pregunta 11" />       
+        </fieldset>    
+    </tablemaint>
+     
+</CargasMerlo>

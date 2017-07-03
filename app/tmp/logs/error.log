@@ -1,0 +1,728 @@
+2017-07-03 15:30:05 Error: [MissingConnectionException] Database connection "MysqlLog" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'MysqlLog',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'casla\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Datasource/DboSource.php(267): Mysql->connect()
+#1 /Applications/MAMP/htdocs/framework/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3633): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3660): Model->setSource('configurations')
+#5 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3038): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3010): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/framework/app/Vendor/funciones/session.php(42): Model->find('first')
+#8 /Applications/MAMP/htdocs/framework/app/Vendor/funciones/session.php(24): renewSystemConfiguration()
+#9 /Applications/MAMP/htdocs/framework/app/Controller/FmwController.php(1972) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): getSystemConfiguration()
+#10 /Applications/MAMP/htdocs/framework/lib/Cake/Event/CakeEventManager.php(243): FmwController->beforeFilter(Object(CakeEvent))
+#11 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#12 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#13 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/MAMP/htdocs/timbreo-backend-cake/index.php(47): require('/Applications/M...')
+#16 {main}
+2017-07-03 15:30:05 Error: [MissingConnectionException] Database connection "MysqlLog" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'MysqlLog',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'casla\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Datasource/DboSource.php(267): Mysql->connect()
+#1 /Applications/MAMP/htdocs/framework/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3633): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3660): Model->setSource('configurations')
+#5 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3038): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3010): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/framework/app/Vendor/funciones/session.php(42): Model->find('first')
+#8 /Applications/MAMP/htdocs/framework/app/Vendor/funciones/session.php(24): renewSystemConfiguration()
+#9 /Applications/MAMP/htdocs/framework/app/Controller/FmwController.php(1972) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): getSystemConfiguration()
+#10 /Applications/MAMP/htdocs/framework/lib/Cake/Event/CakeEventManager.php(243): FmwController->beforeFilter(Object(CakeEvent))
+#11 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#12 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#13 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/MAMP/htdocs/timbreo-backend-cake/index.php(47): require('/Applications/M...')
+#16 {main}
+2017-07-03 15:45:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:45:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:46:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:47:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:48:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:49:00 Error: [MissingControllerException] Controller class CargasMerloController could not be found.
+Exception Attributes: array (
+  'class' => 'CargasMerloController',
+  'plugin' => 'Merlo',
+)
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:49:00 Error: [MissingControllerException] Controller class CargasMerloController could not be found.
+Exception Attributes: array (
+  'class' => 'CargasMerloController',
+  'plugin' => 'Merlo',
+)
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:49:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:49:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:50:41 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 15:50:41 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 15:50:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 15:50:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:01:44 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 16:01:44 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 16:01:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:01:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:05:22 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 16:05:22 Error: [Error] Class 'CargasMerloSL' not found
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/Plugin/Merlo/Controller/CargasMerloController.php(8): Parse::getData('Merlo.CargasMer...')
+#1 [internal function]: CargasMerloController->index()
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(CargasMerloController), Array)
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-07-03 16:05:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:05:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:09:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:09:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:48:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:48:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:48:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:48:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:49:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:49:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:50:25 Error: [MissingConnectionException] Database connection "MysqlLog" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'MysqlLog',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Datasource/DboSource.php(267): Mysql->connect()
+#1 /Applications/MAMP/htdocs/framework/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3633): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3660): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(834): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/framework/app/Controller/FmwController.php(1972) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): Model->__call('findById', Array)
+#7 /Applications/MAMP/htdocs/framework/lib/Cake/Event/CakeEventManager.php(243): FmwController->beforeFilter(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-03 16:50:25 Error: [MissingConnectionException] Database connection "MysqlLog" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'MysqlLog',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /merlo/cargas_merlo/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Datasource/DboSource.php(267): Mysql->connect()
+#1 /Applications/MAMP/htdocs/framework/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3633): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(3660): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/framework/lib/Cake/Model/Model.php(834): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/framework/app/Controller/FmwController.php(1972) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): Model->__call('findById', Array)
+#7 /Applications/MAMP/htdocs/framework/lib/Cake/Event/CakeEventManager.php(243): FmwController->beforeFilter(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/framework/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/framework/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CargasMerloController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-03 16:50:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:50:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:51:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-07-03 16:51:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/funciones_app.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timbreo-backend-cake/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
