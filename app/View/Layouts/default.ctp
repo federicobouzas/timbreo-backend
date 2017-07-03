@@ -22,11 +22,12 @@
     <body>
         <div id="header" class="navbar"> 
             <div class="container-fluid header">
-                <div class="top-header">
-                    <?php echo $this->element('logo'); ?>
+                <div class="col-sm-9">
+                    <?php echo $this->element('menu'); ?>
+                </div> 
+                <div class="col-sm-3 pt2">
                     <?php echo $this->element('user_info'); ?>
-                </div>  
-                <?php echo $this->element('menu'); ?>
+                </div> 
                 <?php
                 if (isset(AppConfig::$array['push_server']['enabled']) && AppConfig::$array['push_server']['enabled']):
                     echo $this->element('notifications');
@@ -47,10 +48,10 @@
         </div>
         <?php //echo $this->element('sql_dump'); ?>
         <?php if (isset(AppConfig::$array['site']['ajax']['loading']) && AppConfig::$array['site']['ajax']['loading']): ?>
-            <div class="loadingAjax">
-                <i class="fa fa-cog fa-spin"></i>
-                <div><?php echo AppConfig::$array['site']['ajax']['loading']; ?></div>
-            </div>
+        <div class="loadingAjax">
+            <i class="fa fa-cog fa-spin"></i>
+            <div><?php echo AppConfig::$array['site']['ajax']['loading']; ?></div>
+        </div>
         <?php endif; ?>
     </body>
 </html>

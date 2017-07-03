@@ -1,7 +1,9 @@
 <menu>
     <menuitem label="Inicio" url="" />
     <menuitem label="Merlo">
-        <menuitem label="Cargas" plugin="merlo" controller="cargas_merlo" action="index" />
+        <menuitem label="Dashboard" plugin="merlo" controller="cargas_merlo" action="dashboard" />
+        <menuitem label="Respuestas" plugin="merlo" controller="cargas_merlo" action="index" />
+        <menuitem label="Mapa" plugin="merlo" controller="cargas_merlo" action="mapa" />
     </menuitem>
     <menuitem label="Administración">
         <menuitem label="Acceso">

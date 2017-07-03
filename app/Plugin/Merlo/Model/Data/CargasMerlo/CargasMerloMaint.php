@@ -4,7 +4,7 @@
 
 App::uses('AbstractData', 'Lib');
 
-class ArbolesMaint extends AbstractData {
+class CargasMerloMaint extends AbstractData {
 
 protected $data = array (
     'translatepath' => NULL,

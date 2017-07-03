@@ -33,26 +33,14 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'identificacion',
-                    'label' => 'Indentificación',
+                    'name' => 'time',
+                    'label' => 'Fecha/Hora',
+                    'presentation' => 'DATETIME',
+                    'classparams' => '{\'no_seconds\': true}',
                 ),
             ),
         ),
         1 => 
-        array (
-            'label' => '',
-            'sortfield' => '',
-            'fields' => 
-            array (
-                0 => 
-                array (
-                    'name' => 'time',
-                    'label' => 'Fecha',
-                    'presentation' => 'DATE',
-                ),
-            ),
-        ),
-        2 => 
         array (
             'label' => '',
             'sortfield' => '',
@@ -67,6 +55,19 @@ protected $data = array (
                 ),
             ),
         ),
+        2 => 
+        array (
+            'label' => '',
+            'sortfield' => '',
+            'fields' => 
+            array (
+                0 => 
+                array (
+                    'name' => 'edad',
+                    'label' => 'Edad',
+                ),
+            ),
+        ),
         3 => 
         array (
             'label' => '',
@@ -75,8 +76,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_1',
-                    'label' => 'Pregunta 1',
+                    'name' => 'respuesta_1',
+                    'label' => 1,
                 ),
             ),
         ),
@@ -88,8 +89,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_2',
-                    'label' => 'Pregunta 2',
+                    'name' => 'respuesta_2',
+                    'label' => 2,
                 ),
             ),
         ),
@@ -101,8 +102,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_3',
-                    'label' => 'Pregunta 3',
+                    'name' => 'respuesta_3',
+                    'label' => 3,
                 ),
             ),
         ),
@@ -114,8 +115,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_4',
-                    'label' => 'Pregunta 4',
+                    'name' => 'respuesta_4',
+                    'label' => 4,
                 ),
             ),
         ),
@@ -127,8 +128,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_5',
-                    'label' => 'Pregunta 5',
+                    'name' => 'respuesta_5',
+                    'label' => 5,
                 ),
             ),
         ),
@@ -140,8 +141,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_6',
-                    'label' => 'Pregunta 6',
+                    'name' => 'respuesta_6',
+                    'label' => 6,
                 ),
             ),
         ),
@@ -153,8 +154,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_7',
-                    'label' => 'Pregunta 7',
+                    'name' => 'respuesta_7',
+                    'label' => 7,
                 ),
             ),
         ),
@@ -166,8 +167,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_8',
-                    'label' => 'Pregunta 8',
+                    'name' => 'respuesta_8',
+                    'label' => 8,
                 ),
             ),
         ),
@@ -179,8 +180,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_9',
-                    'label' => 'Pregunta 9',
+                    'name' => 'respuesta_9',
+                    'label' => 9,
                 ),
             ),
         ),
@@ -192,8 +193,8 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_10',
-                    'label' => 'Pregunta 10',
+                    'name' => 'respuesta_10',
+                    'label' => 10,
                 ),
             ),
         ),
@@ -205,8 +206,47 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'pregunta_11',
-                    'label' => 'Pregunta 11',
+                    'name' => 'respuesta_11',
+                    'label' => 11,
+                ),
+            ),
+        ),
+        14 => 
+        array (
+            'label' => '',
+            'sortfield' => '',
+            'fields' => 
+            array (
+                0 => 
+                array (
+                    'name' => 'nombre',
+                    'label' => 'Nombre',
+                ),
+            ),
+        ),
+        15 => 
+        array (
+            'label' => '',
+            'sortfield' => '',
+            'fields' => 
+            array (
+                0 => 
+                array (
+                    'name' => 'email',
+                    'label' => 'Email',
+                ),
+            ),
+        ),
+        16 => 
+        array (
+            'label' => '',
+            'sortfield' => '',
+            'fields' => 
+            array (
+                0 => 
+                array (
+                    'name' => 'telefono',
+                    'label' => 'Teléfono',
                 ),
             ),
         ),

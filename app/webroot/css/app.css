@@ -152,3 +152,7 @@ div.user_info, div.user_info a, #menu.k-menu a.k-link {
 .progress-bar-inconsistente {
     background-color: #999;
 }
+
+.navbar {
+    min-height: 0;
+}

@@ -6,51 +6,60 @@
     
         <table>
             <column>
-                <listfield name="identificacion" label="Indentificación" />
-            </column>
-            <column>
-                <listfield name="time" label="Fecha" presentation="DATE" />
+                <listfield name="time" label="Fecha/Hora" presentation="DATETIME" classparams="{'no_seconds': true}" />
             </column>
             <column>
                 <listfield name="position" label="Posición" presentation="GOOGLEMAP" classparams="{'list': true}" />
             </column>
             <column>
-                <listfield name="pregunta_1" label="Pregunta 1" />
+                <listfield name="edad" label="Edad" />
             </column>
             <column>
-                <listfield name="pregunta_2" label="Pregunta 2" />
+                <listfield name="respuesta_1" label="1" />
             </column>
             <column>
-                <listfield name="pregunta_3" label="Pregunta 3" />
+                <listfield name="respuesta_2" label="2" />
             </column>
             <column>
-                <listfield name="pregunta_4" label="Pregunta 4" />
+                <listfield name="respuesta_3" label="3" />
             </column>
             <column>
-                <listfield name="pregunta_5" label="Pregunta 5" />
+                <listfield name="respuesta_4" label="4" />
             </column>
             <column>
-                <listfield name="pregunta_6" label="Pregunta 6" />
+                <listfield name="respuesta_5" label="5" />
             </column>
             <column>
-                <listfield name="pregunta_7" label="Pregunta 7" />
+                <listfield name="respuesta_6" label="6" />
             </column>
             <column>
-                <listfield name="pregunta_8" label="Pregunta 8" />
+                <listfield name="respuesta_7" label="7" />
             </column>
             <column>
-                <listfield name="pregunta_9" label="Pregunta 9" />
+                <listfield name="respuesta_8" label="8" />
             </column>
             <column>
-                <listfield name="pregunta_10" label="Pregunta 10" />
+                <listfield name="respuesta_9" label="9" />
             </column>
             <column>
-                <listfield name="pregunta_11" label="Pregunta 11" />
+                <listfield name="respuesta_10" label="10" />
+            </column>
+            <column>
+                <listfield name="respuesta_11" label="11" />
+            </column>
+            <column>
+                <listfield name="nombre" label="Nombre" />
+            </column>
+            <column>
+                <listfield name="email" label="Email" />
+            </column>
+            <column>
+                <listfield name="telefono" label="Teléfono" />
             </column>
         </table>
     </search_list>
   
-    <tablemaint file="ArbolesMaint.php">
+    <tablemaint file="CargasMerloMaint.php">
         <fieldset title="Descripción" columns="2" id="ubicacion">
             <field name="identificacion" label="Indentificación" />
             <field name="time" label="Fecha" presentation="DATERANGE" />
@@ -59,17 +68,17 @@
             <field name="position" label="" presentation="GOOGLEMAP" />
         </fieldset> 
         <fieldset title="Respuestas" columns="3" id="espacio"> 
-            <field name="pregunta_1" label="Pregunta 1" />
-            <field name="pregunta_2" label="Pregunta 2" />
-            <field name="pregunta_3" label="Pregunta 3" />
-            <field name="pregunta_4" label="Pregunta 4" />
-            <field name="pregunta_5" label="Pregunta 5" />
-            <field name="pregunta_6" label="Pregunta 6" />
-            <field name="pregunta_7" label="Pregunta 7" />
-            <field name="pregunta_8" label="Pregunta 8" />
-            <field name="pregunta_9" label="Pregunta 9" />
-            <field name="pregunta_10" label="Pregunta 10" />
-            <field name="pregunta_11" label="Pregunta 11" />       
+            <field name="respuesta_1" label="Pregunta 1" />
+            <field name="respuesta_2" label="Pregunta 2" />
+            <field name="respuesta_3" label="Pregunta 3" />
+            <field name="respuesta_4" label="Pregunta 4" />
+            <field name="respuesta_5" label="Pregunta 5" />
+            <field name="respuesta_6" label="Pregunta 6" />
+            <field name="respuesta_7" label="Pregunta 7" />
+            <field name="respuesta_8" label="Pregunta 8" />
+            <field name="respuesta_9" label="Pregunta 9" />
+            <field name="respuesta_10" label="Pregunta 10" />
+            <field name="respuesta_11" label="Pregunta 11" />       
         </fieldset>    
     </tablemaint>
      

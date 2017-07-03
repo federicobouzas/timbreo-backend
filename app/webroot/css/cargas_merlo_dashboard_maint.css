@@ -1,0 +1,13 @@
+.page-header {
+    margin: 10px 0 20px !important;
+    padding-bottom: 9px !important;
+}
+
+.panel {
+    box-shadow: none;
+    border: 0;
+}
+
+text {
+    text-shadow: initial !important;
+}
