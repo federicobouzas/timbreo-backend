@@ -1,1 +1,7 @@
-/nbproject/private/
+app/tmp/
+app/webroot/files/
+app/Config/config.php
+app/Config/core.php
+app/Config/database.php
+nbproject/
+error.log
