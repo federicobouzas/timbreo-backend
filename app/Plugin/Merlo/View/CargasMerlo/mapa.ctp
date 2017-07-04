@@ -1,4 +1,5 @@
 <?php
+
 $this->Html->scriptBlock("var preguntas = $.parseJSON('" . json_encode($preguntas) . "');\n", array('inline' => false));
 $this->Html->script("../includes/fmw/bootstrap-multiselect/js/bootstrap-multiselect", array('inline' => false));
 $this->Html->script("https://maps.google.com/maps/api/js?sensor=false&amp;key=" . AppConfig::get('site.googlemaps.key') . "&amp;libraries=visualization", array('inline' => false));
@@ -13,8 +14,14 @@ $this->Html->css('mapa', array('inline' => false));
 
 <div id="map" style="height: 400px; width: 100%;"></div>
 
-<div style="position: absolute; width: 100%; top: 50px; right: 20px;">
-    
+<div style="position: absolute; width: 100%; top: 50px; left: 20px;">
+    <div id="filtroEdades" class="pull-left">
+        <select id="edades" multiple="multiple">
+            <option value="18-30">18-30</option>
+            <option value="31-49">31-49</option>
+            <option value="+50">+50</option>        
+        </select>
+    </div>
 </div>
 
 <?php echo $this->element('js_initial'); ?>

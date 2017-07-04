@@ -1,23 +1,34 @@
 <?php
-
+$this->Html->script("../includes/fmw/datepicker/js/bootstrap-datetimepicker.min.js", array('inline' => false));
+$this->Html->css("../includes/fmw/datepicker/css/bootstrap-datetimepicker.css", array('inline' => false));
 $this->Html->script("cargas_merlo_dashboard_maint", array('inline' => false));
 $this->Html->css("cargas_merlo_dashboard_maint", array('inline' => false));
 ?>
 <div class="col-lg-12 mt20 mb30">
-    <form class="form-inline">
-        <label for="dashboardDesde">Desde</label>
-        <input type="text" class="form-control" id="dashboardDesde">
-        <label for="dashboardHasta" class="ml20">Hasta</label>
-        <input type="email" class="form-control" id="dashboardHasta">
-        <label for="dashboardEdad" class="ml20">Edad</label>
-        <select class="form-control" id="dashboardEdad">
+    <div class="pull-left input">
+        <label for="dashboardDesde" class="pull-left">Desde</label>
+        <div class="input-group date pull-left">
+            <input type="text" class="form-control" id="dashboardDesde" />
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        </div>
+    </div>
+    <div class="pull-left input ml25">
+        <label for="dashboardHasta" class="pull-left">Hasta</label>
+        <div class="input-group date pull-left">
+            <input type="text" class="form-control" id="dashboardHasta" />
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        </div>
+    </div>
+    <div class="pull-left input ml25">
+        <label for="dashboardEdad" class="pull-left">Edad</label>
+        <select class="form-control pull-left" id="dashboardEdad">
             <option value="">Todas</option>
             <option value="18-30">18-30</option>
             <option value="31-49">31-49</option>
             <option value="+50">+50</option>
         </select>
-        <button type="submit" class="btn btn-primary ml20">Filtrar</button>
-    </form>
+    </div>
+    <button class="btn btn-primary ml20 pull-lef">Filtrar</button>
 </div>
 <div class="p0">
     <?php foreach ($preguntas as $key=> $pregunta): ?>

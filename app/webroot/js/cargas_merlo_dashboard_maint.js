@@ -1,7 +1,37 @@
 $(function () {
-    $.get(WWW + "merlo/cargas_merlo/ajax_get_respuestas", function (data) {
+    $("#dashboardDesde, #dashboardHasta").parent().datetimepicker({
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        viewMode: 'days'
+    });
+    $("button").click(submitForm);
+    submitForm();
+});
+
+function submitForm() {
+    var fecha_desde = $("#dashboardDesde").val() || "";
+    var fecha_hasta = $("#dashboardHasta").val() || "";
+    var edad = $("#dashboardEdad").val() || "";
+    if (fecha_desde) {
+        var array_fecha_desde = fecha_desde.split("/");
+        if (array_fecha_desde.length == 3) {
+            fecha_desde = array_fecha_desde[2] + "-" + array_fecha_desde[1] + "-" + array_fecha_desde[0];
+        }
+    }
+    if (fecha_hasta) {
+        var array_fecha_hasta = fecha_hasta.split("/");
+        if (array_fecha_hasta.length == 3) {
+            fecha_hasta = array_fecha_hasta[2] + "-" + array_fecha_hasta[1] + "-" + array_fecha_hasta[0];
+        }
+    }
+    $.get(WWW + "merlo/cargas_merlo/ajax_get_respuestas", {
+        fecha_desde: fecha_desde,
+        fecha_hasta: fecha_hasta,
+        edad: edad,
+    }, function (data) {
         var jdata = $.parseJSON(data);
         for (var i in jdata) {
+            $("[id='piePregunta" + i + "'], [id='columnPregunta" + i + "']").empty();
             var categories = [], data = [];
             for (var j in jdata[i]) {
                 var opcion = cambiarOpciones(jdata[i][j].CargaMerlo.respuesta)
@@ -12,24 +42,23 @@ $(function () {
             }
         }
     });
-});
+}
 
 function pie(container, title, data) {
-    var plotOptions = container == "piePregunta11" ?
-            {pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
-                }
-            } : {
-        pie: {allowPointSelect: true, cursor: 'pointer', dataLabels: {enabled: false}, showInLegend: true},
-        series: {
+    var plotOptions = {pie: {allowPointSelect: true, cursor: 'pointer'}};
+    if (container == "piePregunta11") {
+        plotOptions.pie.dataLabels = {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            }
+        };
+
+    } else {
+        plotOptions.pie.dataLabels = {enabled: false};
+        plotOptions.pie.showInLegend = true;
+        plotOptions.series = {
             dataLabels: {
                 enabled: true,
                 formatter: function () {
@@ -38,9 +67,9 @@ function pie(container, title, data) {
                 distance: -30,
                 color: "white"
             }
-        }
-    };
-    $("[id='"+container+"']").highcharts({
+        };
+    }
+    $("[id='" + container + "']").highcharts({
         chart: {
             style: {fontFamily: 'Gotham'},
             plotBackgroundColor: null,
@@ -59,11 +88,8 @@ function pie(container, title, data) {
 }
 
 function column(container, title, categories, series) {
-    $("[id='"+container+"']").highcharts({
-        chart: {
-            style: {fontFamily: 'Gotham'},
-            type: 'column'
-        },
+    $("[id='" + container + "']").highcharts({
+        chart: {tyle: {fontFamily: 'Gotham'}, type: 'column'},
         xAxis: {categories: categories, crosshair: true},
         legend: {enabled: false},
         yAxis: {min: 0, allowDecimals: false, title: {text: null}},
@@ -80,12 +106,7 @@ function column(container, title, categories, series) {
         },
         plotOptions: {
             column: {
-                pointPadding: 0.2,
-                borderWidth: 0,
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: false
+                pointPadding: 0.2, borderWidth: 0, dataLabels: {enabled: true}, enableMouseTracking: false
             }
         },
         series: series

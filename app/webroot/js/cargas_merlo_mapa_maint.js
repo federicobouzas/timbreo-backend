@@ -1,6 +1,15 @@
 var map = null, markers = [];
 
 $(function () {
+    $('#edades').multiselect({
+        nonSelectedText: 'Edades',
+        maxHeight: 400,
+        allSelectedText: 'Todas',
+        nSelectedText: ' edades',
+        numberDisplayed: 3,
+        selectAllText: 'Seleccionar todas',
+        onChange: submitForm
+    });
     createMap();
     submitForm();
 });
@@ -18,6 +27,7 @@ function createMap() {
         zoom: 11,
         mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.BOTTOM_CENTER
         },
     }
     );
@@ -45,18 +55,19 @@ function getMarkerHtmlInfo(data) {
     data.CargaMerlo.time = date + "/" + month + "/" + year + " " + hours + ":" + minutes;
 
     var html = '';
-    html += '<h4><strong>Información:</strong></h4>';
-    html += '<h5><strong>Fecha:</strong> ' + data.CargaMerlo.time + '</div>';
-    html += '<h5><strong>Edad:</strong> ' + data.CargaMerlo.edad + '</div>';
+    html += '<div class="fs13">';
+    html += '<h4 class="mt0"><strong>Información:</strong></h4>';
+    html += '<div><strong>Fecha:</strong> ' + data.CargaMerlo.time + '</div>';
+    html += '<div><strong>Edad:</strong> ' + data.CargaMerlo.edad + '</div>';
     html += '<h4 class="mt20"><strong>Contacto:</strong></h4>';
-    html += '<h5><strong>Nombre:</strong> ' + data.CargaMerlo.nombre + '</div>';
-    html += '<h5><strong>Email:</strong> ' + data.CargaMerlo.email + '</div>';
-    html += '<h5><strong>Teléfono:</strong> ' + data.CargaMerlo.telefono + '</div>';
+    html += '<div><strong>Nombre:</strong> ' + data.CargaMerlo.nombre + '</div>';
+    html += '<div><strong>Email:</strong> ' + data.CargaMerlo.email + '</div>';
+    html += '<div><strong>Teléfono:</strong> ' + data.CargaMerlo.telefono + '</div>';
     html += '<h4 class="mt20"><strong>Respuestas:</strong></h4>';
     for (var i in preguntas) {
         html += '<div><strong>' + i + ')</strong> ' + preguntas[i] + ': <strong>' + data.CargaMerlo['respuesta_' + i] + '</strong></div>';
     }
-    html += '<div class="clearfix"></div>';
+    html += '</div>';
     return html;
 }
 
@@ -74,12 +85,18 @@ function plotMap(data) {
             marker.addListener('click', function (event) {
                 bootbox.alert(this.information);
             });
+            markers.push(marker);
         }
     }
 }
 
+function getMapData() {
+    return {
+        edad: $("#edades").val() ? $("#edades").val().join() : []
+    };
+}
+
 function submitForm() {
     resetMap();
-    $.ajax(WWW + "merlo/cargas_merlo/ajax_get_cargas").done(plotMap);
-    return false;
+    $.ajax(WWW + "merlo/cargas_merlo/ajax_get_cargas", {data: getMapData()}).done(plotMap);
 }

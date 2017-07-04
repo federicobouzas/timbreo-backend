@@ -24,31 +24,47 @@ class CargasMerloController extends AppController {
         parent::view($id, $return);
     }
 
-    public function dashboard($return = null) {
+    public function dashboard() {
         $preguntas = $this->CargaMerlo->preguntas;
         unset($preguntas[11]);
         $this->set("preguntas", $preguntas);
     }
 
-    public function ajax_get_respuestas() {
+    public function mapa() {
+        $this->set("preguntas", $this->CargaMerlo->preguntas);
+    }
+
+    public function ajax_get_respuestas($fecha_desde = null, $fecha_hasta = null, $edad = null) {
+        $conditions = [];
+        if (!empty($this->request->query["fecha_desde"])) {
+            $conditions["time >="] = $this->request->query["fecha_desde"];
+        }
+        if (!empty($this->request->query["fecha_hasta"])) {
+            $conditions["time <="] = $this->request->query["fecha_hasta"];
+        }
+        if (!empty($this->request->query["edad"])) {
+            $conditions["edad"] = $this->request->query["edad"];
+        }
         $data = [];
         foreach (array_keys($this->CargaMerlo->preguntas) as $pregunta) {
             $data[$pregunta] = $this->CargaMerlo->find("all", [
                 "fields" => ["respuesta_" . $pregunta . " AS respuesta", "COUNT(*) AS cantidad"],
                 "group" => "respuesta_" . $pregunta,
-                "conditions" => ["respuesta_" . $pregunta . " !=" => ""],
+                "conditions" => array_merge($conditions, ["respuesta_" . $pregunta . " !=" => ""]),
             ]);
         }
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }
 
-    public function mapa($return = null) {
-        $this->set("preguntas", $this->CargaMerlo->preguntas);
-    }
-
     public function ajax_get_cargas() {
-        $data = $this->CargaMerlo->find("all");
+        $filter = array_filter($this->request->query, function($var) {
+            return !empty($var);
+        });
+        $conditions = array_map(function($var) {
+            return explode(",", $var);
+        }, $filter);
+        $data = $this->CargaMerlo->find("all", ["conditions" => $conditions]);
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }
