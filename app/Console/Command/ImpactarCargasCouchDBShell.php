@@ -14,7 +14,7 @@ class ImpactarCargasCouchDBShell extends AppShell {
 
         try {
             $couchdb_server_dsn = "http://eideoos.com:5984/";
-            $couchdb_database_name = "timbreo-merlo-dev";
+            $couchdb_database_name = "timbreo-merlo";
             $client = new CouchClient($couchdb_server_dsn, $couchdb_database_name);
 
             $all_docs = $client->getAllDocs();
