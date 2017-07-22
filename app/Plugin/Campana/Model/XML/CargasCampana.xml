@@ -1,0 +1,61 @@
+<CargasCampana>
+  
+    <search_list file="CargasCampanaSL.php">
+        <searchfield name="identificacion" label="Indentificación" />
+        <searchfield name="time" label="Fecha" presentation="DATERANGE" />
+    
+        <table>
+            <column>
+                <listfield name="time" label="Fecha/Hora" presentation="DATETIME" classparams="{'no_seconds': true}" />
+            </column>
+            <column>
+                <listfield name="position" label="Posición" presentation="GOOGLEMAP" classparams="{'list': true}" />
+            </column>
+            <column>
+                <listfield name="edad" label="Edad" />
+            </column>
+            <column>
+                <listfield name="respuesta_1" label="1" />
+            </column>
+            <column>
+                <listfield name="respuesta_2" label="2" />
+            </column>
+            <column>
+                <listfield name="respuesta_3" label="3" />
+            </column>
+            <column>
+                <listfield name="respuesta_4" label="4" />
+            </column>
+            <column>
+                <listfield name="respuesta_5" label="5" />
+            </column>
+            <column>
+                <listfield name="nombre" label="Nombre" />
+            </column>
+            <column>
+                <listfield name="email" label="Email" />
+            </column>
+            <column>
+                <listfield name="telefono" label="Teléfono" />
+            </column>
+        </table>
+    </search_list>
+  
+    <tablemaint file="CargasCampanaMaint.php">
+        <fieldset title="Descripción" columns="2" id="ubicacion">
+            <field name="identificacion" label="Indentificación" />
+            <field name="time" label="Fecha" presentation="DATERANGE" />
+        </fieldset> 
+        <fieldset title="Posición" columns="1" id="position">
+            <field name="position" label="" presentation="GOOGLEMAP" />
+        </fieldset> 
+        <fieldset title="Respuestas" columns="3" id="espacio"> 
+            <field name="respuesta_1" label="Pregunta 1" />
+            <field name="respuesta_2" label="Pregunta 2" />
+            <field name="respuesta_3" label="Pregunta 3" />
+            <field name="respuesta_4" label="Pregunta 4" />
+            <field name="respuesta_5" label="Pregunta 5" />    
+        </fieldset>    
+    </tablemaint>
+     
+</CargasCampana>

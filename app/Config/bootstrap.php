@@ -48,11 +48,13 @@ if (!defined('CAKE_FRAMEWORK')) {
 Inflector::rules('plural', array('irregular' => array(
     'cargamerlo' => 'CargasMerlo',
     'cargacaba' => 'CargasCaba',
+    'cargacampana' => 'CargasCampana',
 )));
 
 Inflector::rules('singular', array('irregular' => array(
     'cargasmerlo' => 'CargaMerlo',
     'cargascaba' => 'CargaCaba',
+    'cargascampana' => 'CargaCampana',
 )));
 
 /*

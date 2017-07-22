@@ -5,6 +5,11 @@
         <menuitem label="Respuestas" plugin="merlo" controller="cargas_merlo" action="index" />
         <menuitem label="Mapa" plugin="merlo" controller="cargas_merlo" action="mapa" />
     </menuitem>
+    <menuitem label="Campana">
+        <menuitem label="Dashboard" plugin="campana" controller="cargas_campana" action="dashboard" />
+        <menuitem label="Respuestas" plugin="campana" controller="cargas_campana" action="index" />
+        <menuitem label="Mapa" plugin="campana" controller="cargas_campana" action="mapa" />
+    </menuitem>
     <menuitem label="Administración">
         <menuitem label="Acceso">
             <menuitem label="Usuarios" controller="users" action="index" plugin="fmw_acceso" />

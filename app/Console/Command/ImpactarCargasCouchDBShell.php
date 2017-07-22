@@ -7,13 +7,54 @@ use PHPOnCouch\CouchDocument;
 
 class ImpactarCargasCouchDBShell extends AppShell {
 
-    public $uses = array('Merlo.CargaMerlo');
+    public $uses = array('Merlo.CargaMerlo', 'Campana.CargaCampana');
 
     public function main() {
         $this->out("CRON DE IMPACTO DE COUCHDB (" . date("H:i:s") . " DEL " . date("d/m/Y") . ")");
-
+        $this->merlo();
+        $this->campana();
+        $this->setFechaUltimaEjecucion();
+        $this->out("FIN");
+    }
+    
+    public function campana() {
         try {
-            $couchdb_server_dsn = "http://eideoos.com:5984/";
+            $couchdb_server_dsn = "https://couchdb.timbrea.me/";
+            $couchdb_database_name = "timbreo-campana";
+            $client = new CouchClient($couchdb_server_dsn, $couchdb_database_name);
+
+            $all_docs = $client->getAllDocs();
+            foreach ($all_docs->rows as $row) {
+                if (!$this->CargaCampana->findByCouchdbId($row->id)) {
+                    $doc = $client->getDoc($row->id);
+                    $this->CargaCampana->create();
+                    $this->CargaCampana->save([
+                        "couchdb_id" => $doc->_id,
+                        "couchdb_rev" => $doc->_rev,
+                        "time" => isset($doc->time) ? date("Y-m-d H:i:s", (int) ($doc->time / 1000)) : "",
+                        "identificacion" => isset($doc->user->identificacion) ? $doc->user->identificacion : "",
+                        "position" => isset($doc->position->latitude) && isset($doc->position->latitude) ? ($doc->position->latitude . "," . $doc->position->longitude) : "",
+                        "edad" => isset($doc->respuestas->{'edad'}) ? $doc->respuestas->{'edad'} : "",
+                        "nombre" => isset($doc->respuestas->{'nombre'}) ? $doc->respuestas->{'nombre'} : "",
+                        "email" => isset($doc->respuestas->{'email'}) ? $doc->respuestas->{'email'} : "",
+                        "telefono" => isset($doc->respuestas->{'telefono'}) ? $doc->respuestas->{'telefono'} : "",
+                        "respuesta_1" => isset($doc->respuestas->{'1'}) ? $this->formatRespuesta($doc->respuestas->{'1'}) : "",
+                        "respuesta_2" => isset($doc->respuestas->{'2'}) ? $this->formatRespuesta($doc->respuestas->{'2'}) : "",
+                        "respuesta_3" => isset($doc->respuestas->{'3'}) ? $this->formatRespuesta($doc->respuestas->{'3'}) : "",
+                        "respuesta_4" => isset($doc->respuestas->{'4'}) ? $this->formatRespuesta($doc->respuestas->{'4'}) : "",
+                        "respuesta_5" => isset($doc->respuestas->{'5'}) ? $this->formatRespuesta($doc->respuestas->{'5'}) : "",
+                    ]);
+                }
+            }
+        } catch (Exception $ex) {
+            debug($doc);
+            debug($ex);
+        }
+    }
+    
+    public function merlo() {
+        try {
+            $couchdb_server_dsn = "https://couchdb.timbrea.me/";
             $couchdb_database_name = "timbreo-merlo";
             $client = new CouchClient($couchdb_server_dsn, $couchdb_database_name);
 
@@ -49,9 +90,13 @@ class ImpactarCargasCouchDBShell extends AppShell {
         } catch (Exception $ex) {
             debug($ex);
         }
-
-        $this->setFechaUltimaEjecucion();
-        $this->out("FIN");
+    }
+    
+    public function formatRespuesta($respuesta) {
+        if (is_array($respuesta)) {
+            return implode(",", $respuesta);
+        }
+        return $respuesta;
     }
 
 }
