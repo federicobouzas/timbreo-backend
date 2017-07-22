@@ -37,10 +37,10 @@ class CargasCampanaController extends AppController {
     public function ajax_get_respuestas($fecha_desde = null, $fecha_hasta = null, $edad = null) {
         $conditions = [];
         if (!empty($this->request->query["fecha_desde"])) {
-            $conditions["time >="] = $this->request->query["fecha_desde"];
+            $conditions["time >="] = $this->request->query["fecha_desde"] . " 00:00:00";
         }
         if (!empty($this->request->query["fecha_hasta"])) {
-            $conditions["time <="] = $this->request->query["fecha_hasta"];
+            $conditions["time <="] = $this->request->query["fecha_hasta"] . " 23:59:59";
         }
         if (!empty($this->request->query["edad"])) {
             $conditions["edad"] = $this->request->query["edad"];
