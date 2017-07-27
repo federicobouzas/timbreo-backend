@@ -122,12 +122,22 @@ function cambiarOpciones(opcion) {
         case "M":
             return "Mala";
     }
+    switch (opcion) {
+        case "FPV":
+            return "Unidad Ciudadana (Ruben Romano)";
+        case "Union Ciudadana":
+            return "Unidad Ciudadana (Alejo Sarna)";
+        case "Frente Renovador":
+            return "1 País";
+        case "Izquierda":
+            return "Frente Izquierda";
+    }
     return opcion;
 }
 
 function getColor(opcion) {
     //var colors = ['#50B432', '#5176A3', '#A655AC', '#FF9702', '#299CB4', '#4265BC', '#FFD300', '#F39C12'];
-    var colors = ['#99C25F', '#5176A3', '#A655AC', '#F39C12', '#037DBF', '#4265BC', '#FCDA59', '#E76056'];
+    var colors = ['#50B432', '#5176A3', '#A655AC', '#F39C12', '#037DBF', '#4265BC', '#FFD300', '#F44336'];
     switch (opcion) {
         case "Si":
             return colors[0];
@@ -140,14 +150,20 @@ function getColor(opcion) {
         case "M":
             return colors[7];
         case "Frente Renovador":
+        case "1 País":
             return colors[7];
+        case "Izquierda":
+        case "Frente Izquierda":
+            return colors[0];
         case "Cambiemos":
             return colors[6];
         case "Cumplir":
             return colors[3];
         case "Union Ciudadana":
+        case "Unidad Ciudadana (Alejo Sarna)":
             return colors[2];
         case "FPV":
+        case "Unidad Ciudadana (Ruben Romano)":
             return colors[4];
         case "Otro":
         case "NS/NC":
