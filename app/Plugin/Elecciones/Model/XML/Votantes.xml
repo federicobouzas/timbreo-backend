@@ -1,0 +1,65 @@
+<Votantes>
+    
+    <search_list file="VotantesSL.php">              
+        <searchfield name="matricula" label="Matrícula"/>
+        <searchfield name="clase" label="Clase"/>
+        <searchfield name="apellido" label="Apellido"/>
+        <searchfield name="nombre" label="Nombre"/>
+        <searchfield name="domicilio" label="Domicilio"/>
+        <searchfield name="tipodoc" label="Tipo de Documento" />
+        <searchfield name="circuito" label="Circuito" />
+        <searchfield name="sexo" label="Sexo" />
+        <searchfield name="orden" label="Orden"/>
+        <searchfield name="en_ruta" label="Asignado"/>
+        
+        <listfield name="matricula" label="Matrícula"  />
+        <listfield name="clase" label="Clase"  />
+        <listfield name="apellido" label="Apellido"  />
+        <listfield name="nombre" label="Nombre"  />
+        <listfield name="domicilio" label="Domicilio"  />
+        <listfield name="tipodoc" label="Tipo de Documento"  />
+        <listfield name="circuito" label="Circuito" />
+        <listfield name="sexo" label="Sexo" />
+        <listfield name="orden" label="Orden"  />
+        <listfield name="en_ruta" label="Asignado"  />
+        
+        <actions>
+            <action op="V" action="carta" icon="file-text-o" label="Imprimir Carta" />
+            <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiqueta" />
+            <action op="E" action="edit" />
+        </actions>
+    </search_list>
+    
+    <tablemaint file="VotantesMaint.php">
+        <jsinclude file="socios_padron/maint_socios" />
+        <fieldset title="Datos del Votante" id="votante" columns="2">
+            <field name="matricula" label="Matrícula" readonly="true" />
+            <field name="clase" label="Clase" readonly="true" />
+            <field name="apellido" label="Apellido" readonly="true" />
+            <field name="nombre" label="Nombre" readonly="true" />
+            <field name="domicilio" label="Domicilio" readonly="true" />
+            <field name="tipodoc" label="Tipo de Documento" readonly="true" />
+            <field name="circuito" label="Circuito" />
+            <field name="sexo" label="Sexo" />
+            <field name="orden" label="Orden" readonly="true" />
+            <field name="en_ruta" label="Asignado" readonly="true" />
+        </fieldset>
+        <fieldset title="Ubicación" id="ubicacion">
+            <field name="estado_geo" label="Estado Georef." presentation="GEO" readonly="true" />
+            <field name="calle" label="Calle" readonly="true" />
+            <field name="altura" label="Altura" readonly="true" />
+            <field name="piso" label="Piso" readonly="true" />
+            <field name="dpto" label="Dto." readonly="true" />
+            <field name="codigo_postal" label="Código Postal" readonly="true" />
+            <field name="barrio_google" label="Barrio" readonly="true" />
+            <field name="comuna_google" label="Comuna" readonly="true" />
+            <field name="localidad" label="Localidad" readonly="true" />
+            <field name="provincia" label="Provincia" readonly="true" />
+            <field name="tmp_pais" label="País" initialvalue="Argentina" isvisible="false" />
+        </fieldset>
+        <fieldset title="Mapa" id="mapa">
+            <field name="coordenadas" label="" readonly="true" presentation="GOOGLEMAP" clasparams="{'calle':'calle','altura':'altura','provincia':'provincia','pais':'tmp_pais'}" />
+        </fieldset>
+    </tablemaint>
+    
+</Votantes>
