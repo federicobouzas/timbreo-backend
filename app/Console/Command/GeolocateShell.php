@@ -7,7 +7,7 @@ class GeolocateShell extends AppShell {
 
     public $uses = array('Elecciones.Votante');
     public $limit = false;
-    public $max = 2450;
+    public $max = 1;
     public $key = "AIzaSyD9-6pCf5rGWhsbNI5DGHNx52WTzm79RKE";
 
     public function main() {
@@ -19,7 +19,10 @@ class GeolocateShell extends AppShell {
     protected function padron() {
         $votantes = $this->Votante->find("all", [
             "limit" => $this->max,
-            "conditions" => ["estado_geo" => "Sin geolocalizar"]
+            "conditions" => [
+                "estado_geo" => "Sin geolocalizar",
+                "circuito" => "155A"
+            ]
         ]);
 
         if (empty($votantes)) {
@@ -89,7 +92,7 @@ class GeolocateShell extends AppShell {
                             'political' => isset($array['political']) ? $array['political'] : null,
                             'locality' => isset($array['locality']) ? $array['locality'] : null,
                             'administrative_area_level_1' => isset($array['administrative_area_level_1']) ? $array['administrative_area_level_1'] : null,
-                            'administrative_area_level_1' => isset($array['administrative_area_level_2']) ? $array['administrative_area_level_2'] : null,
+                            'administrative_area_level_2' => isset($array['administrative_area_level_2']) ? $array['administrative_area_level_2'] : null,
                             'location' => $array['location'],
                             'estado_geo' => 'Geolocalizado',
                         ]);
