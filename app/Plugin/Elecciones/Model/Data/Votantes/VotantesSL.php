@@ -136,6 +136,13 @@ protected $data = array (
             'name' => 'en_ruta',
             'label' => 'Asignado',
         ),
+        10 => 
+        array (
+            'name' => 'location',
+            'label' => '',
+            'presentation' => 'GOOGLEMAP',
+            'classparams' => '{\'list\':true}',
+        ),
     ),
 );
 

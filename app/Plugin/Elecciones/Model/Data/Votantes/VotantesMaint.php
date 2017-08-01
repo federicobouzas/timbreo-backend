@@ -170,7 +170,7 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'coordenadas',
+                    'name' => 'location',
                     'label' => '',
                     'presentation' => 'GOOGLEMAP',
                     'readonly' => true,

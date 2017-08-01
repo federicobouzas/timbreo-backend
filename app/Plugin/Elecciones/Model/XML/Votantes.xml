@@ -22,7 +22,8 @@
         <listfield name="sexo" label="Sexo" />
         <listfield name="orden" label="Orden"  />
         <listfield name="en_ruta" label="Asignado"  />
-        
+        <listfield name="location" label="" presentation="GOOGLEMAP" classparams="{'list':true}" />
+
         <actions>
             <action op="V" action="carta" icon="file-text-o" label="Imprimir Carta" />
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiqueta" />
@@ -58,7 +59,7 @@
             <field name="tmp_pais" label="País" initialvalue="Argentina" isvisible="false" />
         </fieldset>
         <fieldset title="Mapa" id="mapa">
-            <field name="coordenadas" label="" readonly="true" presentation="GOOGLEMAP" clasparams="{'calle':'calle','altura':'altura','provincia':'provincia','pais':'tmp_pais'}" />
+            <field name="location" label="" readonly="true" presentation="GOOGLEMAP" clasparams="{'calle':'calle','altura':'altura','provincia':'provincia','pais':'tmp_pais'}" />
         </fieldset>
     </tablemaint>
     

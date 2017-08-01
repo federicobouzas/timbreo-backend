@@ -42,7 +42,7 @@ class GeolocateShell extends AppShell {
             }
 
             // Geolocalizo
-            $url_google = "https://maps.googleapis.com/maps/api/geocode/json?key=" . $this->key . "&address=" . urlencode(trim($votante['Votante']['calle']) . " " . trim($votante['Votante']['altura']) . ", " . trim($votante['Votante']['localidad']) . ", " . trim($votante['Votante']['provincia']) . ", Argentina") . "&sensor=false";
+            $url_google = "https://maps.googleapis.com/maps/api/geocode/json?key=" . $this->key . "&address=" . urlencode(trim($votante['Votante']['domicilio']) . ", Campana, Buenos Aires, Argentina") . "&sensor=false";
             $json = file_get_contents($url_google);
             $jdata = json_decode($json, true);
 
@@ -81,12 +81,12 @@ class GeolocateShell extends AppShell {
 
                 $array['location'] = $jdata['results'][0]['geometry']['location']['lat'] . "," . $jdata['results'][0]['geometry']['location']['lng'];
 
-                if (isset($array['calle']) && isset($array['altura']) && isset($array['coordenadas'])) {
+                if (isset($array['route']) && isset($array['street_number']) && isset($array['location'])) {
                     try {
                         $this->Votante->save([
                             'street_number' => $array['street_number'],
                             'route' => $array['route'],
-                            'political' => $array['political'],
+                            'political' => isset($array['political']) ? $array['political'] : null,
                             'locality' => $array['route'],
                             'administrative_area_level_1' => $array['administrative_area_level_1'],
                             'administrative_area_level_1' => $array['administrative_area_level_2'],

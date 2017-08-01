@@ -58,14 +58,28 @@ class Votante extends AppModel {
         include_once(CAKE_FRAMEWORK . DS . 'app' . DS . 'Lib' . DS . 'FPDF' . DS . 'fpdf.php');
         $pdf = new FPDF();
 
+        $nombre = "";
         $votante = $this->findById($id);
+        if (isset($votante["Votante"]["sexo"])) {
+            if ($votante["Votante"]["sexo"] == "M") {
+                $nombre .= "o ";
+            } elseif ($votante["Votante"]["sexo"] == "F") {
+                $nombre .= "a ";
+            } else {
+                $nombre .= "o/a ";
+            }
+        } else {
+            $nombre .= "o/a ";
+        }
+        $nombre .= utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":");
 
         $pdf->SetAutoPageBreak(false);
         $pdf->AddPage();
-        $pdf->SetFont('Times', '', 12);
-        $pdf->Ln(20);
-        $pdf->Cell(25);
-        $pdf->Cell(0, 60, utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":"), 0);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetTextColor(51, 51, 51);
+        $pdf->Ln(19);
+        $pdf->Cell(21);
+        $pdf->Cell(0, 60, $nombre, 0);
 
         // Imprimo
         $pdf->Output();
