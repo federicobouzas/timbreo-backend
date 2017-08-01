@@ -87,9 +87,9 @@ class GeolocateShell extends AppShell {
                             'street_number' => $array['street_number'],
                             'route' => $array['route'],
                             'political' => isset($array['political']) ? $array['political'] : null,
-                            'locality' => $array['route'],
-                            'administrative_area_level_1' => $array['administrative_area_level_1'],
-                            'administrative_area_level_1' => $array['administrative_area_level_2'],
+                            'locality' => isset($array['locality']) ? $array['locality'] : null,
+                            'administrative_area_level_1' => isset($array['administrative_area_level_1']) ? $array['administrative_area_level_1'] : null,
+                            'administrative_area_level_1' => isset($array['administrative_area_level_2']) ? $array['administrative_area_level_2'] : null,
                             'location' => $array['location'],
                             'estado_geo' => 'Geolocalizado',
                         ]);
