@@ -5,9 +5,9 @@ App::import('Vendor', 'funciones');
 
 class GeolocateShell extends AppShell {
 
-    public $uses = array('Votante');
+    public $uses = array('Elecciones.Votante');
     public $limit = false;
-    public $max = 100;
+    public $max = 1;
     public $key = "AIzaSyBgW_37h86jkC0jUYW8H1fpJhTIVmJ-KYY";
 
     public function main() {
