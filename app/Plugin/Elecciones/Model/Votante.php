@@ -39,12 +39,13 @@ class Votante extends AppModel {
         $str .= "M0\n";
         $str .= "S3\n";
         $str .= "N\n";
-        $str .= "A20,2,0,4,1,1,R,\"        CAMBIEMOS       \"\n";
-        $str .= "A20,26,0,4,1,1,R,\"     Abella - Roses   \"\n";
+        $str .= "A20,2,0,4,2,1,R,\"  CAMBIEMOS  \"\n";
+        $str .= "A20,26,0,4,1,1,R,\"     Abella - Roses     \"\n";
         $str .= "A20,65,0,4,1,1,N,\"" . fixString($votante["nombre"]) . "\"\n";
         $str .= "A20,90,0,3,1,1,N,\"" . fixString(substr($votante["route"], 0, 22)) . " " . $votante["street_number"] . "\"\n";
-        $str .= "LO20,120,500,2\n";
-        $str .= "A20,130,0,2,1,1,N,\"CAMPANA\"\n";
+        $str .= "LO20,125,500,2\n";
+		$str .= "A20,135,0,2,1,1,N,\"Campana\"\n";
+        $str .= "A20,155,0,2,1,1,N,\"Buenos Aires\"\n";
         $str .= "P1\n";
         if ($string) {
             return $str;

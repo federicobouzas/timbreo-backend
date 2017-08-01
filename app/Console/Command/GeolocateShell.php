@@ -7,7 +7,7 @@ class GeolocateShell extends AppShell {
 
     public $uses = array('Elecciones.Votante');
     public $limit = false;
-    public $max = 1;
+    public $max = 50;
     public $key = "AIzaSyBgW_37h86jkC0jUYW8H1fpJhTIVmJ-KYY";
 
     public function main() {
