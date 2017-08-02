@@ -7,8 +7,8 @@ class GeolocateShell extends AppShell {
 
     public $uses = array('Elecciones.Votante');
     public $limit = false;
-    public $max = 2450;
-    public $key = "AIzaSyDSnBZ_IlENTOdF0lt6F5B_UuYLxPCZrd0";
+    public $max = 1900;
+    public $key = "AIzaSyAYhrTjGuaC088OEf3FU3zNbdHYOzUNnzk";
 
     public function main() {
         $this->out("GEOLOCALIZANDO " . date("d/m/Y H:i"));
@@ -21,7 +21,6 @@ class GeolocateShell extends AppShell {
             "limit" => $this->max,
             "conditions" => [
                 "estado_geo" => "Sin geolocalizar",
-                "circuito" => "156"
             ]
         ]);
 
