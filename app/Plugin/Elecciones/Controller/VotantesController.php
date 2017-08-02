@@ -60,7 +60,7 @@ class VotantesController extends AppController {
     public function ajax_get_votantes() {
         $this->Votante->recursive = -1;
         $data = $this->Votante->find('all', [
-            "limit" => 10,
+            //"limit" => 10,
             "fields" => ["id", "location", "domicilio", "nombre", "apellido"],
             'conditions' => [
                 "estado_geo" => "Geolocalizado",
