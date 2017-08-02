@@ -33,7 +33,7 @@ class Votante extends AppModel {
         $str .= "M0\n";
         $str .= "S3\n";
         $str .= "N\n";
-        $str .= "A20,2,0,4,2,1,R,\"  CAMBIEMOS  \"\n";
+        $str .= "A20,2,0,4,2,1,R,\" CAMBIEMOS   \"\n";
         $str .= "A20,26,0,4,1,1,R,\"     Abella - Roses     \"\n";
         $str .= "A20,65,0,4,1,1,N,\"" . fixString($votante["nombre"]) . "\"\n";
         $str .= "A20,90,0,3,1,1,N,\"" . fixString(substr($votante["route"], 0, 22)) . " " . $votante["street_number"] . "\"\n";
@@ -58,8 +58,8 @@ class Votante extends AppModel {
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(51, 51, 51);
-        $pdf->Ln(19);
-        $pdf->Cell(21);
+        $pdf->Ln(18);
+        $pdf->Cell(27);
         $pdf->Cell(0, 60, $nombre, 0);
         $pdf->Output();
     }

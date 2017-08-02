@@ -39,7 +39,7 @@ class Ruta extends AppModel {
         $ruta = $this->findById($id);
         $filename = APP . "tmp" . DS . "files" . DS . "label.epl";
         $str = "";
-        
+
         $domicilios = array();
         foreach ($ruta["Votante"] as $key => $row) {
             $domicilios[$key] = $row['route'] . " " . $row['street_number'];
@@ -71,8 +71,8 @@ class Ruta extends AppModel {
             $pdf->AddPage();
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetTextColor(51, 51, 51);
-            $pdf->Ln(19);
-            $pdf->Cell(21);
+            $pdf->Ln(18);
+            $pdf->Cell(27);
             $pdf->Cell(0, 60, $nombre, 0);
         }
         $pdf->Output();
