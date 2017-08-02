@@ -22,7 +22,7 @@ class Ruta extends AppModel {
     public $validate = array(
         'realizada' => array(
             'required' => array(
-                'rule' => array('notEmpty'),
+                'rule' => array('notBlank'),
                 'message' => 'Debe indicar si la ruta se encuentra realizada'
             )
         )
@@ -39,15 +39,15 @@ class Ruta extends AppModel {
         $ruta = $this->findById($id);
         $filename = APP . "tmp" . DS . "files" . DS . "label.epl";
         $str = "";
-
+        
         $domicilios = array();
-        foreach ($ruta["SocioPadron"] as $key => $row) {
-            $domicilios[$key] = $row['calle_google'] . " " . $row['altura_google'];
+        foreach ($ruta["Votante"] as $key => $row) {
+            $domicilios[$key] = $row['route'] . " " . $row['street_number'];
         }
-        array_multisort($domicilios, SORT_ASC, $ruta["SocioPadron"]);
+        array_multisort($domicilios, SORT_ASC, $ruta["Votante"]);
 
-        foreach ($ruta["SocioPadron"] as $socio) {
-            $str .= $this->Subsidio->etiquetar($socio["id"]);
+        foreach ($ruta["Votante"] as $votante) {
+            $str .= $this->Votante->etiquetar($votante["id"]);
         }
         file_put_contents($filename, $str);
         $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi_user"] . ':' . $configuration["hamachi_pass"] . '@' . $configuration["hamachi_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
@@ -60,27 +60,21 @@ class Ruta extends AppModel {
         $pdf->SetAutoPageBreak(false);
         $pdf->SetFont('Times', '', 12);
         $ruta = $this->findById($id);
-
         $domicilios = array();
-        foreach ($ruta["SocioPadron"] as $key => $row) {
-            $domicilios[$key] = $row['calle_google'] . " " . $row['altura_google'];
+        foreach ($ruta["Votante"] as $key => $row) {
+            $domicilios[$key] = $row['route'] . " " . $row['street_number'];
         }
-        array_multisort($domicilios, SORT_ASC, $ruta["SocioPadron"]);
-
-        foreach ($ruta["SocioPadron"] as $socio) {
+        array_multisort($domicilios, SORT_ASC, $ruta["Votante"]);
+        foreach ($ruta["Votante"] as $votante) {
+            $nombre = utf8_decode(ucwords(strtolower($votante["nombre"] . " " . $votante["apellido"])) . ":");
+            $pdf->SetAutoPageBreak(false);
             $pdf->AddPage();
-            $pdf->Ln(51);
-            $pdf->Cell(25);
-            $pdf->Cell(0, 60, utf8_decode("/a " . ucwords(strtolower($socio["nombre"])) . ":"), 0);
-            $pdf->Ln(190);
-            $pdf->Cell(3);
-            $pdf->Cell(44, 60, utf8_decode("Votás en la mesa número "), 0);
-            $pdf->SetFont('Times', 'B', 12);
-            $pdf->Cell($socio["mesa"] > 9 ? 5 : 2, 60, utf8_decode($socio["mesa"]), 0);
-            $pdf->SetFont('Times', '', 12);
-            $pdf->Cell(0, 60, utf8_decode(" | el17jugasvos@gmail.com"), 0);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetTextColor(51, 51, 51);
+            $pdf->Ln(19);
+            $pdf->Cell(21);
+            $pdf->Cell(0, 60, $nombre, 0);
         }
-        // Imprimo
         $pdf->Output();
     }
 

@@ -19,14 +19,8 @@ class Votante extends AppModel {
     public $validate = array(
         'en_ruta' => array(
             'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Debe indicar si deja al socio en ruta'
-            )
-        ),
-        'voto' => array(
-            'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Debe indicar si el Socio ya emitió el voto'
+                'rule' => array('notBlank'),
+                'message' => 'Debe indicar si deja al votante en ruta'
             )
         )
     );
@@ -44,7 +38,7 @@ class Votante extends AppModel {
         $str .= "A20,65,0,4,1,1,N,\"" . fixString($votante["nombre"]) . "\"\n";
         $str .= "A20,90,0,3,1,1,N,\"" . fixString(substr($votante["route"], 0, 22)) . " " . $votante["street_number"] . "\"\n";
         $str .= "LO20,125,500,2\n";
-		$str .= "A20,135,0,2,1,1,N,\"Campana\"\n";
+        $str .= "A20,135,0,2,1,1,N,\"Campana\"\n";
         $str .= "A20,155,0,2,1,1,N,\"Buenos Aires\"\n";
         $str .= "P1\n";
         if ($string) {
@@ -58,22 +52,8 @@ class Votante extends AppModel {
     public function carta($id = null) {
         include_once(CAKE_FRAMEWORK . DS . 'app' . DS . 'Lib' . DS . 'FPDF' . DS . 'fpdf.php');
         $pdf = new FPDF();
-
-        $nombre = "";
         $votante = $this->findById($id);
-        if (isset($votante["Votante"]["sexo"])) {
-            if ($votante["Votante"]["sexo"] == "M") {
-                $nombre .= "o ";
-            } elseif ($votante["Votante"]["sexo"] == "F") {
-                $nombre .= "a ";
-            } else {
-                $nombre .= "o/a ";
-            }
-        } else {
-            $nombre .= "o/a ";
-        }
-        $nombre .= utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":");
-
+        $nombre = utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":");
         $pdf->SetAutoPageBreak(false);
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 10);
@@ -81,8 +61,6 @@ class Votante extends AppModel {
         $pdf->Ln(19);
         $pdf->Cell(21);
         $pdf->Cell(0, 60, $nombre, 0);
-
-        // Imprimo
         $pdf->Output();
     }
 

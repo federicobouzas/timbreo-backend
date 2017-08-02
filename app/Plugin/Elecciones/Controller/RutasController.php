@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
 class RutasController extends AppController {
 
     public function add($return = null) {
-        $this->render = ["/Rutas/add", "default"];
+        $this->render = ["add", "default"];
         $this->maint = Parse::getData('Elecciones.Rutas/RutasAddMaint');
         parent::add($return);
     }
@@ -21,7 +21,7 @@ class RutasController extends AppController {
     }
 
     public function view($id = null, $return = null) {
-        $this->render = array('/Rutas/view', 'default');
+        $this->render = array('gview', 'default');
         $this->maint = Parse::getData('Elecciones.Rutas/RutasMaint');
         parent::view($id, $return);
     }
@@ -106,8 +106,8 @@ class RutasController extends AppController {
             throw new NotFoundException(__('Registro inexistente.'));
         }
 
-        $this->Ruta->Query("UPDATE ele_socios SET en_ruta='No' WHERE id IN (SELECT socio_id FROM ele_socios_rutas WHERE ruta_id=" . $id . ")");
-        $this->Ruta->Query("DELETE FROM ele_socios_rutas WHERE ruta_id=" . $id);
+        $this->Ruta->Query("UPDATE ele_votantes SET en_ruta='No' WHERE id IN (SELECT votante_id FROM ele_votantes_rutas WHERE ruta_id=" . $id . ")");
+        $this->Ruta->Query("DELETE FROM ele_votantes_rutas WHERE ruta_id=" . $id);
         parent::delete($id);
     }
 
@@ -124,16 +124,16 @@ class RutasController extends AppController {
                 throw new NotFoundException(__('Registro #' . $id . ' inexistente'));
             }
 
-            $socios = $data_ruta['SocioPadron'];
+            $votantes = $data_ruta['Votante'];
 
             $data = array();
             $i = 65;
             $markers = '';
 
-            foreach ($socios as $socio) {
-                if ($socio["en_ruta"] != "Verificado") {
-                    $data[chr($i)] = $socio;
-                    $markers .= '&markers=label:' . chr($i) . '%7C' . str_replace(" ", "", $socio['coordenadas']);
+            foreach ($votantes as $votante) {
+                if ($votante["en_ruta"] != "Verificado") {
+                    $data[chr($i)] = $votante;
+                    $markers .= '&markers=label:' . chr($i) . '%7C' . str_replace(" ", "", $votante['location']);
                     $i++;
                 }
             }
@@ -174,10 +174,10 @@ class RutasController extends AppController {
             // Tabla
             //$pdf->AddPage();
             $pdf->Ln(155);
-            $w = array(4, 50, 40, 12, 12, 20, 30, 30);
+            $w = array(5, 50, 50, 60, 10);
 
             $pdf->SetFont('Arial', 'B', 9);
-            $header = array('#', 'Nombre', 'Calle', 'Altura', 'CP', 'Barrio', 'Localidad', 'Partido');
+            $header = array('#', 'Nombre', 'Apellido', 'Calle', 'Altura');
             for ($i = 0; $i < count($header); $i++) {
                 $pdf->Cell($w[$i], 6, utf8_decode($header[$i]), 1, 0, 'C');
             }
@@ -188,21 +188,14 @@ class RutasController extends AppController {
             $pdf->SetTextColor(0);
             $fill = false;
             foreach ($data as $num => $row) {
-                $nombre = substr(utf8_decode($row['nombre']), 0, 26) . (strlen($row['nombre']) > 26 ? '...' : '');
-                $calle = substr(utf8_decode($row['calle']), 0, 22) . (strlen($row['calle']) > 22 ? '...' : '');
-                $barrio = substr(utf8_decode($row['barrio_google']), 0, 13) . (strlen($row['barrio_google']) > 13 ? '...' : '');
-                $localidad = $row['localidad_google'] == "Ciudad Autónoma de Buenos Aires" ? "CABA" : (substr(utf8_decode($row['localidad_google']), 0, 30) . (strlen($row['localidad_google']) > 30 ? '...' : ''));
-                $partido = $row['partido_google'] == "Ciudad Autónoma de Buenos Aires" ? "CABA" : (substr(utf8_decode($row['partido_google']), 0, 30) . (strlen($row['partido_google']) > 30 ? '...' : ''));
-                $localidad = $row['localidad_google'] == "Ciudad Autónoma de Buenos Aires" ? "CABA" : (substr(utf8_decode($row['localidad_google']), 0, 30) . (strlen($row['localidad_google']) > 30 ? '...' : ''));
-
+                $nombre = substr(utf8_decode($row['nombre'] . " " . $row['apellido']), 0, 26) . (strlen($row['nombre'] . " " . $row['apellido']) > 26 ? '...' : '');
+                $calle = substr(utf8_decode($row['route']), 0, 22) . (strlen($row['route']) > 22 ? '...' : '');
+                
                 $pdf->Cell($w[0], 6, $num, 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[1], 6, $nombre, 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[2], 6, $calle, 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[3], 6, $row['altura'], 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[4], 6, $row['codigo_postal'], 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[5], 6, $barrio, 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[6], 6, $localidad, 'LR', 0, 'C', $fill);
-                $pdf->Cell($w[7], 6, $partido, 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[1], 6, $row['nombre'], 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[2], 6, $row['apellido'], 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[3], 6, $row['route'], 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[4], 6, $row['street_number'], 'LR', 0, 'C', $fill);
                 $pdf->Ln();
                 $fill = !$fill;
             }
@@ -249,8 +242,8 @@ class RutasController extends AppController {
                 $this->set('data', array('status' => 'ERROR 2'));
                 return $this->render('/ajax', 'ajax');
             }
-            $query1 = $db->Query("UPDATE ele_socios SET en_ruta = 'Si' WHERE id=" . $marker);
-            $query2 = $db->Query("INSERT INTO ele_socios_rutas (socio_id, ruta_id) VALUES (" . $marker . ", " . $this->Ruta->id . ")");
+            $query1 = $db->Query("UPDATE ele_votantes SET en_ruta = 'Si' WHERE id=" . $marker);
+            $query2 = $db->Query("INSERT INTO ele_votantes_rutas (votante_id, ruta_id) VALUES (" . $marker . ", " . $this->Ruta->id . ")");
 
             if ($query1 === false || $query2 === false) {
                 $db->rollback();
@@ -266,7 +259,7 @@ class RutasController extends AppController {
 
     public function etiquetar($id = null) {
         $this->Ruta->etiquetar($id);
-        $this->redirect(WWW . "rutas/index/last");
+        $this->redirect(WWW . "elecciones/rutas/index/last");
     }
 
     public function carta($id = null) {

@@ -53,22 +53,16 @@
             <field name="tmp_id" label="Mapa" presentation="RUTAS::MAPA" readonly="true" />
         </fieldset>
         
-        <table title="Socios" id="socios" paginate="false" model="SocioPadron" assoc="true" multiple="true" orderby="SocioPadron.calle ASC, SocioPadron.altura ASC">            
+        <table title="Votantes" id="votantes" paginate="false" model="Votante" assoc="true" multiple="true" orderby="Votante.route ASC, Votante.street_number ASC">            
             <conditions>
-                <condition field="SocioPadron.en_ruta !=" values="Verificado" />
+                <condition field="Votante.en_ruta !=" values="Verificado" />
             </conditions>
             
-            <field name="SocioPadron.en_ruta" label="Estado" presentation="SOCIOS_PADRON::ESTADO_SOCIO" isvisible="false" />
-            <field name="SocioPadron.nombre" label="Nombre" />
-            <field name="SocioPadron.calle_google" label="Calle" />
-            <field name="SocioPadron.altura_google" label="Altura" />
-            <field name="SocioPadron.piso" label="Piso" />
-            <field name="SocioPadron.dpto" label="Dto." />
-            <field name="SocioPadron.codigo_postal" label="CP" />
-            <field name="SocioPadron.barrio_google" label="Barrio" />
-            <field name="SocioPadron.localidad_google" label="Localidad" />
-            <field name="SocioPadron.partido_google" label="Partido" />
-            <field name="SocioPadron.provincia_google" label="Provincia" />
+            <field name="Votante.en_ruta" label="Estado" presentation="SOCIOS_PADRON::ESTADO_SOCIO" isvisible="false" />
+            <field name="nombre" label="Nombre" />
+            <field name="apellido" label="Apellido" />
+            <field name="route" label="Calle" />
+            <field name="street_number" label="Altura" />
         </table>
     </tablemaint>
          

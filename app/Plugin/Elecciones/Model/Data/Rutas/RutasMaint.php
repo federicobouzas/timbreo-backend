@@ -82,72 +82,42 @@ protected $data = array (
             array (
                 0 => 
                 array (
-                    'name' => 'SocioPadron.en_ruta',
+                    'name' => 'Votante.en_ruta',
                     'label' => 'Estado',
                     'presentation' => 'SOCIOS_PADRON::ESTADO_SOCIO',
                     'isvisible' => false,
                 ),
                 1 => 
                 array (
-                    'name' => 'SocioPadron.nombre',
+                    'name' => 'nombre',
                     'label' => 'Nombre',
                 ),
                 2 => 
                 array (
-                    'name' => 'SocioPadron.calle_google',
-                    'label' => 'Calle',
+                    'name' => 'apellido',
+                    'label' => 'Apellido',
                 ),
                 3 => 
                 array (
-                    'name' => 'SocioPadron.altura_google',
-                    'label' => 'Altura',
+                    'name' => 'route',
+                    'label' => 'Calle',
                 ),
                 4 => 
                 array (
-                    'name' => 'SocioPadron.piso',
-                    'label' => 'Piso',
-                ),
-                5 => 
-                array (
-                    'name' => 'SocioPadron.dpto',
-                    'label' => 'Dto.',
-                ),
-                6 => 
-                array (
-                    'name' => 'SocioPadron.codigo_postal',
-                    'label' => 'CP',
-                ),
-                7 => 
-                array (
-                    'name' => 'SocioPadron.barrio_google',
-                    'label' => 'Barrio',
-                ),
-                8 => 
-                array (
-                    'name' => 'SocioPadron.localidad_google',
-                    'label' => 'Localidad',
-                ),
-                9 => 
-                array (
-                    'name' => 'SocioPadron.partido_google',
-                    'label' => 'Partido',
-                ),
-                10 => 
-                array (
-                    'name' => 'SocioPadron.provincia_google',
-                    'label' => 'Provincia',
+                    'name' => 'street_number',
+                    'label' => 'Altura',
                 ),
             ),
-            'id' => 'socios',
+            'id' => 'votantes',
             'paginate' => false,
-            'title' => 'Socios',
-            'model' => 'SocioPadron',
-            'orderby' => 'SocioPadron.calle ASC, SocioPadron.altura ASC',
+            'title' => 'Votantes',
+            'model' => 'Votante',
+            'orderby' => 'Votante.route ASC, Votante.street_number ASC',
             'assoc' => true,
             'multiple' => true,
             'conditions' => 
             array (
-                'SocioPadron.en_ruta !=' => 'Verificado',
+                'Votante.en_ruta !=' => 'Verificado',
             ),
         ),
     ),
