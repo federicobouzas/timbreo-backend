@@ -122,6 +122,11 @@ function generarRuta(modal_id) {
                 });
             });
         }
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < markersRuta.length; i++) {
+            bounds.extend(markersRuta[i].getPosition());
+        }
+        confirmMap.fitBounds(bounds);
     }, 500);
 
     $('#buttonConfirmarRuta').click(function () {
