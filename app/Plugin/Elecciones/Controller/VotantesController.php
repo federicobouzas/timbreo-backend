@@ -46,7 +46,7 @@ class VotantesController extends AppController {
         $this->maint = Parse::getData('Elecciones.Votantes/VotantesMaint');
         parent::view($id, $return);
     }
-    
+
     public function etiquetar($id = null) {
         $this->Votante->etiquetar($id);
         $this->redirect(WWW . "elecciones/votantes/index/last");
@@ -55,6 +55,20 @@ class VotantesController extends AppController {
     public function carta($id = null) {
         $this->Votante->carta($id);
         exit(0);
+    }
+
+    public function ajax_get_votantes() {
+        $this->Votante->recursive = -1;
+        $data = $this->Votante->find('all', [
+            "limit" => 10,
+            "fields" => ["id", "location", "domicilio", "nombre", "apellido"],
+            'conditions' => [
+                "estado_geo" => "Geolocalizado",
+                "en_ruta" => "No",
+            ]
+        ]);
+        $this->set('data', $data);
+        return $this->render("/ajax", "ajax");
     }
 
 }

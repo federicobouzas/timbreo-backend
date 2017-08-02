@@ -5,54 +5,41 @@ var MAX_MARKERS = 99;
 
 $(function () {
     map = new google.maps.Map(document.getElementById("mapa"), {
-        zoom: 10,
-        center: new google.maps.LatLng(-34.619, -58.46),
+        zoom: 13,
+        center: new google.maps.LatLng(-34.183335, -58.959264),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    //plotear();
-
-    crearModalGenerarRuta('windowConfirmarRuta', 'buttonGenerarRuta');
     $('#buttonGenerarRuta').click(function () {
         generarRuta('windowConfirmarRuta');
     });
 });
 
 function plotear() {
-    $("#loading-subsidios").fadeIn(500);
-    var marker;
-
+    loadingAjaxStart();
     for (var i in markers) {
         markers[i].setMap(null);
     }
-
-    markers = new Array();
-
-    var comuna = $("#RutaComuna").val() || "";
-    var barrio = $("#RutaBarrio").val() || "";
-    var localidad = $("#RutaLocalidad").val() || "";
-    var partido = $("#RutaPartido").val() || "";
-    var provincia = $("#RutaProvincia").val() || "";
-
-    var data = sync_request("GENERAR_PLOTEO", "ajax_get_coordenadas", '{"comuna":"' + comuna + '", "barrio":"' + barrio + '", "localidad":"' + localidad + '", "partido":"' + partido + '", "provincia":"' + provincia + '"}');
-    $("#loading-subsidios").fadeOut(500, function () {
-        if (empty(data)) {
+    markers = [];
+    $.get(WWW + "elecciones/votantes/ajax_get_votantes", function (data) {
+        loadingAjaxEnd();
+        var jdata = $.parseJSON(data);
+        if (empty(jdata)) {
             bootbox.alert('<h4>No se encontraron subsidios.</h4>');
         }
+        for (var i in jdata) {
+            var location = jdata[i].Votante.location.split(",");
+            var marker = new google.maps.Marker({
+                id: jdata[i].Votante.id,
+                domicilio: jdata[i].Votante.domicilio,
+                map: map,
+                title: jdata[i].Votante.domicilio,
+                position: new google.maps.LatLng(location[0], location[1]),
+                icon: "https://lh3.ggpht.com/hx6IeSRualApBd7KZB9s2N7bcHZIjtgr9VEuOxHzpd05_CZ6RxZwehpXCRN-1ps3HuL0g8Wi=w9-h9"
+            });
+            markers.push(marker);
+        }
     });
-
-    for (var i in data) {
-        marker = new google.maps.Marker({
-            id: data[i]['id'],
-            domicilio: data[i]['domicilio'],
-            //map: map,
-            title: data[i]['domicilio'] + ", Comuna " + data[i]['comuna'],
-            position: new google.maps.LatLng(data[i]['coordenadas'][0], data[i]['coordenadas'][1]),
-            //icon: "https://lh3.ggpht.com/hx6IeSRualApBd7KZB9s2N7bcHZIjtgr9VEuOxHzpd05_CZ6RxZwehpXCRN-1ps3HuL0g8Wi=w9-h9"
-        });
-        markers.push(marker);
-    }
-    new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
 
 function getMarkersCurrentViewport() {
@@ -67,20 +54,18 @@ function getMarkersCurrentViewport() {
 }
 
 function generarRuta(modal_id) {
-    var marker;
-    var modal = $("[id='" + modal_id + "']");
-    var width = 640; // var width = screen.width * 0.45;
-    var height = 500; // var height = screen.height * 0.63;
+    var width = 570; // var width = screen.width * 0.45;
+    var height = 495; // var height = screen.height * 0.63;
     var html = '';
 
     var markers = getMarkersCurrentViewport();
 
-    html += '<div class="col-sm-7 mt15">';
+    html += '<div class="col-sm-8 mt15">';
     html += '<div id="mapaConfirmarRuta" style="width: ' + width + 'px; height: ' + height + 'px;"></div>';
     html += '</div>';
-    html += '<div class="col-sm-5 mt15">';
+    html += '<div class="col-sm-4 mt5">';
     html += '<div class="col-sm-12">';
-    html += '<div class="page-header mt0"><h2 class="mt0">Domicilios de la Ruta (<span id="ul_length">' + markers.length + '</span>)</h2></div>';
+    html += '<div class="page-header mt0"><h4 class="mt0">Domicilios de la Ruta (<span id="ul_length">' + markers.length + '</span>)</h4></div>';
     html += '<ul style="height: 224px; overflow-y: scroll; overflow-x: hidden;">';
     for (var i in markers) {
         html += '<li id="li_' + markers[i].id + '">' + markers[i].domicilio + '</li>';
@@ -95,7 +80,7 @@ function generarRuta(modal_id) {
     html += '</div>';
     html += '<div class="clearfix"></div>';
 
-    var d = bootbox.alert({size: 'large', className: 'subsidios', message: html});
+    bootbox.alert({size: 'large', className: 'subsidios', message: html});
     window.setTimeout(function () {
         var myOptions = {
             zoom: map.getZoom() - 1,
@@ -120,7 +105,7 @@ function generarRuta(modal_id) {
                 id: markers[i].id,
                 domicilio: markers[i].domicilio,
                 title: markers[i].title,
-                //icon: "https://lh3.ggpht.com/hx6IeSRualApBd7KZB9s2N7bcHZIjtgr9VEuOxHzpd05_CZ6RxZwehpXCRN-1ps3HuL0g8Wi=w9-h9"
+                icon: "https://lh3.ggpht.com/hx6IeSRualApBd7KZB9s2N7bcHZIjtgr9VEuOxHzpd05_CZ6RxZwehpXCRN-1ps3HuL0g8Wi=w9-h9"
             });
             markersRuta[i] = marker;
 
@@ -141,24 +126,19 @@ function generarRuta(modal_id) {
 
     $('#buttonConfirmarRuta').click(function () {
         var cant = 0;
-
         for (var i in markersRuta) {
             if (markersRuta[i] !== null) {
                 cant++;
             }
         }
-
         if (cant == 0) {
             bootbox.alert('<h4>Debe especificar al menos un domicilio para generar la ruta.</h4>');
             return;
         }
-
-
         if (cant > MAX_MARKERS) {
             bootbox.alert('<h4>Puede especificar un máximo de ' + MAX_MARKERS + ' domicilios por ruta.</h4>');
             return;
         }
-
         bootbox.confirm('<h4>¿Confirma generar una ruta con los domicilios indicados?</h4>', function (r) {
             if (r) {
                 var ids = new Array();
@@ -175,12 +155,11 @@ function generarRuta(modal_id) {
                     "informacion": $("#rutaInformacion").val(),
                     "markers": ids.join(",")
                 };
-                $.post(WWW + "rutas/confirmar", params, function (data) {
+                $.post(WWW + "elecciones/rutas/confirmar", params, function (data) {
                     var jdata = $.parseJSON(data);
                     if (jdata.status == "OK") {
-                        window.location = WWW + 'rutas';
+                        window.location = WWW + 'elecciones/rutas/index';
                     } else {
-                        modal.data("kendoWindow").close();
                         bootbox.alert('<h4>Se produjo un error creando la ruta, intente nuevamente.</h4>');
                     }
                 });
@@ -188,22 +167,4 @@ function generarRuta(modal_id) {
         });
     });
 
-}
-
-function crearModalGenerarRuta(modal_id, button_id) {
-    var modal = $("[id='" + modal_id + "']");
-    var width = 1100; // var width = screen.width * 0.70;
-    var height = 520; // var height = screen.height * 0.65;
-
-    modal.kendoWindow({
-        width: width + "px",
-        height: height + "px",
-        title: "Confirmar Ruta",
-        actions: ["Maximize", "Close"],
-        iframe: false,
-        modal: true,
-        visible: false,
-        show: "fadeIn",
-        hide: "fadeOut"
-    });
 }
