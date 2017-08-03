@@ -68,11 +68,12 @@ class Ruta extends AppModel {
         foreach ($ruta["Votante"] as $votante) {
             $nombre = utf8_decode(ucwords(strtolower($votante["nombre"] . " " . $votante["apellido"])) . ":");
             $pdf->SetAutoPageBreak(false);
+            $pdf->SetTopMargin(10.7);
             $pdf->AddPage();
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetTextColor(51, 51, 51);
-            $pdf->Ln(18);
-            $pdf->Cell(27);
+            $pdf->Ln(10);
+            $pdf->Cell(24);
             $pdf->Cell(0, 60, $nombre, 0);
         }
         $pdf->Output();

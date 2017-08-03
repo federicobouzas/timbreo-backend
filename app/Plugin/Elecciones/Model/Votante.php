@@ -35,7 +35,7 @@ class Votante extends AppModel {
         $str .= "N\n";
         $str .= "A20,2,0,4,2,1,R,\" CAMBIEMOS   \"\n";
         $str .= "A20,26,0,4,1,1,R,\"     Abella - Roses     \"\n";
-        $str .= "A20,65,0,4,1,1,N,\"" . fixString($votante["nombre"]) . "\"\n";
+        $str .= "A20,65,0,4,1,1,N,\"" . fixString($votante["nombre"]) . " " . fixString($votante["apellido"]) . "\"\n";
         $str .= "A20,90,0,3,1,1,N,\"" . fixString(substr($votante["route"], 0, 22)) . " " . $votante["street_number"] . "\"\n";
         $str .= "LO20,125,500,2\n";
         $str .= "A20,135,0,2,1,1,N,\"Campana\"\n";
@@ -55,11 +55,12 @@ class Votante extends AppModel {
         $votante = $this->findById($id);
         $nombre = utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":");
         $pdf->SetAutoPageBreak(false);
+        $pdf->SetTopMargin(10.7);
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(51, 51, 51);
-        $pdf->Ln(18);
-        $pdf->Cell(27);
+        $pdf->Ln(10);
+        $pdf->Cell(24);
         $pdf->Cell(0, 60, $nombre, 0);
         $pdf->Output();
     }
