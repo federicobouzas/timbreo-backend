@@ -7,8 +7,8 @@ class GeolocateShell extends AppShell {
 
     public $uses = array('Elecciones.Votante');
     public $limit = false;
-    public $max = 2450;
-    public $key = "AIzaSyDIG-GS-Ji2ziiBBIWrUnt34RWqEytiRPQ";
+    public $max = 30000;
+    public $key = "AIzaSyDts9s5QdHWCv9mywGWpJ8xxSuTx-BvWzs";
 
     public function main() {
         $this->out("GEOLOCALIZANDO " . date("d/m/Y H:i"));
