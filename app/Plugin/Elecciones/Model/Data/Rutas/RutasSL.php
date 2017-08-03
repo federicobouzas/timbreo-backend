@@ -21,36 +21,31 @@ protected $data = array (
     array (
         0 => 
         array (
-            'op' => 'V',
-            'action' => 'view',
-        ),
-        1 => 
-        array (
             'op' => 'P',
             'action' => 'imprimir',
             'label' => 'Imprimir Ruta',
         ),
-        2 => 
+        1 => 
         array (
             'op' => 'V',
             'action' => 'carta',
             'icon' => 'file-text-o',
             'label' => 'Imprimir Cartas',
         ),
-        3 => 
+        2 => 
         array (
             'op' => 'V',
             'action' => 'etiquetar',
             'icon' => 'envelope',
             'label' => 'Imprimir Etiquetas',
         ),
-        4 => 
+        3 => 
         array (
             'op' => 'D',
             'action' => 'delete',
             'post' => '¿Estás seguro de borrar el registro?',
         ),
-        5 => 
+        4 => 
         array (
             'op' => 'A',
             'action' => 'add',

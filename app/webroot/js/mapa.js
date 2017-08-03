@@ -1,7 +1,4 @@
-var map, confirmMap;
-var markers = new Array();
-var markersRuta = new Array();
-var MAX_MARKERS = 99;
+var map, confirmMap, markers = [], markersRuta = [], MAX_MARKERS = 99;
 
 $(function () {
     map = new google.maps.Map(document.getElementById("mapa"), {
@@ -53,7 +50,8 @@ function getMarkersCurrentViewport() {
     return array;
 }
 
-function generarRuta(modal_id) {
+function generarRuta() {
+    markersRuta = [];
     var width = 570; // var width = screen.width * 0.45;
     var height = 495; // var height = screen.height * 0.63;
     var html = '';

@@ -4,7 +4,7 @@
         <cssinclude file="rutas.css" />
         
         <actions>
-            <action op="V" action="view" />
+            <!--<action op="V" action="view" />-->
             <action op="P" action="imprimir" label="Imprimir Ruta" />
             <action op="V" action="carta" icon="file-text-o" label="Imprimir Cartas" />            
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiquetas" />
@@ -24,7 +24,6 @@
         <listfield name="Ruta.fecha_carga" label="Fecha Carga" presentation="DATETIME" classparams="{'no_seconds':true}" />
         <listfield name="Ruta.encargado" label="Encargado" />
         <listfield name="Ruta.realizada" label="Realizada" presentation="RUTAS::ESTADO_RUTA" />
-        <!--<listfield name="Ruta.tmp_id" label="Imprimir" presentation="RUTAS::IMPRIMIR" />-->
     </search_list>
            
     <tablemaint file="RutasAddMaint.php">

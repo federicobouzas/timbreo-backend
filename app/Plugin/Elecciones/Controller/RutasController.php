@@ -21,7 +21,6 @@ class RutasController extends AppController {
     }
 
     public function view($id = null, $return = null) {
-        $this->render = array('gview', 'default');
         $this->maint = Parse::getData('Elecciones.Rutas/RutasMaint');
         parent::view($id, $return);
     }
