@@ -7,13 +7,13 @@ $this->Html->script('mapa.js', array('inline' => false));
 <form action="/rutas/add" id="RutaAddForm" enctype="multipart/form-data" method="post" accept-charset="utf-8" onsubmit="plotear();
         return false;">
     <fieldset>
-        <div class="pull-left mt15 col-sm-7" style="width: 700px;">
-            <div id="mapa" style="width: 690px; height: 600px;"></div>
+        <div class="pull-left mt15 col-sm-10">
+            <div id="mapa" style="width: 1030px; height: 600px;"></div>
         </div>
-        <div class="pull-left mt15 col-sm-5">
-            <div class="ml10 form-inline pull-left">
+        <div class="pull-left mt15 col-sm-2">
+            <div class="form-inline col-sm-12 text-center">
                 <label for="circuito">Circuito</label>
-                <select id="circuito" name="circuito" class="form-control">
+                <select id="circuito" name="circuito" class="ml10 form-control">
                     <option value=""></option>
                     <option value="155">155</option>
                     <option value="155A">155A</option>
@@ -22,11 +22,11 @@ $this->Html->script('mapa.js', array('inline' => false));
                     <option value="156B">156B</option>
                 </select>  
             </div>
-            <div class="pull-left">
-                <a class="btn btn-primary ml25 pull-left" id="plotearRuta" data-toggle="tooltip" data-placement="top" title="Plotear Votantes" href="javascript:void(0);" onclick="plotear();"><i class="fa fa-map-marker"></i> Plotear</a>
+            <div class="col-sm-12 mt25 text-center">
+                <a class="btn btn-primary" id="plotearRuta" data-toggle="tooltip" data-placement="top" title="Plotear Votantes" href="javascript:void(0);" onclick="plotear();"><i class="fa fa-map-marker"></i> Plotear</a>
             </div>
-            <div class="pull-left">
-                <a class="btn btn-primary ml25 pull-left" id="generarRuta" data-toggle="tooltip" data-placement="top" title="Generar Ruta" href="javascript:void(0);" onclick="generarRuta();"><i class="fa fa-map"></i> Ruta</a>
+            <div class="col-sm-12 mt25 text-center">
+                <a class="btn btn-primary" id="generarRuta" data-toggle="tooltip" data-placement="top" title="Generar Ruta" href="javascript:void(0);" onclick="generarRuta();"><i class="fa fa-map"></i> Ruta</a>
             </div>
         </div>
     </fieldset>
