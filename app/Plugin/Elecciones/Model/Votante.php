@@ -66,3 +66,4 @@ class Votante extends AppModel {
     }
 
 }
+ 
