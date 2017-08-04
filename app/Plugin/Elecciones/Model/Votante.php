@@ -25,7 +25,7 @@ class Votante extends AppModel {
         )
     );
 
-    public function etiquetar($id = null, $string = false) {
+    public function etiquetar($id = null, $string = false, $impresora = "") {
         $configuration = getSystemConfiguration();
         $votante = $this->findById($id)["Votante"];
         $filename = APP . "tmp" . DS . "files" . DS . "label.epl";
@@ -45,7 +45,7 @@ class Votante extends AppModel {
             return $str;
         }
         file_put_contents($filename, $str);
-        $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi_user"] . ':' . $configuration["hamachi_pass"] . '@' . $configuration["hamachi_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
+        $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi" . $impresora . "_user"] . ':' . $configuration["hamachi" . $impresora . "_pass"] . '@' . $configuration["hamachi" . $impresora . "_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
         shell_exec($cmdImpresion);
     }
 

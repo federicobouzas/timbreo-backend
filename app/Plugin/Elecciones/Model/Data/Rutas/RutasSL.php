@@ -11,11 +11,12 @@ protected $data = array (
     'title' => '',
     'jsincludes' => 
     array (
-        0 => 'rutas/index',
+        0 => 'elecciones/rutas.js',
+        1 => 'rutas/index',
     ),
     'cssincludes' => 
     array (
-        0 => 'rutas.css',
+        0 => 'elecciones/rutas.css',
     ),
     'actions' => 
     array (
@@ -41,11 +42,18 @@ protected $data = array (
         ),
         3 => 
         array (
+            'op' => 'V',
+            'action' => 'etiquetar2',
+            'icon' => 'envelope',
+            'label' => 'Imprimir Etiquetas 2',
+        ),
+        4 => 
+        array (
             'op' => 'D',
             'action' => 'delete',
             'post' => '¿Estás seguro de borrar el registro?',
         ),
-        4 => 
+        5 => 
         array (
             'op' => 'A',
             'action' => 'add',

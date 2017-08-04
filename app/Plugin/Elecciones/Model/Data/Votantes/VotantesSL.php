@@ -9,6 +9,14 @@ class VotantesSL extends AbstractData {
 protected $data = array (
     'translatepath' => NULL,
     'title' => '',
+    'jsincludes' => 
+    array (
+        0 => 'votantes/votantes_sl.js',
+    ),
+    'cssincludes' => 
+    array (
+        0 => 'elecciones/votantes_sl.css',
+    ),
     'actions' => 
     array (
         0 => 
@@ -26,6 +34,13 @@ protected $data = array (
             'label' => 'Imprimir Etiqueta',
         ),
         2 => 
+        array (
+            'op' => 'V',
+            'action' => 'etiquetar2',
+            'icon' => 'envelope',
+            'label' => 'Imprimir Etiqueta 2',
+        ),
+        3 => 
         array (
             'op' => 'E',
             'action' => 'edit',

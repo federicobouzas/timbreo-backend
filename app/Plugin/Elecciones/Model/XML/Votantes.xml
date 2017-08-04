@@ -1,6 +1,9 @@
 <Votantes>
     
-    <search_list file="VotantesSL.php">              
+    <search_list file="VotantesSL.php">    
+        <jsinclude file="votantes/votantes_sl.js" />          
+        <cssinclude file="elecciones/votantes_sl.css" />          
+        
         <searchfield name="matricula" label="Matrícula"/>
         <searchfield name="clase" label="Clase"/>
         <searchfield name="apellido" label="Apellido"/>
@@ -27,6 +30,7 @@
         <actions>
             <action op="V" action="carta" icon="file-text-o" label="Imprimir Carta" />
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiqueta" />
+            <action op="V" action="etiquetar2" icon="envelope" label="Imprimir Etiqueta 2" />
             <action op="E" action="edit" />
         </actions>
     </search_list>

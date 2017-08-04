@@ -51,6 +51,11 @@ class VotantesController extends AppController {
         $this->Votante->etiquetar($id);
         $this->redirect(WWW . "elecciones/votantes/index/last");
     }
+    
+    public function etiquetar2($id = null) {
+        $this->Votante->etiquetar($id, false, "2");
+        $this->redirect(WWW . "elecciones/votantes/index/last");
+    }
 
     public function carta($id = null) {
         $this->Votante->carta($id);

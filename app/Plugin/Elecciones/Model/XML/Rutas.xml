@@ -1,13 +1,15 @@
 <Rutas>
     
     <search_list file="RutasSL.php">
-        <cssinclude file="rutas.css" />
+        <jsinclude file="elecciones/rutas.js" />
+        <cssinclude file="elecciones/rutas.css" />
         
         <actions>
             <!--<action op="V" action="view" />-->
             <action op="P" action="imprimir" label="Imprimir Ruta" />
             <action op="V" action="carta" icon="file-text-o" label="Imprimir Cartas" />            
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiquetas" />
+            <action op="V" action="etiquetar2" icon="envelope" label="Imprimir Etiquetas 2" />
             <action op="D" action="delete" post="¿Estás seguro de borrar el registro?" />
             <action op="A" action="add" global="true" label="Cargar Ruta" />
         </actions>

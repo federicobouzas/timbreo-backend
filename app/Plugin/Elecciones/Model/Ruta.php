@@ -34,7 +34,7 @@ class Ruta extends AppModel {
         return parent::afterSave($created, $options);
     }
 
-    public function etiquetar($id) {
+    public function etiquetar($id, $impresora = "") {
         $configuration = getSystemConfiguration();
         $ruta = $this->findById($id);
         $filename = APP . "tmp" . DS . "files" . DS . "label.epl";
@@ -50,7 +50,7 @@ class Ruta extends AppModel {
             $str .= $this->Votante->etiquetar($votante["id"]);
         }
         file_put_contents($filename, $str);
-        $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi_user"] . ':' . $configuration["hamachi_pass"] . '@' . $configuration["hamachi_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
+        $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi" . $impresora . "_user"] . ':' . $configuration["hamachi" . $impresora . "_pass"] . '@' . $configuration["hamachi" . $impresora . "_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
         shell_exec($cmdImpresion);
     }
 

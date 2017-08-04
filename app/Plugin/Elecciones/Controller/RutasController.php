@@ -260,6 +260,11 @@ class RutasController extends AppController {
         $this->Ruta->etiquetar($id);
         $this->redirect(WWW . "elecciones/rutas/index/last");
     }
+    
+    public function etiquetar2($id = null) {
+        $this->Ruta->etiquetar($id, "2");
+        $this->redirect(WWW . "elecciones/rutas/index/last");
+    }
 
     public function carta($id = null) {
         $this->Ruta->carta($id);
