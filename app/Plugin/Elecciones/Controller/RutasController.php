@@ -256,14 +256,14 @@ class RutasController extends AppController {
         return $this->render('/ajax', 'ajax');
     }
 
-    public function etiquetar($id = null) {
+    public function etiquetar($id = null, $next = null) {
         $this->Ruta->etiquetar($id);
-        $this->redirect(WWW . "elecciones/rutas/index/last");
+        $this->redirect(getNextUrl($next));
     }
     
-    public function etiquetar2($id = null) {
+    public function etiquetar2($id = null, $next = null) {
         $this->Ruta->etiquetar($id, "2");
-        $this->redirect(WWW . "elecciones/rutas/index/last");
+        $this->redirect(getNextUrl($next));
     }
 
     public function carta($id = null) {
