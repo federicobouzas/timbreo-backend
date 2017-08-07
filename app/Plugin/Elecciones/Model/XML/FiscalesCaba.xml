@@ -1,0 +1,30 @@
+<FiscalesCaba>
+    
+    <search_list file="FiscalesCabaSL.php">
+        <searchfield name="area" label="Área" />
+        <searchfield name="referente" label="Referente" />
+        <searchfield name="apellido" label="Apellido" />
+        <searchfield name="nombre" label="Nombre" />
+        <searchfield name="dni" label="DNI" presentation="INT" />
+        <searchfield name="barrio_vota" label="Barrio" presentation="GEOLOCALIZACION::BARRIOS" />
+        <searchfield name="comuna_vota" label="Comuna" presentation="GEOLOCALIZACION::COMUNAS" />
+        <searchfield name="fue_fiscal" label="Fue Fiscal" presentation="SINO" />
+        <searchfield name="capacitado" label="Capacitado" presentation="SINO" />
+        
+        <listfield name="area" label="Área" />
+        <listfield name="referente" label="Referente" />
+        <listfield name="apellido" label="Apellido" />
+        <listfield name="nombre" label="Nombre" />
+        <listfield name="dni" label="DNI" />
+        <listfield name="telefono" label="Teléfono" />
+        <listfield name="email" label="Email" />
+        <listfield name="barrio_vota" label="Barrio" />
+        <listfield name="comuna_vota" label="Comuna" />
+        <listfield name="fue_fiscal" label="Fue Fiscal" />
+        <listfield name="capacitado" label="Capacitado" />
+        <listfield name="comentarios" label="Comentarios" />
+        
+        <actions></actions>
+    </search_list>
+         
+</FiscalesCaba>

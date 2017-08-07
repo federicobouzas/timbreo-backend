@@ -9,15 +9,21 @@
         <menuitem label="Dashboard" plugin="campana" controller="cargas_campana" action="dashboard" />
         <menuitem label="Respuestas" plugin="campana" controller="cargas_campana" action="index" />
         <menuitem label="Mapa" plugin="campana" controller="cargas_campana" action="mapa" />
+        <menuitem label="Elecciones">
+            <menuitem label="Padrón">
+                <menuitem label="Importar Excel" plugin="elecciones" controller="votantes" action="import" />
+                <menuitem label="Listado" plugin="elecciones" controller="votantes" action="index" />
+            </menuitem>
+            <menuitem label="Rutas">
+                <menuitem label="Nueva" plugin="elecciones" controller="rutas" action="add" />
+                <menuitem label="Listado" plugin="elecciones" controller="rutas" action="index" />
+            </menuitem>
+        </menuitem>
     </menuitem>
-    <menuitem label="Elecciones">
-        <menuitem label="Padrón">
-            <menuitem label="Importar Excel" plugin="elecciones" controller="votantes" action="import" />
-            <menuitem label="Listado" plugin="elecciones" controller="votantes" action="index" />
-       </menuitem>
-        <menuitem label="Rutas">
-            <menuitem label="Nueva" plugin="elecciones" controller="rutas" action="add" />
-            <menuitem label="Listado" plugin="elecciones" controller="rutas" action="index" />
+    <menuitem label="CABA">
+        <menuitem label="Fiscales">
+            <menuitem label="Listado" plugin="elecciones" controller="fiscales_caba" action="index" />
+            <menuitem label="Importar" plugin="elecciones" controller="fiscales_caba" action="import" />
         </menuitem>
     </menuitem>
     <menuitem label="Administración">
