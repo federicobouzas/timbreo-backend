@@ -29,7 +29,7 @@ protected $data = array (
         1 => 
         array (
             'op' => 'V',
-            'action' => 'carta',
+            'action' => 'carta_completa',
             'icon' => 'file-text-o',
             'label' => 'Imprimir Cartas',
         ),
