@@ -47,7 +47,7 @@ class Ruta extends AppModel {
         array_multisort($domicilios, SORT_ASC, $ruta["Votante"]);
 
         foreach ($ruta["Votante"] as $votante) {
-            $str .= $this->Votante->etiquetar($votante["id"]);
+            $str .= $this->Votante->etiquetar($votante["id"], true, $impresora);
         }
         file_put_contents($filename, $str);
         $cmdImpresion = '/usr/bin/smbspool smb://' . $configuration["hamachi" . $impresora . "_user"] . ':' . $configuration["hamachi" . $impresora . "_pass"] . '@' . $configuration["hamachi" . $impresora . "_ip"] . '/zebra test-1 root "titulo" 1 "" < ' . $filename;
