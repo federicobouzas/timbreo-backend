@@ -270,5 +270,10 @@ class RutasController extends AppController {
         $this->Ruta->carta($id);
         exit(0);
     }
+    
+    public function carta_completa($id = null) {
+        $this->Ruta->carta_completa($id);
+        exit(0);
+    }
 
 }

@@ -7,7 +7,7 @@
         <actions>
             <!--<action op="V" action="view" />-->
             <action op="P" action="imprimir" label="Imprimir Ruta" />
-            <action op="V" action="carta" icon="file-text-o" label="Imprimir Cartas" />            
+            <action op="V" action="carta_completa" icon="file-text-o" label="Imprimir Cartas" />            
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiquetas" />
             <action op="V" action="etiquetar2" icon="envelope" label="Imprimir Etiquetas 2" />
             <action op="D" action="delete" post="¿Estás seguro de borrar el registro?" />

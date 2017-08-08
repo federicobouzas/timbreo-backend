@@ -28,7 +28,7 @@
         <listfield name="location" label="" presentation="GOOGLEMAP" classparams="{'list':true}" />
 
         <actions>
-            <action op="V" action="carta" icon="file-text-o" label="Imprimir Carta" />
+            <action op="V" action="carta_completa" icon="file-text-o" label="Imprimir Carta" />
             <action op="V" action="etiquetar" icon="envelope" label="Imprimir Etiqueta" />
             <action op="V" action="etiquetar2" icon="envelope" label="Imprimir Etiqueta 2" />
             <action op="E" action="edit" />

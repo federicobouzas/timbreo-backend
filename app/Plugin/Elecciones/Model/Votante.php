@@ -65,5 +65,39 @@ class Votante extends AppModel {
         $pdf->Output();
     }
 
+    public function carta_completa($id = null) {
+        include_once(CAKE_FRAMEWORK . DS . 'app' . DS . 'Lib' . DS . 'FPDF' . DS . 'fpdf.php');
+        $pdf = new FPDF();
+        $votante = $this->findById($id);
+        $nombre = utf8_decode(ucwords(strtolower($votante["Votante"]["nombre"] . " " . $votante["Votante"]["apellido"])) . ":");
+        $pdf->SetAutoPageBreak(false);
+        $pdf->SetTopMargin(10.7);
+        $pdf->AddPage();
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->SetTextColor(51, 51, 51);
+        $pdf->Image(WWW_ROOT . 'img' . DS . 'Cambiemos_logo.png', 10, 12, 50, 0, '');
+        $pdf->Ln(20);
+        $pdf->Cell(0, 10, 'Campana, Agosto 2017', 0, 0, 'R');
+        $pdf->Ln(20);
+        $pdf->Cell(0, 5, "Querido/a " . $nombre);
+        $pdf->Ln(10);
+        $pdf->MultiCell(0, 5, iconv('UTF-8', 'windows-1252', "Hace un año y medio que nos diste la oportunidad de iniciar el cambio. Sabemos que no fue fácil dar este paso juntos, y así decidimos transformar la resignación en esperanza, la desconfianza en compromiso y el desánimo en motivación. Entendimos que era necesario ser protagonistas del cambio y emprender este camino juntos, tomando decisiones con coraje, convicción y responsabilidad."));
+        $pdf->Ln(10);
+        $pdf->MultiCell(0, 5, iconv('UTF-8', 'windows-1252', "Somos gente honesta y con valores, que elije y apuesta por nuestra ciudad. Somos un equipo que tiene la convicción de representarte y no de ocupar cargos para obtener un beneficio personal. Estamos frente a este nuevo desafío, el de seguir cambiando y generando mejores oportunidades para todos. Este es el momento de decidir si queremos seguir creciendo, el momento de darnos cuenta de que vamos a superarnos sólo si los problemas nos encuentran unidos y trabajando."));
+        $pdf->Ln(10);
+        $pdf->MultiCell(0, 5, iconv('UTF-8', 'windows-1252', "Desde que asumimos decidimos hacer lo que por años se pospuso. Iniciamos las obras que tanto esperamos y que están cambiando la calidad de vida de miles de familias, mejoramos los accesos a la ciudad, llevamos a cabo la urbanización integral de barrios: cloacas, pavimento y desagües pluviales. Invertimos en infraestructura escolar e incorporamos más tecnología en seguridad y luminarias. Promovemos día a día un gobierno abierto y accesible al vecino, rindiendo cuentas y considerando tus opiniones."));
+        $pdf->Ln(10);
+        $pdf->MultiCell(0, 5, iconv('UTF-8', 'windows-1252', "Con el equipo, salimos a conocerte, escucharte y poner el cuerpo asumiendo el compromiso de la confianza que depositaste en nosotros. Todos los problemas tienen solución, sobre todo si estamos juntos."));
+        $pdf->Ln(10);
+        $pdf->MultiCell(0, 5, iconv('UTF-8', 'windows-1252', "Por todo esto, te pido que nos acompañes con tu voto el proximo 13 de Agosto y junto a Sergio Roses consigamos la mayoría en el Concejo Deliberante para que este equipo siga creciendo y haciendo todo lo posible por sostener el cambio, sin aflojar ni un segundo en el objetivo de hacer de Campana una ciudad mejor para todos nosotros."));
+        $pdf->Ln(10);
+        $pdf->Cell(0, 5, iconv('UTF-8', 'windows-1252', "Es ahora."));
+        $pdf->Ln(5);
+        $pdf->Cell(0, 5, iconv('UTF-8', 'windows-1252', "¡Juntos es posible!"));
+        $pdf->Ln(15);
+        $pdf->Cell(0, 5, iconv('UTF-8', 'windows-1252', "Un fuerte abrazo,"));
+        $pdf->Image(WWW_ROOT . 'img' . DS . 'firma-abella.jpeg', 130, 210, 70, 0, '');
+        $pdf->Output();
+    }
+
 }
- 

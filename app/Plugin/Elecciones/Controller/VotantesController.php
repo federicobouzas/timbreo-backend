@@ -61,6 +61,11 @@ class VotantesController extends AppController {
         $this->Votante->carta($id);
         exit(0);
     }
+    
+    public function carta_completa($id = null) {
+        $this->Votante->carta_completa($id);
+        exit(0);
+    }
 
     public function ajax_get_votantes() {
         $filter = array_filter($this->request->query, function($var) {
