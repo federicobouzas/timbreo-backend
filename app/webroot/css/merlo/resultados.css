@@ -17,6 +17,7 @@
     text-align: center;
     font-weight: bold;
     border: solid 1px #999;
+    border-top: 0 !important;
     border-width: 1px 0 0 1px;
     height: 90px;
     line-height: 90px;
@@ -62,4 +63,8 @@ div.input label {
 
 .error-message {
     display: none;
+}
+
+.bl0 {
+    border-left: 0 !important;
 }

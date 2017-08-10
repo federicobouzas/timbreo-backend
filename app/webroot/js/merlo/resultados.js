@@ -38,7 +38,7 @@ $(function () {
         var classPrimero = "primero";
         for (var j in agrupaciones[i][2]) {
             var html = '';
-            html += '<div class="col-sm-1 readonly ' + classPrimero + '">' + agrupaciones[i][0] + '</div>';
+            html += '<div class="col-sm-1 text-center readonly bl0 ' + classPrimero + '">' + agrupaciones[i][0] + '</div>';
             html += '<div class="col-sm-4 readonly ' + classPrimero + '">' + agrupaciones[i][1] + '</div>';
             html += '<div class="col-sm-3 readonly ' + classPrimero + '">LISTA ' + agrupaciones[i][2][j] + '</div>';
             var selector = "#agrupaciones .form-group div:nth-child(" + (linea + 1) + ")";
@@ -53,7 +53,7 @@ $(function () {
     $("#agrupaciones div.input").addClass("col-sm-1");
 
     var html = '';
-    html += '<div class="col-sm-1 cabecera">Nº</div>';
+    html += '<div class="col-sm-1 bl0 cabecera">Nº</div>';
     html += '<div class="col-sm-4 cabecera">AGRUPACIONES POLÍTICAS</div>';
     html += '<div class="col-sm-3 cabecera">LISTAS INTERNAS</div>';
     html += '<div class="col-sm-1 cabecera">SENADORES NACIONALES</div>';
@@ -65,7 +65,7 @@ $(function () {
     linea = linea + 7;
     for (var i in totales) {
         var html = '';
-        html += '<div class="col-sm-8 readonly pie primero">' + totales[i] + '</div>';
+        html += '<div class="col-sm-8 readonly bl0 pie primero">' + totales[i] + '</div>';
         var selector = "#agrupaciones .form-group div:nth-child(" + (linea + 1) + ")";
         linea = linea + 5;
         $(selector).before(html);
