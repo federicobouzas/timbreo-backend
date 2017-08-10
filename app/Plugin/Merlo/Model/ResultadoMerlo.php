@@ -11,19 +11,19 @@ class ResultadoMerlo extends AppModel {
         '501_pais_unido_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo 1PAIS - SENADORES es requerido'
+                'message' => 'El campo es requerido'
             )
         ),
         '501_pais_unido_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo 1PAIS - CONSEJALES es requerido'
+                'message' => 'El campo es requerido'
             )
         ),
         '503_celeste_blanca_u_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo UNIDAD CIUDADANA - SENADORES es requerido'
+                'message' => 'El campo es requerido'
             )
         ),
         '503_celeste_blanca_u2_con' => array(
@@ -57,6 +57,54 @@ class ResultadoMerlo extends AppModel {
             )
         ),
         '509_cumplir_4_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_agrup_sen' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_agrup_dip' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_agrup_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_agrup_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_sen' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_dip' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo es requerido'
+            )
+        ),
+        'total_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo es requerido'
