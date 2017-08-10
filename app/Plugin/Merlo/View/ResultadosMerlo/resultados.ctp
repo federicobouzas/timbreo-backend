@@ -8,53 +8,35 @@ $this->Html->css("censo/arboles_auditoria_maint", array('inline' => false));
 <div class="row mt20 mb30">
     <div class="col-lg-6">
         <div class="tabla mt20">
-            <table class="table" id="tablaColegios">
+            <table class="table" id="tablaCircuitos">
                 <thead>
                     <tr>
-                        <th rowspan="2">Colegio</th>
-                        <th rowspan="2">1PAIS</th>
-                        <th colspan="2">UNIDAD CIUDADANA</th>
-                        <th colspan="2">CAMBIEMOS BUENOS AIRES</th>
-                        <th colspan="3">FRENTE JUSTICIALISTA</th>
-                    </tr>
-                    <tr>
-                        <th>CELESTE Y BLANCA U</th>
-                        <th>CELESTE Y BLANCA U2</th>
-                        <th>CAMBIANDO JUNTOS</th>
-                        <th>1A AMARILLO</th>
-                        <th>CUMPLIR</th>
-                        <th>CUMPLIR 2</th>
-                        <th>CUMPLIR 4</th>
-                    </tr>
+                        <th>Circuito</th>
+                        <th class='text-center'>1PAIS</th>
+                        <th class='text-center'>UNIDAD CIUDADANA</th>
+                        <th class='text-center'>CAMBIEMOS BUENOS AIRES</th>
+                        <th class='text-center'>FRENTE JUSTICIALISTA</th>
+                    </tr>                   
                 </thead>
-                <tbody>
-                    
-                </tbody>
+                <tbody></tbody>
             </table>
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6" style="max-height: 500px; overflow-y: scroll;">
         <div class="tabla mt20">
             <table class="table" id="tablaColegios">
                 <thead>
                     <tr>
-                        <th rowspan="2">Colegio</th>
-                        <th rowspan="2">1PAIS</th>
-                        <th colspan="2">UNIDAD CIUDADANA</th>
-                        <th colspan="2">CAMBIEMOS BUENOS AIRES</th>
-                        <th colspan="3">FRENTE JUSTICIALISTA</th>
-                    </tr>
-                    <tr>
-                        <th>CELESTE Y BLANCA U</th>
-                        <th>CELESTE Y BLANCA U2</th>
-                        <th>CAMBIANDO JUNTOS</th>
-                        <th>1A AMARILLO</th>
-                        <th>CUMPLIR</th>
-                        <th>CUMPLIR 2</th>
-                        <th>CUMPLIR 4</th>
-                    </tr>
+                        <th>Colegio</th>
+                        <th class='text-center'>1PAIS</th>
+                        <th class='text-center'>UNIDAD CIUDADANA</th>
+                        <th class='text-center'>CAMBIEMOS</th>
+                        <th class='text-center'>PJ</th>
+                    </tr>  
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    
+                </tbody>
             </table>
         </div>
     </div>

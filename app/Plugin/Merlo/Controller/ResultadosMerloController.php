@@ -38,60 +38,33 @@ class ResultadosMerloController extends AppController {
     }
 
     public function ajax_get_resultados_colegios() {
-        $data = [];
-        $censistas = $this->ResultadoMerlo->find("all", [
+        $data = $this->ResultadoMerlo->find("all", [
             "fields" => ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_sen) AS 501_pais_unido_sen",
-                'SUM(503_celeste_blanca_u_sen) as 503_celeste_blanca_u_sen',
-                'SUM(503_celeste_blanca_u2_sen) as 503_celeste_blanca_u2_sen',
-                'SUM(508_cambiando_juntos_sen) as 508_cambiando_juntos_sen',
-                'SUM(508_amarillo_sen) as 508_amarillo_sen',
-                'SUM(509_cumplir_sen) as 509_cumplir_sen',
-                'SUM(509_cumplir_2_sen) as 509_cumplir_2_sen',
-                'SUM(509_cumplir_4_sen) as 509_cumplir_4_sen',
+                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
+                'SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 as 503_sen',
+                'SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 as 508_sen',
+                'SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 as 509_sen',
             ],
-            "group" => "user_name",
-            "order" => "user_name ASC",
-            "conditions" => $conditions,
+            "group" => "establecimiento",
+            "order" => "establecimiento ASC",
         ]);
-
-        foreach ($censistas as $censista) {
-            $data[$censista["Arbol"]["user_name"]] = [
-                "total" => $censista[0]["cantidad"],
-                "lineal" => $censista[0]["cantidad"],
-                "ep" => 0,
-                "eevv" => 0,
-            ];
-        }
+        
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }
 
     public function ajax_get_resultados_circuitos() {
-        $conditions = [];
-        if (!empty($this->request->query["fecha_desde"])) {
-            $conditions["Arbol.fecha_carga >="] = $this->request->query["fecha_desde"];
-        }
-        if (!empty($this->request->query["fecha_hasta"])) {
-            $conditions["Arbol.fecha_carga <="] = $this->request->query["fecha_hasta"];
-        }
-        $data = [];
-        $totales = ["lineal" => 0, "ep" => 0, "eevv" => 0];
-        $censistas = $this->Arbol->find("all", [
-            "fields" => ["Arbol.user_name", "COUNT(*) AS cantidad"],
-            "group" => "user_name",
-            "order" => "user_name ASC",
-            "conditions" => $conditions,
+        $data = $this->ResultadoMerlo->find("all", [
+            "fields" => ["ResultadoMerlo.circuito",
+                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
+                'SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 as 503_sen',
+                'SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 as 508_sen',
+                'SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 as 509_sen',
+            ],
+            "group" => "circuito",
+            "order" => "circuito ASC",
         ]);
-
-        foreach ($censistas as $censista) {
-            $data[$censista["Arbol"]["user_name"]] = [
-                "total" => $censista[0]["cantidad"],
-                "lineal" => $censista[0]["cantidad"],
-                "ep" => 0,
-                "eevv" => 0,
-            ];
-        }
+        
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }

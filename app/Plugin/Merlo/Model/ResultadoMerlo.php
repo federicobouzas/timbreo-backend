@@ -7,26 +7,24 @@ class ResultadoMerlo extends AppModel {
     public $useTable = 'resultados';
     public $plugin = 'Merlo';
     public $primaryKey = 'mesa';
-    
     public $virtualFields = array(
-        'tmp_501_sen' => 'SUM(501_pais_unido_sen)',
-        'tmp_501_dip' => 'SUM(501_pais_unido_dip)',
-        'tmp_501_leg' => 'SUM(501_pais_unido_leg)',
-        'tmp_501_con' => 'SUM(501_pais_unido_con)',
-        'tmp_503_sen' => 'SUM(503_celeste_blanca_u_sen)',
-        'tmp_503_dip' => 'SUM(503_celeste_blanca_u_dip)',
-        'tmp_503_leg' => 'SUM(503_celeste_blanca_u2_leg)',
-        'tmp_503_con' => 'SUM(503_celeste_blanca_u2_con)',
-        'tmp_508_sen' => 'SUM(508_cambiando_juntos_sen)',
-        'tmp_508_dip' => 'SUM(508_cambiando_juntos_dip)',
-        'tmp_508_leg' => 'SUM(508_amarillo_leg)',
-        'tmp_508_con' => 'SUM(508_amarillo_con)',
-        'tmp_509_sen' => 'SUM(509_cumplir_sen)',
-        'tmp_509_dip' => 'SUM(509_cumplir_dip)',
-        'tmp_509_leg' => 'SUM(509_cumplir_2_leg)',
-        'tmp_509_con' => 'SUM(509_cumplir_2_con) + SUM(509_cumplir_4_con)'
-    );
-    
+        'tmp_501_sen' => '501_pais_unido_sen',
+        'tmp_501_dip' => '501_pais_unido_dip',
+        'tmp_501_leg' => '501_pais_unido_leg',
+        'tmp_501_con' => '501_pais_unido_con',
+        'tmp_503_sen' => '503_celeste_blanca_u_sen',
+        'tmp_503_dip' => '503_celeste_blanca_u_dip',
+        'tmp_503_leg' => '503_celeste_blanca_u2_leg',
+        'tmp_503_con' => '503_celeste_blanca_u2_con',
+        'tmp_508_sen' => '508_cambiando_juntos_sen',
+        'tmp_508_dip' => '508_cambiando_juntos_dip',
+        'tmp_508_leg' => '508_amarillo_leg',
+        'tmp_508_con' => '508_amarillo_con',
+        'tmp_509_sen' => '509_cumplir_sen',
+        'tmp_509_dip' => '509_cumplir_dip',
+        'tmp_509_leg' => '509_cumplir_2_leg',
+        'tmp_509_con' => '509_cumplir_2_con + 509_cumplir_4_con')
+    ;
     public $validate = array(
         '501_pais_unido_sen' => array(
             'required' => array(
@@ -131,7 +129,5 @@ class ResultadoMerlo extends AppModel {
             )
         ),
     );
-    
-    
 
 }
