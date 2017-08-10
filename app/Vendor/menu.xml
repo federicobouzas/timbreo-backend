@@ -4,6 +4,12 @@
         <menuitem label="Dashboard" plugin="merlo" controller="cargas_merlo" action="dashboard" />
         <menuitem label="Respuestas" plugin="merlo" controller="cargas_merlo" action="index" />
         <menuitem label="Mapa" plugin="merlo" controller="cargas_merlo" action="mapa" />
+        <menuitem label="Elecciones">
+            <menuitem label="Resultados">
+                <menuitem label="Importar Excel Mesas" plugin="merlo" controller="resultados_merlo" action="import" />
+                <menuitem label="Listado" plugin="merlo" controller="resultados_merlo" action="index" />
+            </menuitem>
+        </menuitem>
     </menuitem>
     <menuitem label="Campana">
         <menuitem label="Dashboard" plugin="campana" controller="cargas_campana" action="dashboard" />

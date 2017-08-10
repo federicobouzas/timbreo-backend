@@ -1,0 +1,41 @@
+<CargasMerlo>
+  
+    <search_list file="ResultadosMerloSL.php">
+        <searchfield name="mesa" label="Mesa" presentation="INT" size="4" />
+        <searchfield name="establecimiento" label="Establecimiento" />
+    
+        <table>
+            <column>
+                <listfield name="mesa" label="Mesa" />
+            </column>
+            <column>
+                <listfield name="establecimiento" label="Establecimiento" />
+            </column>
+            <column>
+                <listfield name="direccion" label="Direccón" />
+            </column>
+        </table>
+    </search_list>
+  
+    <tablemaint file="ResultadosMerloMaint.php">
+        <jsinclude file="merlo/resultados.js" />
+        <cssinclude file="merlo/resultados.css" />
+        <fieldset title="Descripción" columns="3" id="descripcion">
+            <field name="mesa" label="Mesa" readonly="true" />
+            <field name="establecimiento" label="Establecimiento" readonly="true" />
+            <field name="direccion" label="Direccón" readonly="true" />
+        </fieldset> 
+        <fieldset title="Ciudadanos y Sobres" columns="3" id="ciudadanos_sobres"> 
+            <field name="ciudadanos" label="Ciudadanos" presentation="INT" size="4" />
+            <field name="sobres" label="Sobres" presentation="INT" size="4" />
+            <field name="dif_votantes_sobres" label="Diferencia" presentation="INT" size="4" />     
+        </fieldset>  
+        <fieldset title="Agrupaciones Políticas" columns="12" id="agrupaciones"> 
+            <field name="8_a_sen" label="" presentation="INT" size="4" />
+            <field name="8_a_dip" label="" presentation="INT" size="4" />
+            <field name="8_a_leg" label="" presentation="INT" class="disabled" size="4" />   
+            <field name="8_a_con" label="" presentation="INT" class="disabled" size="4" />     
+        </fieldset>    
+    </tablemaint>
+     
+</CargasMerlo>
