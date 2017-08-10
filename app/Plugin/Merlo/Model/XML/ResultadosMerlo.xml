@@ -3,6 +3,7 @@
     <search_list file="ResultadosMerloSL.php">
         <searchfield name="mesa" label="Mesa" presentation="INT" size="4" />
         <searchfield name="establecimiento" label="Establecimiento" />
+        <searchfield name="extranjero" label="Extranjero" presentation="SINO" />
     
         <table>
             <column>
@@ -14,6 +15,9 @@
             <column>
                 <listfield name="direccion" label="Direccón" />
             </column>
+            <column>
+                <listfield name="extranjero" label="Extranjero" presentation="SINO" />
+            </column>
         </table>
         <actions>
             <action op="E" action="edit" />
@@ -23,16 +27,16 @@
     <tablemaint file="ResultadosMerloMaint.php">
         <jsinclude file="merlo/resultados.js" />
         <cssinclude file="merlo/resultados.css" />
-        <fieldset title="Información de la Mesa" columns="3" id="descripcion">
-            <field name="mesa" label="Mesa" readonly="true" />
+        <fieldset title="Información de la Mesa" columns="4" id="descripcion">
+            <field name="mesa" label="Mesa" presentation="CODIGO" classparams="{'sigla':'', 'largo':4}" readonly="true" />
             <field name="establecimiento" label="Establecimiento" readonly="true" />
             <field name="direccion" label="Direccón" readonly="true" />
+            <field name="extranjero" label="Extranjero" presentation="SINO" readonly="true" />
             <field name="ciudadanos" label="Ciudadanos" presentation="INT" size="8" />
             <field name="sobres" label="Sobres" presentation="INT" size="8" />
             <field name="dif_votantes_sobres" label="Diferencia" presentation="INT" size="8" />   
         </fieldset> 
         <fieldset title="" columns="1000" id="agrupaciones"> 
-         
             <field name="8_a_sen" label="" presentation="INT" size="4" />
             <field name="8_a_dip" label="" presentation="INT" size="4" />
             <field name="8_a_leg" label="" presentation="INT" class="disabled" size="4" />   
@@ -258,6 +262,40 @@
             <field name="821_proyecto_local_merlense_leg" label="" presentation="INT" class="disabled" size="4" />
             <field name="821_proyecto_local_merlense_con" label="" presentation="INT" size="4" />
             
+            <field name="total_agrup_sen" label="" presentation="INT" size="4" />
+            <field name="total_agrup_dip" label="" presentation="INT" size="4" />
+            <field name="total_agrup_leg" label="" presentation="INT" size="4" />
+            <field name="total_agrup_con" label="" presentation="INT" size="4" />
+            
+            <field name="nulos_sen" label="" presentation="INT" size="4" />
+            <field name="nulos_dip" label="" presentation="INT" size="4" />
+            <field name="nulos_leg" label="" presentation="INT" size="4" />
+            <field name="nulos_con" label="" presentation="INT" size="4" />
+            
+            <field name="recurridos_sobre_3_sen" label="" presentation="INT" size="4" />
+            <field name="recurridos_sobre_3_dip" label="" presentation="INT" size="4" />
+            <field name="recurridos_sobre_3_leg" label="" presentation="INT" size="4" />
+            <field name="recurridos_sobre_3_con" label="" presentation="INT" size="4" />
+            
+            <field name="identidad_impugnada_sobre_3_sen" label="" presentation="INT" size="4" />
+            <field name="identidad_impugnada_sobre_3_dip" label="" presentation="INT" size="4" />
+            <field name="identidad_impugnada_sobre_3_leg" label="" presentation="INT" size="4" />
+            <field name="identidad_impugnada_sobre_3_con" label="" presentation="INT" size="4" />
+            
+            <field name="comando_electoral_bolsin_sen" label="" presentation="INT" size="4" />
+            <field name="comando_electoral_bolsin_dip" label="" presentation="INT" size="4" />
+            <field name="comando_electoral_bolsin_leg" label="" presentation="INT" size="4" />
+            <field name="comando_electoral_bolsin_con" label="" presentation="INT" size="4" />
+            
+            <field name="blanco_sen" label="" presentation="INT" size="4" />
+            <field name="blanco_dip" label="" presentation="INT" size="4" />
+            <field name="blanco_leg" label="" presentation="INT" size="4" />
+            <field name="blanco_con" label="" presentation="INT" size="4" />
+            
+            <field name="total_sen" label="" presentation="INT" size="4" />
+            <field name="total_dip" label="" presentation="INT" size="4" />
+            <field name="total_leg" label="" presentation="INT" size="4" />
+            <field name="total_con" label="" presentation="INT" size="4" />
         </fieldset>    
     </tablemaint>
      

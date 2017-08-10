@@ -12,9 +12,6 @@
     border-radius: 0;
     border-width: 1px 0 0 1px;
 }
-#agrupaciones .form-group div.input:last-child input {
-    border-width: 1px;
-}
 
 #agrupaciones .cabecera {
     text-align: center;
@@ -41,10 +38,24 @@
     border-width: 1px 0 0 1px;
 }
 
+#agrupaciones .form-group {
+    border: solid 2px #666;
+}
 #agrupaciones .form-group div {
     margin-top: -1px;
 }
 
 #agrupaciones .primero {
     border-top: solid 2px #666 !important;
+}
+
+div.input label {
+    width: 100px !important;
+}
+.ml150 {
+    margin-left: 100px !important;
+}
+
+#agrupaciones .pie {
+    font-weight: bold;
 }

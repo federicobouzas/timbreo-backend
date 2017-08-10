@@ -31,6 +31,12 @@ protected $data = array (
             'name' => 'establecimiento',
             'label' => 'Establecimiento',
         ),
+        2 => 
+        array (
+            'name' => 'extranjero',
+            'label' => 'Extranjero',
+            'presentation' => 'SINO',
+        ),
     ),
     'columns' => 
     array (
@@ -70,6 +76,20 @@ protected $data = array (
                 array (
                     'name' => 'direccion',
                     'label' => 'Direccón',
+                ),
+            ),
+        ),
+        3 => 
+        array (
+            'label' => '',
+            'sortfield' => '',
+            'fields' => 
+            array (
+                0 => 
+                array (
+                    'name' => 'extranjero',
+                    'label' => 'Extranjero',
+                    'presentation' => 'SINO',
                 ),
             ),
         ),
