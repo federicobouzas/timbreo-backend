@@ -7,7 +7,7 @@
         <menuitem label="Elecciones">            
             <menuitem label="Importar Excel Mesas" plugin="merlo" controller="resultados_merlo" action="import" />
             <menuitem label="Listado Mesas" plugin="merlo" controller="resultados_merlo" action="index" />
-            <menuitem label="Resultados" plugin="merlo" controller="resultados_merlo" action="index" />
+            <menuitem label="Resultados" plugin="merlo" controller="resultados_merlo" action="resultados" />
         </menuitem>
     </menuitem>
     <menuitem label="Campana">
