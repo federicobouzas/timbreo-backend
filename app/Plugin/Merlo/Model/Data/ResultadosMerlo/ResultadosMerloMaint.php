@@ -494,37 +494,37 @@ protected $data = array (
                 ),
                 56 => 
                 array (
-                    'name' => '502_86_socialista_popular_sen',
+                    'name' => '502_a_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 57 => 
                 array (
-                    'name' => '502_86_socialista_popular_dip',
+                    'name' => '502_a_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                58 => 
+                array (
+                    'name' => '502_a_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                58 => 
-                array (
-                    'name' => '502_86_socialista_popular_leg',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'size' => 4,
-                ),
                 59 => 
                 array (
-                    'name' => '502_86_socialista_popular_con',
+                    'name' => '502_a_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 60 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '502_86_socialista_popular_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -532,7 +532,7 @@ protected $data = array (
                 ),
                 61 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '502_86_socialista_popular_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -540,36 +540,37 @@ protected $data = array (
                 ),
                 62 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '502_86_socialista_popular_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 63 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '502_86_socialista_popular_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 64 => 
                 array (
-                    'name' => '503_celeste_blanca_u_sen',
+                    'name' => '502_86_socialismo_merlense_sen',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 65 => 
                 array (
-                    'name' => '503_celeste_blanca_u_dip',
+                    'name' => '502_86_socialismo_merlense_dip',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 66 => 
                 array (
-                    'name' => '503_celeste_blanca_u_leg',
+                    'name' => '502_86_socialismo_merlense_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -577,13 +578,42 @@ protected $data = array (
                 ),
                 67 => 
                 array (
+                    'name' => '502_86_socialismo_merlense_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                68 => 
+                array (
+                    'name' => '503_celeste_blanca_u_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                69 => 
+                array (
+                    'name' => '503_celeste_blanca_u_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                70 => 
+                array (
+                    'name' => '503_celeste_blanca_u_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                71 => 
+                array (
                     'name' => '503_celeste_blanca_u_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                68 => 
+                72 => 
                 array (
                     'name' => '503_celeste_blanca_u2_sen',
                     'label' => '',
@@ -591,7 +621,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                69 => 
+                73 => 
                 array (
                     'name' => '503_celeste_blanca_u2_dip',
                     'label' => '',
@@ -599,21 +629,21 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                70 => 
+                74 => 
                 array (
                     'name' => '503_celeste_blanca_u2_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                71 => 
+                75 => 
                 array (
                     'name' => '503_celeste_blanca_u2_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                72 => 
+                76 => 
                 array (
                     'name' => '504_unidad_izquierda_sen',
                     'label' => '',
@@ -621,7 +651,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                73 => 
+                77 => 
                 array (
                     'name' => '504_unidad_izquierda_dip',
                     'label' => '',
@@ -629,7 +659,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                74 => 
+                78 => 
                 array (
                     'name' => '504_unidad_izquierda_leg',
                     'label' => '',
@@ -637,28 +667,28 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                75 => 
+                79 => 
                 array (
                     'name' => '504_unidad_izquierda_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                76 => 
+                80 => 
                 array (
                     'name' => '505_a_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                77 => 
+                81 => 
                 array (
                     'name' => '505_a_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                78 => 
+                82 => 
                 array (
                     'name' => '505_a_leg',
                     'label' => '',
@@ -666,7 +696,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                79 => 
+                83 => 
                 array (
                     'name' => '505_a_con',
                     'label' => '',
@@ -674,14 +704,14 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                80 => 
+                84 => 
                 array (
                     'name' => '505_b_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                81 => 
+                85 => 
                 array (
                     'name' => '505_b_dip',
                     'label' => '',
@@ -689,7 +719,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                82 => 
+                86 => 
                 array (
                     'name' => '505_b_leg',
                     'label' => '',
@@ -697,7 +727,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                83 => 
+                87 => 
                 array (
                     'name' => '505_b_con',
                     'label' => '',
@@ -705,14 +735,14 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                84 => 
+                88 => 
                 array (
                     'name' => '505_c_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                85 => 
+                89 => 
                 array (
                     'name' => '505_c_dip',
                     'label' => '',
@@ -720,7 +750,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                86 => 
+                90 => 
                 array (
                     'name' => '505_c_leg',
                     'label' => '',
@@ -728,7 +758,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                87 => 
+                91 => 
                 array (
                     'name' => '505_c_con',
                     'label' => '',
@@ -736,14 +766,14 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                88 => 
+                92 => 
                 array (
                     'name' => '505_d_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
-                89 => 
+                93 => 
                 array (
                     'name' => '505_d_dip',
                     'label' => '',
@@ -751,7 +781,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                90 => 
+                94 => 
                 array (
                     'name' => '505_d_leg',
                     'label' => '',
@@ -759,7 +789,7 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                91 => 
+                95 => 
                 array (
                     'name' => '505_d_con',
                     'label' => '',
@@ -767,48 +797,16 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                92 => 
-                array (
-                    'name' => '502_86_socialismo_merlense_sen',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'class' => 'disabled',
-                    'size' => 4,
-                ),
-                93 => 
-                array (
-                    'name' => '502_86_socialismo_merlense_dip',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'class' => 'disabled',
-                    'size' => 4,
-                ),
-                94 => 
-                array (
-                    'name' => '502_86_socialismo_merlense_leg',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'class' => 'disabled',
-                    'size' => 4,
-                ),
-                95 => 
-                array (
-                    'name' => '502_86_socialismo_merlense_con',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'size' => 4,
-                ),
                 96 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '505_e_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 97 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '505_e_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -816,7 +814,7 @@ protected $data = array (
                 ),
                 98 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '505_e_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -824,22 +822,22 @@ protected $data = array (
                 ),
                 99 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
-                    'label' => '',
-                    'presentation' => 'INT',
-                    'size' => 4,
-                ),
-                100 => 
-                array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '505_e_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
                     'size' => 4,
                 ),
+                100 => 
+                array (
+                    'name' => '505_f_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
                 101 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '505_f_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -847,7 +845,7 @@ protected $data = array (
                 ),
                 102 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '505_f_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -855,14 +853,15 @@ protected $data = array (
                 ),
                 103 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '505_f_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 104 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '506_mem_ver_just_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -870,15 +869,14 @@ protected $data = array (
                 ),
                 105 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '506_mem_ver_just_dip',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 106 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '506_mem_ver_just_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -886,14 +884,15 @@ protected $data = array (
                 ),
                 107 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '506_mem_ver_just_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 108 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '506_tierra_techo_trabajo_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -901,7 +900,7 @@ protected $data = array (
                 ),
                 109 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '506_tierra_techo_trabajo_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -909,38 +908,35 @@ protected $data = array (
                 ),
                 110 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '506_tierra_techo_trabajo_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 111 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '506_tierra_techo_trabajo_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 112 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '507_convicciones_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 113 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '507_convicciones_dip',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 114 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '507_convicciones_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -948,14 +944,15 @@ protected $data = array (
                 ),
                 115 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '507_convicciones_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 116 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '507_79_convicciones_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -963,7 +960,7 @@ protected $data = array (
                 ),
                 117 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '507_79_convicciones_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -971,38 +968,35 @@ protected $data = array (
                 ),
                 118 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '507_79_convicciones_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 119 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '507_79_convicciones_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 120 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '508_cambiando_juntos_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 121 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '508_cambiando_juntos_dip',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 122 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '508_cambiando_juntos_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1010,14 +1004,15 @@ protected $data = array (
                 ),
                 123 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '508_cambiando_juntos_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 124 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '508_amarillo_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1025,7 +1020,7 @@ protected $data = array (
                 ),
                 125 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '508_amarillo_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1033,38 +1028,35 @@ protected $data = array (
                 ),
                 126 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '508_amarillo_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 127 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '508_amarillo_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 128 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '509_cumplir_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 129 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '509_cumplir_dip',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 130 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '509_cumplir_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1072,14 +1064,15 @@ protected $data = array (
                 ),
                 131 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '509_cumplir_con',
                     'label' => '',
                     'presentation' => 'INT',
+                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 132 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '509_cumplir_2_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1087,7 +1080,7 @@ protected $data = array (
                 ),
                 133 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '509_cumplir_2_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1095,22 +1088,21 @@ protected $data = array (
                 ),
                 134 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '509_cumplir_2_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 135 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '509_cumplir_2_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 136 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '509_cumplir_4_consen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1118,7 +1110,7 @@ protected $data = array (
                 ),
                 137 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '509_cumplir_4_condip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1126,7 +1118,7 @@ protected $data = array (
                 ),
                 138 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '509_cumplir_4_conleg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1134,45 +1126,42 @@ protected $data = array (
                 ),
                 139 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '509_cumplir_4_concon',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 140 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '510_1_sen',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 141 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '510_1_dip',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 142 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '510_1_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 143 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '510_1_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 144 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '1902_autoctono_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1180,7 +1169,7 @@ protected $data = array (
                 ),
                 145 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '1902_autoctono_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1188,22 +1177,21 @@ protected $data = array (
                 ),
                 146 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '1902_autoctono_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 147 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '1902_autoctono_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 148 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '1902_dignidad_popular_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1211,7 +1199,7 @@ protected $data = array (
                 ),
                 149 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '1902_dignidad_popular_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1219,22 +1207,21 @@ protected $data = array (
                 ),
                 150 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '1902_dignidad_popular_leg',
                     'label' => '',
                     'presentation' => 'INT',
-                    'class' => 'disabled',
                     'size' => 4,
                 ),
                 151 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '1902_dignidad_popular_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
                 ),
                 152 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_sen',
+                    'name' => '1902_frente_union_federal_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1242,7 +1229,7 @@ protected $data = array (
                 ),
                 153 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_dip',
+                    'name' => '1902_frente_union_federal_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1250,15 +1237,197 @@ protected $data = array (
                 ),
                 154 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_leg',
+                    'name' => '1902_frente_union_federal_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                155 => 
+                array (
+                    'name' => '1902_frente_union_federal_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                156 => 
+                array (
+                    'name' => '1902_primera_dama_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
                     'size' => 4,
                 ),
-                155 => 
+                157 => 
                 array (
-                    'name' => '502_86_socialismo_merlense_con',
+                    'name' => '1902_primera_dama_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                158 => 
+                array (
+                    'name' => '1902_primera_dama_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                159 => 
+                array (
+                    'name' => '1902_primera_dama_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                160 => 
+                array (
+                    'name' => '1902_laborista_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                161 => 
+                array (
+                    'name' => '1902_laborista_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                162 => 
+                array (
+                    'name' => '1902_laborista_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                163 => 
+                array (
+                    'name' => '1902_laborista_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                164 => 
+                array (
+                    'name' => '1902_popular_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                165 => 
+                array (
+                    'name' => '1902_popular_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                166 => 
+                array (
+                    'name' => '1902_popular_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                167 => 
+                array (
+                    'name' => '1902_popular_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                168 => 
+                array (
+                    'name' => '1902_renovacion_federal_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                169 => 
+                array (
+                    'name' => '1902_renovacion_federal_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                170 => 
+                array (
+                    'name' => '1902_renovacion_federal_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                171 => 
+                array (
+                    'name' => '1902_renovacion_federal_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                172 => 
+                array (
+                    'name' => '1902_tres_banderas_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                173 => 
+                array (
+                    'name' => '1902_tres_banderas_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                174 => 
+                array (
+                    'name' => '1902_tres_banderas_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                175 => 
+                array (
+                    'name' => '1902_tres_banderas_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                176 => 
+                array (
+                    'name' => '821_proyecto_local_merlense_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                177 => 
+                array (
+                    'name' => '821_proyecto_local_merlense_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                178 => 
+                array (
+                    'name' => '821_proyecto_local_merlense_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                179 => 
+                array (
+                    'name' => '821_proyecto_local_merlense_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
