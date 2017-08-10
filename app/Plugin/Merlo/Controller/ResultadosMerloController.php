@@ -24,5 +24,12 @@ class ResultadosMerloController extends AppController {
         $this->maint = Parse::getData('Merlo.ResultadosMerlo/ResultadosMerloMaint');
         parent::view($id, $return);
     }   
-
+    
+    public function import() {
+        set_time_limit(0);
+        ini_set('memory_limit', '2048M');
+        $this->maint = Parse::getData('Merlo.ResultadosMerlo/ResultadosMerloImportarMaint');
+        $this->importar = Parse::getDataImportar('Merlo.ResultadosMerlo/ResultadosMerloImportarMaint');
+        parent::importar('tmp_archivo');
+    }
 }

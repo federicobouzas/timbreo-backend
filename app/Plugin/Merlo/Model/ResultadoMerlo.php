@@ -6,6 +6,6 @@ class ResultadoMerlo extends AppModel {
     public $tablePrefix = 'app_merlo_';
     public $useTable = 'resultados';
     public $plugin = 'Merlo';
-    
+    public $primaryKey = 'mesa';
 
 }
