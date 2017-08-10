@@ -37,7 +37,36 @@ class ResultadosMerloController extends AppController {
         
     }
     
-    public function ajax_get_resultados() {
+    public function ajax_get_resultados_colegios() {
+        $conditions = [];
+        if (!empty($this->request->query["fecha_desde"])) {
+            $conditions["Arbol.fecha_carga >="] = $this->request->query["fecha_desde"];
+        }
+        if (!empty($this->request->query["fecha_hasta"])) {
+            $conditions["Arbol.fecha_carga <="] = $this->request->query["fecha_hasta"];
+        }
+        $data = [];
+        $totales = ["lineal" => 0, "ep" => 0, "eevv" =>0];
+        $censistas = $this->Arbol->find("all", [
+            "fields" => ["Arbol.user_name", "COUNT(*) AS cantidad"],
+            "group" => "user_name",
+            "order" => "user_name ASC",
+            "conditions" => $conditions,
+        ]);
+   
+        foreach ($censistas as $censista) {
+            $data[$censista["Arbol"]["user_name"]] = [
+                "total" => $censista[0]["cantidad"],
+                "lineal" => $censista[0]["cantidad"],
+                "ep" => 0,
+                "eevv" => 0,
+            ];
+        }
+        $this->set('data', $data);
+        return $this->render("/ajax", "ajax");
+    }
+    
+    public function ajax_get_resultados_circuitos() {
         $conditions = [];
         if (!empty($this->request->query["fecha_desde"])) {
             $conditions["Arbol.fecha_carga >="] = $this->request->query["fecha_desde"];
