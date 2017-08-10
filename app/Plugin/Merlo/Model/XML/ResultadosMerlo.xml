@@ -103,6 +103,11 @@
             <field name="501_pais_unido_leg" label="" presentation="INT" size="4" />
             <field name="501_pais_unido_con" label="" presentation="INT" size="4" />
             
+            <field name="502_a_sen" label="" presentation="INT" size="4" />
+            <field name="502_a_dip" label="" presentation="INT" size="4" />
+            <field name="502_a_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="502_a_con" label="" presentation="INT" class="disabled" size="4" />
+            
             <field name="502_86_socialista_popular_sen" label="" presentation="INT" class="disabled" size="4" />
             <field name="502_86_socialista_popular_dip" label="" presentation="INT" class="disabled" size="4" />
             <field name="502_86_socialista_popular_leg" label="" presentation="INT" size="4" />
