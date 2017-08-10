@@ -6,7 +6,7 @@
     width: 100% !important;
     border: solid 1px #999;
     border-radius: 0;
-    border-width: 1px 0 1px 1px;
+    border-width: 1px 0 0 1px;
 }
 #agrupaciones .form-group div.input:last-child input {
     border-width: 1px;
@@ -15,5 +15,9 @@
 .readonly {
     padding: 7.5px 5px;
     border: solid #999;
-    border-width: 1px 0 1px 1px;
+    border-width: 1px 0 0 1px;
+}
+
+#agrupaciones .form-group div {
+    margin-top: -1px;
 }

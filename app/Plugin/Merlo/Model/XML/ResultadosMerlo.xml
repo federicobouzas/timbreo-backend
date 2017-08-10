@@ -15,6 +15,9 @@
                 <listfield name="direccion" label="Direccón" />
             </column>
         </table>
+        <actions>
+            <action op="E" action="edit" />
+        </actions>
     </search_list>
   
     <tablemaint file="ResultadosMerloMaint.php">
