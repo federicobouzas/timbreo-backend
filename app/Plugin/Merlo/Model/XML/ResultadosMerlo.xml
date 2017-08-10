@@ -34,7 +34,35 @@
             <field name="8_a_sen" label="" presentation="INT" size="4" />
             <field name="8_a_dip" label="" presentation="INT" size="4" />
             <field name="8_a_leg" label="" presentation="INT" class="disabled" size="4" />   
-            <field name="8_a_con" label="" presentation="INT" class="disabled" size="4" />     
+            <field name="8_a_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="8_b_sen" label="" presentation="INT" size="4" />
+            <field name="8_b_dip" label="" presentation="INT" size="4" />
+            <field name="8_b_leg" label="" presentation="INT" size="4" />
+            <field name="8_b_con" label="" presentation="INT" size="4" />
+            <field name="8_c_sen" label="" presentation="INT" size="4" />
+            <field name="8_c_dip" label="" presentation="INT" size="4" />
+            <field name="8_c_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="8_c_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="8_d_sen" label="" presentation="INT" size="4" />
+            <field name="8_d_dip" label="" presentation="INT" size="4" />
+            <field name="8_d_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="8_d_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="22_a_sen" label="" presentation="INT" size="4" />
+            <field name="22_a_dip" label="" presentation="INT" size="4" />
+            <field name="22_a_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="22_a_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_a_sen" label="" presentation="INT" size="4" />
+            <field name="259_a_dip" label="" presentation="INT" size="4" />
+            <field name="259_a_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_a_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_b_sen" label="" presentation="INT" size="4" />
+            <field name="259_b_dip" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_b_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_b_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_c_sen" label="" presentation="INT" size="4" />
+            <field name="259_c_dip" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_c_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="259_c_con" label="" presentation="INT" class="disabled" size="4" />
         </fieldset>    
     </tablemaint>
      
