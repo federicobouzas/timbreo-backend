@@ -17,12 +17,12 @@ $(function () {
             html += '<div class="col-sm-3 readonly">LISTA ' + agrupaciones[i][2][j] + '</div>';
             var selector = "#agrupaciones .form-group div:nth-child(" + (linea + 1) + ")";
             linea = linea + 7;
-            console.log(selector);
-            console.log($(selector));
+            console.log(agrupaciones[i]);
             $(selector).before(html);
         }
     }
 
     $(".disabled").attr("disabled", true).attr("placeholder", "NO USAR");
     $("#agrupaciones .input label").remove();
+    $("#agrupaciones div.input").addClass("col-sm-1");
 });

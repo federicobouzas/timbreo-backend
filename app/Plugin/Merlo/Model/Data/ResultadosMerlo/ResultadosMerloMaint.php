@@ -116,10 +116,220 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
+                4 => 
+                array (
+                    'name' => '8_b_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                5 => 
+                array (
+                    'name' => '8_b_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                6 => 
+                array (
+                    'name' => '8_b_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                7 => 
+                array (
+                    'name' => '8_b_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                8 => 
+                array (
+                    'name' => '8_c_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                9 => 
+                array (
+                    'name' => '8_c_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                10 => 
+                array (
+                    'name' => '8_c_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                11 => 
+                array (
+                    'name' => '8_c_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                12 => 
+                array (
+                    'name' => '8_d_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                13 => 
+                array (
+                    'name' => '8_d_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                14 => 
+                array (
+                    'name' => '8_d_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                15 => 
+                array (
+                    'name' => '8_d_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                16 => 
+                array (
+                    'name' => '22_a_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                17 => 
+                array (
+                    'name' => '22_a_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                18 => 
+                array (
+                    'name' => '22_a_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                19 => 
+                array (
+                    'name' => '22_a_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                20 => 
+                array (
+                    'name' => '259_a_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                21 => 
+                array (
+                    'name' => '259_a_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                22 => 
+                array (
+                    'name' => '259_a_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                23 => 
+                array (
+                    'name' => '259_a_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                24 => 
+                array (
+                    'name' => '259_b_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                25 => 
+                array (
+                    'name' => '259_b_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                26 => 
+                array (
+                    'name' => '259_b_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                27 => 
+                array (
+                    'name' => '259_b_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                28 => 
+                array (
+                    'name' => '259_c_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                29 => 
+                array (
+                    'name' => '259_c_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                30 => 
+                array (
+                    'name' => '259_c_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                31 => 
+                array (
+                    'name' => '259_c_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
             ),
             'id' => 'agrupaciones',
             'title' => '',
-            'columns' => '12',
+            'columns' => '1000',
         ),
     ),
 );
