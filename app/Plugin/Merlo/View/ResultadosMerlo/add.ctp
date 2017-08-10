@@ -24,7 +24,6 @@ foreach ($jsincludes as $jsinclude) {
 <?php echo $this->Template->drawBlockById("ciudadanos_sobres"); ?>
 <?php echo $this->Template->drawBlockById("agrupaciones"); ?>
 
-
 <?php echo $this->element('files/list', array('files' => $files, 'add' => true)); ?>
 
 <input type="hidden" name="_next" value="<?php echo $next; ?>" /> 
