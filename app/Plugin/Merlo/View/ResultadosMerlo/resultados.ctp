@@ -27,7 +27,9 @@ $this->Html->css("censo/arboles_auditoria_maint", array('inline' => false));
                         <th>CUMPLIR 4</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    
+                </tbody>
             </table>
         </div>
     </div>

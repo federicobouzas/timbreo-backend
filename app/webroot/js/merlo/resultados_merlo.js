@@ -1,56 +1,12 @@
 $(function () {
-    $("#dashboardDesde, #dashboardHasta").parent().datetimepicker({
-        format: 'DD/MM/YYYY',
-        useCurrent: false,
-        viewMode: 'days',
-        defaultDate: new Date(),
-    });
-    $("button").click(submitForm);
-    submitForm();
-    $.get(WWW + "censo/arboles/ajax_get_total_auditoria", function (data) {
+    $.get(WWW + "merlo/resultadomerlo/ajax_get_resultados_colegios", function (data) {
         var jdata = $.parseJSON(data);
-        graficoAuditoria(jdata);
+        cargarResultados(jdata);
     });
 });
-function graficoAuditoria(jdata) {
-    $("[id='graficoAuditoria']").highcharts({
-        chart: {tyle: {fontFamily: 'Gotham'}, type: 'area'},
-        credits: {enabled: false},
-        exporting: {enabled: false},
-        colors: ['#FFD300', '#50B432', '#5176A3', '#A655AC', '#FF9702', '#299CB4', '#4265BC', '#F44336'],
-        title: {text: 'Cargas Totales Semanales'},
-        xAxis: {
-            categories: jdata.categories,
-            tickmarkPlacement: 'on',
-            title: {enabled: false}
-        },
-        yAxis: {
-            title: {enabled: false}
-        },
-        tooltip: {
-            formatter: function () {
-                var s = '<strong>' + this.x + '</strong><br />', sum = 0;
-                $.each(this.points, function (i, point) {
-                    s += '<span style="color:' + point.series.color + '">' + point.series.name + '</span>: <strong>' + number_format(point.y, 0, ",", ".") + '</strong> (' + number_format(point.percentage, 2, ",", ".") + '%)<br/>';
-                    sum += point.y;
-                });
-                s += '<strong>Total: ' + number_format(sum, 0, ",", ".") + '</strong>';
-                return s;
-            },
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y:,.0f}</b> ({point.percentage:.1f}%)<br/>',
-            split: true, shared: true
-        },
-        plotOptions: {
-            area: {
-                stacking: 'normal', lineColor: '#666666', lineWidth: 1,
-                marker: {lineWidth: 1, lineColor: '#666666'}
-            }
-        },
-        series: jdata.series
-    });
-}
 
-function submitForm() {
+
+function cargarResultados(jdata) {
     $("#tablaAuditoria tbody").empty();
     var fecha_desde = $("#dashboardDesde").val() || "";
     var fecha_hasta = $("#dashboardHasta").val() || "";
