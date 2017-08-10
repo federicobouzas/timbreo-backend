@@ -23,18 +23,15 @@
     <tablemaint file="ResultadosMerloMaint.php">
         <jsinclude file="merlo/resultados.js" />
         <cssinclude file="merlo/resultados.css" />
-        <fieldset title="Descripción" columns="3" id="descripcion">
+        <fieldset title="Información de la Mesa" columns="3" id="descripcion">
             <field name="mesa" label="Mesa" readonly="true" />
             <field name="establecimiento" label="Establecimiento" readonly="true" />
             <field name="direccion" label="Direccón" readonly="true" />
+            <field name="ciudadanos" label="Ciudadanos" presentation="INT" size="8" />
+            <field name="sobres" label="Sobres" presentation="INT" size="8" />
+            <field name="dif_votantes_sobres" label="Diferencia" presentation="INT" size="8" />   
         </fieldset> 
-        <fieldset title="Ciudadanos y Sobres" columns="3" id="ciudadanos_sobres"> 
-            <field name="ciudadanos" label="Ciudadanos" presentation="INT" size="4" />
-            <field name="sobres" label="Sobres" presentation="INT" size="4" />
-            <field name="dif_votantes_sobres" label="Diferencia" presentation="INT" size="4" />     
-        </fieldset>  
-        <fieldset title="" columns="12" id="agrupaciones"> 
-            
+        <fieldset title="" columns="1000" id="agrupaciones"> 
             <field name="8_a_sen" label="" presentation="INT" size="4" />
             <field name="8_a_dip" label="" presentation="INT" size="4" />
             <field name="8_a_leg" label="" presentation="INT" class="disabled" size="4" />   
@@ -91,7 +88,7 @@
             <field name="301_vamos_con" label="" presentation="INT" class="disabled" size="4" />
            
             <field name="301_fuerza_de_la_gente_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="301_fuerza_de_la_gente_dip" label="" presentation="INT" class="disabled"size="4" />
+            <field name="301_fuerza_de_la_gente_dip" label="" presentation="INT" class="disabled" size="4" />
             <field name="301_fuerza_de_la_gente_leg" label="" presentation="INT" size="4" />
             <field name="301_fuerza_de_la_gente_con" label="" presentation="INT" size="4" />
            
@@ -229,8 +226,7 @@
             <field name="502_86_socialismo_merlense_dip" label="" presentation="INT" class="disabled" size="4" />
             <field name="502_86_socialismo_merlense_leg" label="" presentation="INT" class="disabled" size="4" />
             <field name="502_86_socialismo_merlense_con" label="" presentation="INT" size="4" />
-            
-            </fieldset>    
+        </fieldset>    
     </tablemaint>
      
 </CargasMerlo>
