@@ -116,9 +116,69 @@ protected $data = array (
                     'class' => 'disabled',
                     'size' => 4,
                 ),
+                4 => 
+                array (
+                    'name' => '8_a_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                5 => 
+                array (
+                    'name' => '8_a_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                6 => 
+                array (
+                    'name' => '8_a_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                7 => 
+                array (
+                    'name' => '8_a_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                8 => 
+                array (
+                    'name' => '8_a_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                9 => 
+                array (
+                    'name' => '8_a_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                10 => 
+                array (
+                    'name' => '8_a_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
+                11 => 
+                array (
+                    'name' => '8_a_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'class' => 'disabled',
+                    'size' => 4,
+                ),
             ),
             'id' => 'agrupaciones',
-            'title' => 'Agrupaciones Políticas',
+            'title' => '',
             'columns' => '12',
         ),
     ),
