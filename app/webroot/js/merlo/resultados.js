@@ -22,6 +22,16 @@ var agrupaciones = [
     [821, "AG. VECINALISTA PROYECTO LOCAL MERLENSE", ["PROYECTO LOCAL MERLENSE"]]
 ];
 
+var totales = [
+    "TOTAL VOTOS AGRUPACIONES POLÍTICAS",
+    "VOTOS NULOS",
+    "VOTOS RECURRIDOS QUE SE REMITEN EN SOBRE Nro. 3",
+    "VOTOS DE IDENTIDAD IMPUGNADA QUE SE REMITEN EN SOBRE Nro. 3",
+    "VOTOS DEL COMANDO ELECTORAL QUE SE REMITEN EN EL BOLSIN",
+    "VOTOS EN BLANCO",
+    "TOTAL POR COLUMNAS"
+];
+
 $(function () {
     var linea = 0;
     for (var i in agrupaciones) {
@@ -51,4 +61,13 @@ $(function () {
     html += '<div class="col-sm-1 cabecera">LEGISLADORES PROVINCIALES</div>';
     html += '<div class="col-sm-1 cabecera">CONCEJALES Y CONSEJEROS ESCOLARES</div>';
     $("#agrupaciones .form-group").prepend(html);
+
+    linea = linea + 7;
+    for (var i in totales) {
+        var html = '';
+        html += '<div class="col-sm-8 readonly pie primero">' + totales[i] + '</div>';
+        var selector = "#agrupaciones .form-group div:nth-child(" + (linea + 1) + ")";
+        linea = linea + 5;
+        $(selector).before(html);
+    }
 });

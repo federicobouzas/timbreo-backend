@@ -31,6 +31,8 @@ protected $data = array (
                 array (
                     'name' => 'mesa',
                     'label' => 'Mesa',
+                    'presentation' => 'CODIGO',
+                    'classparams' => '{\'sigla\':\'\', \'largo\':4}',
                     'readonly' => true,
                 ),
                 1 => 
@@ -47,19 +49,26 @@ protected $data = array (
                 ),
                 3 => 
                 array (
+                    'name' => 'extranjero',
+                    'label' => 'Extranjero',
+                    'presentation' => 'SINO',
+                    'readonly' => true,
+                ),
+                4 => 
+                array (
                     'name' => 'ciudadanos',
                     'label' => 'Ciudadanos',
                     'presentation' => 'INT',
                     'size' => 8,
                 ),
-                4 => 
+                5 => 
                 array (
                     'name' => 'sobres',
                     'label' => 'Sobres',
                     'presentation' => 'INT',
                     'size' => 8,
                 ),
-                5 => 
+                6 => 
                 array (
                     'name' => 'dif_votantes_sobres',
                     'label' => 'Diferencia',
@@ -69,7 +78,7 @@ protected $data = array (
             ),
             'id' => 'descripcion',
             'title' => 'Información de la Mesa',
-            'columns' => '3',
+            'columns' => '4',
         ),
         1 => 
         array (
@@ -1428,6 +1437,202 @@ protected $data = array (
                 179 => 
                 array (
                     'name' => '821_proyecto_local_merlense_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                180 => 
+                array (
+                    'name' => 'total_agrup_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                181 => 
+                array (
+                    'name' => 'total_agrup_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                182 => 
+                array (
+                    'name' => 'total_agrup_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                183 => 
+                array (
+                    'name' => 'total_agrup_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                184 => 
+                array (
+                    'name' => 'nulos_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                185 => 
+                array (
+                    'name' => 'nulos_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                186 => 
+                array (
+                    'name' => 'nulos_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                187 => 
+                array (
+                    'name' => 'nulos_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                188 => 
+                array (
+                    'name' => 'recurridos_sobre_3_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                189 => 
+                array (
+                    'name' => 'recurridos_sobre_3_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                190 => 
+                array (
+                    'name' => 'recurridos_sobre_3_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                191 => 
+                array (
+                    'name' => 'recurridos_sobre_3_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                192 => 
+                array (
+                    'name' => 'identidad_impugnada_sobre_3_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                193 => 
+                array (
+                    'name' => 'identidad_impugnada_sobre_3_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                194 => 
+                array (
+                    'name' => 'identidad_impugnada_sobre_3_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                195 => 
+                array (
+                    'name' => 'identidad_impugnada_sobre_3_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                196 => 
+                array (
+                    'name' => 'comando_electoral_bolsin_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                197 => 
+                array (
+                    'name' => 'comando_electoral_bolsin_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                198 => 
+                array (
+                    'name' => 'comando_electoral_bolsin_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                199 => 
+                array (
+                    'name' => 'comando_electoral_bolsin_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                200 => 
+                array (
+                    'name' => 'blanco_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                201 => 
+                array (
+                    'name' => 'blanco_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                202 => 
+                array (
+                    'name' => 'blanco_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                203 => 
+                array (
+                    'name' => 'blanco_con',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                204 => 
+                array (
+                    'name' => 'total_sen',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                205 => 
+                array (
+                    'name' => 'total_dip',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                206 => 
+                array (
+                    'name' => 'total_leg',
+                    'label' => '',
+                    'presentation' => 'INT',
+                    'size' => 4,
+                ),
+                207 => 
+                array (
+                    'name' => 'total_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,
