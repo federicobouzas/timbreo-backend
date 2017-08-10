@@ -50,6 +50,7 @@ Inflector::rules('plural', array('irregular' => array(
     'cargacaba' => 'CargasCaba',
     'cargacampana' => 'CargasCampana',
     'fiscalcaba' => 'FiscalesCaba',
+    'resultadomerlo' => 'ResultadosMerlo',
 )));
 
 Inflector::rules('singular', array('irregular' => array(
@@ -57,6 +58,7 @@ Inflector::rules('singular', array('irregular' => array(
     'cargascaba' => 'CargaCaba',
     'cargascampana' => 'CargaCampana',
     'fiscalescaba' => 'FiscalCaba',
+    'resultadosmerlo' => 'ResultadoMerlo',
 )));
 
 /*
