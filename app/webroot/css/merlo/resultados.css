@@ -59,3 +59,7 @@ div.input label {
 #agrupaciones .pie {
     font-weight: bold;
 }
+
+.error-message {
+    display: none;
+}

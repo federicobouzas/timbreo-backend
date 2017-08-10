@@ -7,5 +7,19 @@ class ResultadoMerlo extends AppModel {
     public $useTable = 'resultados';
     public $plugin = 'Merlo';
     public $primaryKey = 'mesa';
+    public $validate = array(
+        '501_pais_unido_sen' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo 1PAIS - SENADORES es requerido'
+            )
+        ),
+        '501_pais_unido_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo 1PAIS - CONSEJALES es requerido'
+            )
+        ),
+    );
 
 }
