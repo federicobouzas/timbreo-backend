@@ -2,7 +2,7 @@
 
 $this->Html->script("../includes/fmw/datepicker/js/bootstrap-datetimepicker.min.js", array('inline' => false));
 $this->Html->css("../includes/fmw/datepicker/css/bootstrap-datetimepicker.css", array('inline' => false));
-$this->Html->script("censo/arboles_auditoria_maint", array('inline' => false));
+$this->Html->script("merlo/resultados_merlo", array('inline' => false));
 $this->Html->css("censo/arboles_auditoria_maint", array('inline' => false));
 ?>
 <div class="row mt20 mb30">
