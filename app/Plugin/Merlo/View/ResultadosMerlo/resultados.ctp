@@ -1,9 +1,9 @@
 <?php
-
 $this->Html->script("../includes/fmw/datepicker/js/bootstrap-datetimepicker.min.js", array('inline' => false));
 $this->Html->css("../includes/fmw/datepicker/css/bootstrap-datetimepicker.css", array('inline' => false));
 $this->Html->script("merlo/resultados_merlo", array('inline' => false));
 $this->Html->css("merlo/resultados_merlo", array('inline' => false));
+
 ?>
 
 <div>
@@ -19,8 +19,8 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
             <div class="col-sm-6 col-sm-offset-3 mt15 mb25">
                 <h3 class="text-center mt0">Porcentaje de Mesas Escrutadas</h3>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <span>70%</span>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $escrutadas; ?>%">
+                        <span><?php echo $escrutadas; ?>%</span>
                     </div>
                 </div>
             </div>
@@ -31,13 +31,18 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
             <?php echo $this->element('Merlo.totales', ['tipo' => 'concejales']); ?>
         </div>
         <div role="tabpanel" class="tab-pane" id="senadores">
-            <div class="col-lg-5">
-                <?php echo $this->element('Merlo.circuitos', ['id_tabla' => 'tablaCircuitos_sen']); ?>
+            <div>
+                <div class="col-lg-5">
+                    <?php echo $this->element('Merlo.circuitos', ['id_tabla' => 'tablaCircuitos_sen']); ?>
+                </div>
+                <div class="col-lg-7" style="max-height: 400px; overflow-y: scroll;">
+                    <?php echo $this->element('Merlo.establecimientos', ['id_tabla' => 'tablaColegios_sen']); ?>
+                </div>
             </div>
-            <div class="col-lg-7" style="max-height: 400px; overflow-y: scroll;">
-                <?php echo $this->element('Merlo.establecimientos', ['id_tabla' => 'tablaColegios_sen']); ?>
-            </div>
+            <div class="clearfix"></div>
+            <?php echo $this->element('Merlo.totales', ['tipo' => 'senadores']); ?>
         </div>
+
         <div role="tabpanel" class="tab-pane" id="diputados">
             <div class="col-lg-5">
                 <?php echo $this->element('Merlo.circuitos', ['id_tabla' => 'tablaCircuitos_dip']); ?>

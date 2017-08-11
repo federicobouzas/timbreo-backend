@@ -30,7 +30,7 @@ function totales() {
 function completar_resultados(categoria) {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios/" + categoria, function (data) {
         $("#tablaColegios_" + categoria + " tbody").empty();        
-        var jdata = $.parseJSON(data);  console.log(jdata);
+        var jdata = $.parseJSON(data);  
         for (var i in jdata) {
             var row = $("<tr>");
             $("<td>").html("<strong>" + jdata[i].ResultadoMerlo.establecimiento + "</strong>").appendTo(row);
@@ -40,6 +40,8 @@ function completar_resultados(categoria) {
             $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("#tablaColegios_" + categoria + " tbody").append(row);
         }
+        grafico_dona("dona-senadores", "sen");
+        grafico_barras("barras-senadores", "sen");
     });
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_circuitos/" + categoria, function (data) {
         $("#tablaCircuitos_" + categoria + " tbody").empty();

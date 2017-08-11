@@ -34,7 +34,12 @@ class ResultadosMerloController extends AppController {
     }
 
     public function resultados() {
-        
+        $mesasTotal = $this->ResultadoMerlo->find('count');   
+        $mesasEscrutadas = $this->ResultadoMerlo->find('count', array(
+            'conditions' => array('508_cambiando_juntos_sen IS NOT NULL')
+        ));
+        $escrutadas = number_format($mesasEscrutadas/$mesasTotal * 100, 2);
+        $this->set('escrutadas', $escrutadas);
     }
 
     public function ajax_get_resultados_colegios($categoria = null) {
