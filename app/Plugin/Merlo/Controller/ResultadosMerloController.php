@@ -72,7 +72,6 @@ class ResultadosMerloController extends AppController {
             "group" => "establecimiento",
             "order" => "establecimiento ASC",
         ]);
-
         $this->set("data", $data);
         return $this->render("/ajax", "ajax");
     }
@@ -185,11 +184,7 @@ class ResultadosMerloController extends AppController {
                 "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(total_agrup_con)*100 as 509_con",
             ];
         }
-
-        $data = $this->ResultadoMerlo->find("all", [
-            "fields" => $fields
-        ]);
-
+        $data = $this->ResultadoMerlo->find("all", ["fields" => $fields]);
         $this->set("data", $data);
         return $this->render("/ajax", "ajax");
     }
