@@ -15,50 +15,10 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active mt10" id="totales">
-            <div class="col-sm-3">
-                <h3 class="text-center mb0">Senadores</h3>
-                <div id="dona-senadores" style="height: 200px;"></div>
-                <div id="barras-senadores" class="col-sm-9" style="margin-top: -50px; height: 150px;"></div>
-                <div class="porcentajes-partidos">
-                    <div class="porcentaje-partido">635 | 46%</div>
-                    <div class="porcentaje-partido">203 | 23%</div>
-                    <div class="porcentaje-partido">107 | 12%</div>
-                    <div class="porcentaje-partido">31 | 4%</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <h3 class="text-center mb0">Diputados</h3>
-                <div id="dona-diputados" style="height: 200px;"></div>
-                <div id="barras-diputados" class="col-sm-9" style="margin-top: -50px; height: 150px;"></div>
-                <div class="porcentajes-partidos">
-                    <div class="porcentaje-partido">635 | 46%</div>
-                    <div class="porcentaje-partido">203 | 23%</div>
-                    <div class="porcentaje-partido">107 | 12%</div>
-                    <div class="porcentaje-partido">31 | 4%</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <h3 class="text-center mb0">Legisladores</h3>
-                <div id="dona-legisladores" style="height: 200px;"></div>
-                <div id="barras-legisladores" class="col-sm-9" style="margin-top: -50px; height: 150px;"></div>
-                <div class="porcentajes-partidos">
-                    <div class="porcentaje-partido">635 | 46%</div>
-                    <div class="porcentaje-partido">203 | 23%</div>
-                    <div class="porcentaje-partido">107 | 12%</div>
-                    <div class="porcentaje-partido">31 | 4%</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <h3 class="text-center mb0">Concejales</h3>
-                <div id="dona-concejales" style="height: 200px;"></div>
-                <div id="barras-concejales" class="col-sm-9" style="margin-top: -50px; height: 150px;"></div>
-                <div class="porcentajes-partidos">
-                    <div class="porcentaje-partido">635 | 46%</div>
-                    <div class="porcentaje-partido">203 | 23%</div>
-                    <div class="porcentaje-partido">107 | 12%</div>
-                    <div class="porcentaje-partido">31 | 4%</div>
-                </div>
-            </div>
+            <?php echo $this->element('Merlo.totales', ['tipo' => 'senadores']); ?>
+            <?php echo $this->element('Merlo.totales', ['tipo' => 'diputados']); ?>
+            <?php echo $this->element('Merlo.totales', ['tipo' => 'legisladores']); ?>
+            <?php echo $this->element('Merlo.totales', ['tipo' => 'concejales']); ?>
         </div>
         <div role="tabpanel" class="tab-pane" id="senadores">
             <div class="col-lg-5">
