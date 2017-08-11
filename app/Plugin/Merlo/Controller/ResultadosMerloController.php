@@ -37,29 +37,29 @@ class ResultadosMerloController extends AppController {
         
     }
 
-    public function ajax_get_resultados_colegios() {
+    public function ajax_get_resultados_colegios($categoria = null) {
         $data = $this->ResultadoMerlo->find("all", [
             "fields" => ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
-                'SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 as 503_sen',
-                'SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 as 508_sen',
-                'SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 as 509_sen',
+                "SUM(501_pais_unido_$categoria)/SUM(total_agrup_$categoria)*100 AS 501_$categoria",
+                "SUM(503_celeste_blanca_u_$categoria)/SUM(total_agrup_$categoria)*100 as 503_$categoria",
+                "SUM(508_cambiando_juntos_$categoria)/SUM(total_agrup_$categoria)*100 as 508_$categoria",
+                "SUM(509_cumplir_$categoria)/SUM(total_agrup_$categoria)*100 as 509_$categoria",
             ],
             "group" => "establecimiento",
             "order" => "establecimiento ASC",
         ]);
         
-        $this->set('data', $data);
+        $this->set("data", $data);
         return $this->render("/ajax", "ajax");
     }
 
     public function ajax_get_resultados_circuitos() {
         $data = $this->ResultadoMerlo->find("all", [
             "fields" => ["ResultadoMerlo.circuito",
-                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
-                'SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 as 503_sen',
-                'SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 as 508_sen',
-                'SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 as 509_sen',
+                "SUM(501_pais_unido_$categoria)/SUM(total_agrup_$categoria)*100 AS 501_$categoria",
+                "SUM(503_celeste_blanca_u_$categoria)/SUM(total_agrup_$categoria)*100 as 503_$categoria",
+                "SUM(508_cambiando_juntos_$categoria)/SUM(total_agrup_$categoria)*100 as 508_$categoria",
+                "SUM(509_cumplir_$categoria)/SUM(total_agrup_$categoria)*100 as 509_$categoria",
             ],
             "group" => "circuito",
             "order" => "circuito ASC",
