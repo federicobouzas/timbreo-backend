@@ -30,7 +30,7 @@ function totales() {
 function completar_resultados(categoria) {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios/" + categoria, function (data) {
         $("#tablaColegios_" + categoria + " tbody").empty();        
-        var jdata = $.parseJSON(data);
+        var jdata = $.parseJSON(data);  console.log(jdata);
         for (var i in jdata) {
             var row = $("<tr>");
             $("<td>").html("<strong>" + jdata[i].ResultadoMerlo.establecimiento + "</strong>").appendTo(row);
