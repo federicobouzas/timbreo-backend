@@ -3,9 +3,7 @@ $this->Html->script("../includes/fmw/datepicker/js/bootstrap-datetimepicker.min.
 $this->Html->css("../includes/fmw/datepicker/css/bootstrap-datetimepicker.css", array('inline' => false));
 $this->Html->script("merlo/resultados_merlo", array('inline' => false));
 $this->Html->css("merlo/resultados_merlo", array('inline' => false));
-
 ?>
-
 <div>
     <ul class="nav nav-tabs mt15" role="tablist">
         <li role="presentation" class="active"><a href="#totales" aria-controls="totales" role="tab" data-toggle="tab">Totales</a></li>
@@ -19,7 +17,7 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
             <div class="col-sm-6 col-sm-offset-3 mt15 mb25">
                 <h3 class="text-center mt0">Porcentaje de Mesas Escrutadas</h3>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $escrutadas; ?>%">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo floor($escrutadas); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $escrutadas; ?>%">
                         <span><?php echo $escrutadas; ?>%</span>
                     </div>
                 </div>
@@ -39,10 +37,7 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
                     <?php echo $this->element('Merlo.establecimientos', ['id_tabla' => 'tablaColegios_sen']); ?>
                 </div>
             </div>
-            <div class="clearfix"></div>
-            <?php echo $this->element('Merlo.totales', ['tipo' => 'senadores']); ?>
         </div>
-
         <div role="tabpanel" class="tab-pane" id="diputados">
             <div class="col-lg-5">
                 <?php echo $this->element('Merlo.circuitos', ['id_tabla' => 'tablaCircuitos_dip']); ?>
