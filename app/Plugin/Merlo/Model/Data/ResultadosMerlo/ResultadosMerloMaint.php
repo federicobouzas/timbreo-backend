@@ -1111,7 +1111,7 @@ protected $data = array (
                 ),
                 136 => 
                 array (
-                    'name' => '509_cumplir_4_consen',
+                    'name' => '509_cumplir_4_sen',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1119,7 +1119,7 @@ protected $data = array (
                 ),
                 137 => 
                 array (
-                    'name' => '509_cumplir_4_condip',
+                    'name' => '509_cumplir_4_dip',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1127,7 +1127,7 @@ protected $data = array (
                 ),
                 138 => 
                 array (
-                    'name' => '509_cumplir_4_conleg',
+                    'name' => '509_cumplir_4_leg',
                     'label' => '',
                     'presentation' => 'INT',
                     'class' => 'disabled',
@@ -1135,7 +1135,7 @@ protected $data = array (
                 ),
                 139 => 
                 array (
-                    'name' => '509_cumplir_4_concon',
+                    'name' => '509_cumplir_4_con',
                     'label' => '',
                     'presentation' => 'INT',
                     'size' => 4,

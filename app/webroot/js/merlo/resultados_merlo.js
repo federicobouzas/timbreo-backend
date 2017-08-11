@@ -32,7 +32,7 @@ function completar_resultados(categoria) {
         $("#tablaColegios_" + categoria + " tbody").empty();
         
         var jdata = $.parseJSON(data);
-        console.log(jdata);
+        //console.log(jdata);
         for (var i in jdata) {
             var row = $("<tr>");
             $("<td>").html("<strong>" + jdata[i].ResultadoMerlo.establecimiento + "</strong>").appendTo(row);
@@ -50,10 +50,10 @@ function completar_resultados(categoria) {
         for (var i in jdata) {
             var row = $("<tr>");
             $("<td>").html("<strong>" + jdata[i].ResultadoMerlo.circuito + "</strong>").appendTo(row);
-            $("<td class='text-center'>").text(jdata[i].ResultadoMerlo['501_' + categoria + ''] ? number_format(jdata[i][0]['501_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
-            $("<td class='text-center'>").text(jdata[i].ResultadoMerlo['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
-            $("<td class='text-center'>").text(jdata[i].ResultadoMerlo['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
-            $("<td class='text-center'>").text(jdata[i].ResultadoMerlo['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['501_' + categoria + ''] ? number_format(jdata[i][0]['501_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("#tablaCircuitos_" + categoria + " tbody").append(row);
         }
     });
