@@ -29,103 +29,79 @@ class ResultadoMerlo extends AppModel {
         '501_pais_unido_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo 1PAIS - SENADORES es requerido'
             )
         ),
         '501_pais_unido_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo 1PAIS - CONSEJALES es requerido'
             )
         ),
         '503_celeste_blanca_u_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo UNIDAD CIUDADANA - SENADORES es requerido'
             )
         ),
         '503_celeste_blanca_u2_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo UNIDAD CIUDADANA - CONSEJALES es requerido'
             )
         ),
         '508_cambiando_juntos_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo CAMBIEMOS - SENADORES es requerido'
             )
         ),
         '508_amarillo_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo CAMBIEMOS - CONSEJALES es requerido'
             )
         ),
         '509_cumplir_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo FRENTE JUSTICIALISTA - SENADORES es requerido'
             )
         ),
         '509_cumplir_2_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo FRENTE JUSTICIALISTA (LISTA CUMPLIR 2) - CONSEJALES es requerido'
             )
         ),
         '509_cumplir_4_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo FRENTE JUSTICIALISTA (LISTA CUMPLIR 4) - CONSEJALES es requerido'
             )
         ),
         'total_agrup_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
-            )
-        ),
-        'total_agrup_dip' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
-            )
-        ),
-        'total_agrup_leg' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - SENADORES es requerido'
             )
         ),
         'total_agrup_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - CONSEJALES es requerido'
             )
         ),
         'blanco_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
-            )
-        ),
-        'blanco_dip' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
-            )
-        ),
-        'blanco_leg' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo VOTOS EN BLANCO - SENADORES es requerido'
             )
         ),
         'blanco_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo es requerido'
+                'message' => 'El campo VOTOS EN BLANCO - CONSEJALES es requerido'
             )
         ),
     );
