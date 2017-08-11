@@ -1,0 +1,11 @@
+.porcentajes-partidos {
+    margin-top: -42px;
+    margin-left: -15px;
+    float: left;
+    font-family: Gotham;
+}
+
+.porcentaje-partido {
+    padding: 10px 0;
+    height: 32px;
+}
