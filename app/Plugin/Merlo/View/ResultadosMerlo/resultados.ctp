@@ -1,4 +1,5 @@
 <?php
+
 $this->Html->script("../includes/fmw/datepicker/js/bootstrap-datetimepicker.min.js", array('inline' => false));
 $this->Html->css("../includes/fmw/datepicker/css/bootstrap-datetimepicker.css", array('inline' => false));
 $this->Html->script("merlo/resultados_merlo", array('inline' => false));
@@ -15,6 +16,12 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active mt10" id="totales">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                     aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'senadores']); ?>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'diputados']); ?>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'legisladores']); ?>
