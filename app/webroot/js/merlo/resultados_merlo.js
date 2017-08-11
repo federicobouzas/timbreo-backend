@@ -7,6 +7,10 @@ $(function () {
             completar_resultados('sen');
         } else if (target == "diputados") {
             completar_resultados('dip');
+        } else if (target == "legisladores") {
+            completar_resultados('leg');
+        } else if (target == "concejales") {
+            completar_resultados('con');
         }
     });
     totales();
@@ -24,9 +28,9 @@ function totales() {
 }
 
 function completar_resultados(categoria) {
-    $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios/" + categoria + "", function (data) {
+    $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios/" + categoria, function (data) {
+        $("#tablaColegios tbody").empty();
         var jdata = $.parseJSON(data);
-        console.log(jdata);
         for (var i in jdata) {
             var row = $("<tr>");
             $("<td>").html("<strong>" + jdata[i].ResultadoMerlo.establecimiento + "</strong>").appendTo(row);
@@ -37,9 +41,8 @@ function completar_resultados(categoria) {
             $("#tablaColegios tbody").append(row);
         }
     });
-
-
-    $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_circuitos/" + categoria + "", function (data) {
+    $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_circuitos/" + categoria, function (data) {
+        $("#tablaCircuitos tbody").empty();
         var jdata = $.parseJSON(data);
         for (var i in jdata) {
             var row = $("<tr>");
