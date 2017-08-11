@@ -38,23 +38,6 @@ class ResultadosMerloController extends AppController {
     }
 
     public function ajax_get_resultados_colegios($categoria = null) {
-        $data = $this->ResultadoMerlo->find("all", [
-            "fields" => ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_$categoria)/SUM(total_agrup_$categoria)*100 AS 501_$categoria",
-                "SUM(503_celeste_blanca_u_$categoria)/SUM(total_agrup_$categoria)*100 as 503_$categoria",
-                "SUM(508_cambiando_juntos_$categoria)/SUM(total_agrup_$categoria)*100 as 508_$categoria",
-                "SUM(509_cumplir_$categoria)/SUM(total_agrup_$categoria)*100 as 509_$categoria",
-            ],
-            "group" => "establecimiento",
-            "order" => "establecimiento ASC",
-        ]);
-
-        $this->set("data", $data);
-        return $this->render("/ajax", "ajax");
-    }
-
-    public function ajax_get_resultados_circuitos($categoria = null) {
-
         if ($categoria == "sen") {
             $fields = ["ResultadoMerlo.circuito",
                 "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
@@ -84,7 +67,46 @@ class ResultadosMerloController extends AppController {
                 "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(IFNULL(total_agrup_con, 0))*100 AS 509_con",
             ];
         }
+        $data = $this->ResultadoMerlo->find("all", [
+            "fields" => $fields,
+            "group" => "establecimiento",
+            "order" => "establecimiento ASC",
+        ]);
 
+        $this->set("data", $data);
+        return $this->render("/ajax", "ajax");
+    }
+
+    public function ajax_get_resultados_circuitos($categoria = null) {
+        if ($categoria == "sen") {
+            $fields = ["ResultadoMerlo.circuito",
+                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
+                "SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 AS 503_sen",
+                "SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 AS 508_sen",
+                "SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 AS 509_sen",
+            ];
+        } elseif ($categoria == "dip") {
+            $fields = ["ResultadoMerlo.circuito",
+                "SUM(501_pais_unido_dip)/SUM(total_agrup_dip)*100 AS 501_dip",
+                "SUM(503_celeste_blanca_u_dip)/SUM(total_agrup_dip)*100 AS 503_dip",
+                "SUM(508_cambiando_juntos_dip)/SUM(total_agrup_dip)*100 AS 508_dip",
+                "SUM(509_cumplir_dip)/SUM(total_agrup_dip)*100 AS 509_dip",
+            ];
+        } elseif ($categoria == "leg") {
+            $fields = ["ResultadoMerlo.circuito",
+                "SUM(501_pais_unido_leg)/SUM(total_agrup_leg)*100 AS 501_leg",
+                "SUM(503_celeste_blanca_u2_leg)/SUM(total_agrup_leg)*100 AS 503_leg",
+                "SUM(508_amarillo_leg)/SUM(total_agrup_leg)*100 AS 508_leg",
+                "SUM(509_cumplir_2_leg)/SUM(total_agrup_leg)*100 AS 509_leg",
+            ];
+        } elseif ($categoria == "con") {
+            $fields = ["ResultadoMerlo.circuito",
+                "SUM(501_pais_unido_con)/SUM(total_agrup_con)*100 AS 501_con",
+                "SUM(503_celeste_blanca_u2_con)/SUM(total_agrup_con)*100 AS 503_con",
+                "SUM(508_amarillo_con)/SUM(total_agrup_con)*100 AS 508_con",
+                "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(IFNULL(total_agrup_con, 0))*100 AS 509_con",
+            ];
+        }
         $data = $this->ResultadoMerlo->find("all", [
             "fields" => $fields,
             "group" => "circuito",
@@ -93,7 +115,7 @@ class ResultadosMerloController extends AppController {
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }
-    
+
     public function ajax_get_resultados_totales($categoria = null) {
         if ($categoria == "sen") {
             $fields = ["ResultadoMerlo.establecimiento",
