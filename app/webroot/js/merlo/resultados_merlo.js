@@ -1,4 +1,20 @@
 $(function () {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("aria-controls");
+        if (target == "totales") {
+            totales();
+        } else if (target == "senadores") {
+            senadores();
+        }
+    });
+    totales();
+});
+
+function totales() {
+
+}
+
+function senadores() {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios", function (data) {
         var jdata = $.parseJSON(data);
         for (var i in jdata) {
@@ -23,4 +39,4 @@ $(function () {
             $("#tablaCircuitos tbody").append(row);
         }
     });
-});
+}
