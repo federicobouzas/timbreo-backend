@@ -71,8 +71,6 @@ function grafico_dona(container, categoria, title) {
                 arrayData.push(['PJ', parseInt(jdata[0][0][i])]);
             }
         }
-        console.log(jdata);
-        console.log(arrayData);
         $("[id='" + container + "']").highcharts({
             chart: {
                 margin: [0, 0, 0, 0], spacingTop: 0, spacingBottom: 0, spacingLeft: 0, spacingRight: 0,
