@@ -19,8 +19,8 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
             <div class="col-sm-6 col-sm-offset-3 mt15 mb25">
                 <h3 class="text-center mt0">Porcentaje de Mesas Escrutadas</h3>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <span>70%</span>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span>0%</span>
                     </div>
                 </div>
             </div>
