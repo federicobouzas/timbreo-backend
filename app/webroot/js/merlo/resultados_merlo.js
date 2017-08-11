@@ -29,7 +29,7 @@ function totales() {
 
 function completar_resultados(categoria) {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_colegios/" + categoria, function (data) {
-        $("#tablaColegios tbody").empty();
+        $("#tablaColegios_" + categoria + " tbody").empty();        
         var jdata = $.parseJSON(data);
         for (var i in jdata) {
             var row = $("<tr>");
@@ -38,11 +38,11 @@ function completar_resultados(categoria) {
             $("<td class='text-center'>").text(jdata[i][0]['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
-            $("#tablaColegios tbody").append(row);
+            $("#tablaColegios_" + categoria + " tbody").append(row);
         }
     });
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_circuitos/" + categoria, function (data) {
-        $("#tablaCircuitos tbody").empty();
+        $("#tablaCircuitos_" + categoria + " tbody").empty();
         var jdata = $.parseJSON(data);
         for (var i in jdata) {
             var row = $("<tr>");
@@ -51,7 +51,7 @@ function completar_resultados(categoria) {
             $("<td class='text-center'>").text(jdata[i][0]['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
-            $("#tablaCircuitos tbody").append(row);
+            $("#tablaCircuitos_" + categoria + " tbody").append(row);
         }
     });
 }
@@ -71,6 +71,8 @@ function grafico_dona(container, categoria, title) {
                 arrayData.push(['PJ', parseInt(jdata[0][0][i])]);
             }
         }
+        console.log(jdata);
+        console.log(arrayData);
         $("[id='" + container + "']").highcharts({
             chart: {
                 margin: [0, 0, 0, 0], spacingTop: 0, spacingBottom: 0, spacingLeft: 0, spacingRight: 0,
@@ -117,6 +119,7 @@ function grafico_barras(container, categoria) {
                 cantTotal += parseInt(jdata[0][0][i]);
             }
         }
+        $("[id='porcentajes-partidos-" + categoria + "']").empty();
         for (var i in jdata[0][0]) {
             if (i != "tot") {
                 var votos = number_format(jdata[0][0][i], 0, ",", ".");
