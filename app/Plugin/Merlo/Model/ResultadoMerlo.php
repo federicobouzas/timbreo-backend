@@ -23,8 +23,8 @@ class ResultadoMerlo extends AppModel {
         'tmp_509_sen' => '509_cumplir_sen',
         'tmp_509_dip' => '509_cumplir_dip',
         'tmp_509_leg' => '509_cumplir_2_leg',
-        'tmp_509_con' => '509_cumplir_2_con + 509_cumplir_4_con')
-    ;
+        'tmp_509_con' => '509_cumplir_2_con + 509_cumplir_4_con'
+    );
     public $validate = array(
         '501_pais_unido_sen' => array(
             'required' => array(
