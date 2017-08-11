@@ -68,7 +68,7 @@ function grafico_dona(container, title) {
                 type: 'pie',
                 name: 'Votos',
                 innerSize: '50%',
-                data: [['1PAIS', 10.38], ['UNIDAD CIUDADANA', 56.33], ['CAMBIEMOS', 24.03], ['PJ', 4.77]]
+                data: [['UNIDAD CIUDADANA', 56.33], ['CAMBIEMOS', 24.03], ['1PAIS', 10.38], ['PJ', 4.77]]
             }]
     });
 }
@@ -79,7 +79,7 @@ function grafico_barras(container) {
         exporting: {enabled: false},
         credits: {enabled: false},
         title: {text: null},
-        xAxis: {categories: ['1PAIS', 'UC', 'PRO', 'PJ'], title: {text: null}},
+        xAxis: {categories: ['PRO', 'UC', '1PAIS', 'PJ'], title: {text: null}},
         yAxis: {min: 0, title: {text: null}, labels: {enabled: false}},
         tooltip: {enabled: false},
         plotOptions: {bar: {stacking: 'percent', dataLabels: {enabled: false}}},

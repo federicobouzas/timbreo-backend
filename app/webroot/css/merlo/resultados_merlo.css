@@ -9,3 +9,9 @@
     padding: 10px 0;
     height: 32px;
 }
+
+.num-votos, .porc-votos {
+    width: 30px;
+    text-align: right;
+    display: inline-block;
+}
