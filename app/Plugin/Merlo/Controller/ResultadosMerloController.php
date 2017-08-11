@@ -76,7 +76,7 @@ class ResultadosMerloController extends AppController {
                 "SUM(503_celeste_blanca_u_sen) as 503_sen",
                 "SUM(508_cambiando_juntos_sen) as 508_sen",
                 "SUM(509_cumplir_sen) as 509_sen",
-                "(SUM(501_pais_unido_sen) + SUM(503_celeste_blanca_u_sen) + SUM(508_cambiando_juntos_sen) + SUM(509_cumplir_sen)) as tot",
+                "(SUM(IFNULL(501_pais_unido_sen, 0)) + SUM(IFNULL(503_celeste_blanca_u_sen, 0)) + SUM(IFNULL(508_cambiando_juntos_sen, 0)) + SUM(IFNULL(509_cumplir_sen, 0))) as tot",
             ];
         } elseif ($categoria == "dip") {
             $fields = ["ResultadoMerlo.establecimiento",
@@ -84,7 +84,7 @@ class ResultadosMerloController extends AppController {
                 "SUM(503_celeste_blanca_u_dip) as 503_dip",
                 "SUM(508_cambiando_juntos_dip) as 508_dip",
                 "SUM(509_cumplir_dip) as 509_dip",
-                "(SUM(501_pais_unido_dip) + SUM(503_celeste_blanca_u_dip) + SUM(508_cambiando_juntos_dip) + SUM(509_cumplir_dip)) as tot",
+                "(SUM(IFNULL(501_pais_unido_dip, 0)) + SUM(IFNULL(503_celeste_blanca_u_dip, 0)) + SUM(IFNULL(508_cambiando_juntos_dip, 0)) + SUM(IFNULL(509_cumplir_dip, 0))) as tot",
             ];
         } elseif ($categoria == "leg") {
             $fields = ["ResultadoMerlo.establecimiento",
@@ -92,22 +92,18 @@ class ResultadosMerloController extends AppController {
                 "SUM(503_celeste_blanca_u2_leg) as 503_leg",
                 "SUM(508_amarillo_leg) as 508_leg",
                 "SUM(509_cumplir_2_leg) as 509_leg",
-                "(SUM(501_pais_unido_leg) + SUM(503_celeste_blanca_u2_leg) + SUM(508_amarillo_leg) + SUM(509_cumplir_2_leg)) as tot",
+                "(SUM(IFNULL(501_pais_unido_leg, 0)) + SUM(IFNULL(503_celeste_blanca_u2_leg, 0)) + SUM(IFNULL(508_amarillo_leg, 0)) + SUM(IFNULL(509_cumplir_2_leg, 0))) as tot",
             ];
         } elseif ($categoria == "con") {
             $fields = ["ResultadoMerlo.establecimiento",
                 "SUM(501_pais_unido_con) AS 501_con",
                 "SUM(503_celeste_blanca_u2_con) as 503_con",
                 "SUM(508_amarillo_con) as 508_con",
-                "(SUM(509_cumplir_2_con)+SUM(509_cumplir_4_con)) as 509_con",
-                "(SUM(501_pais_unido_con) + SUM(503_celeste_blanca_u2_con) + SUM(508_amarillo_con) + SUM(509_cumplir_2_con) + SUM(509_cumplir_4_con)) as tot",
+                "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0))) as 509_con",
+                "(SUM(IFNULL(501_pais_unido_con, 0)) + SUM(IFNULL(503_celeste_blanca_u2_con, 0)) + SUM(IFNULL(508_amarillo_con, 0)) + SUM(IFNULL(509_cumplir_2_con, 0)) + SUM(IFNULL(509_cumplir_4_con, 0))) as tot",
             ];
         }
-
-        $data = $this->ResultadoMerlo->find("all", [
-            "fields" => $fields,
-        ]);
-
+        $data = $this->ResultadoMerlo->find("all", ["fields" => $fields]);
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }
@@ -139,14 +135,10 @@ class ResultadosMerloController extends AppController {
                 "SUM(501_pais_unido_con)/SUM(total_agrup_con)*100 AS 501_con",
                 "SUM(503_celeste_blanca_u2_con)/SUM(total_agrup_con)*100 as 503_con",
                 "SUM(508_amarillo_con)/SUM(total_agrup_con)*100 as 508_con",
-                "(SUM(509_cumplir_2_con)+SUM(509_cumplir_4_con))/SUM(total_agrup_con)*100 as 509_con",
+                "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(total_agrup_con)*100 as 509_con",
             ];
         }
-
-        $data = $this->ResultadoMerlo->find("all", [
-            "fields" => $fields,
-        ]);
-
+        $data = $this->ResultadoMerlo->find("all", ["fields" => $fields]);
         $this->set('data', $data);
         return $this->render("/ajax", "ajax");
     }

@@ -71,7 +71,6 @@ function grafico_dona(container, categoria, title) {
                 arrayData.push(['PJ', parseInt(jdata[0][0][i])]);
             }
         }
-
         $("[id='" + container + "']").highcharts({
             chart: {
                 margin: [0, 0, 0, 0], spacingTop: 0, spacingBottom: 0, spacingLeft: 0, spacingRight: 0,
@@ -99,49 +98,60 @@ function grafico_dona(container, categoria, title) {
 
 function grafico_barras(container, categoria) {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_totales/" + categoria, function (data) {
+        var categories = [];
         var jdata = $.parseJSON(data);
-        var arrayData = [];
         var cantTotal = 0;
+        var series = [{name: 'Faltante', data: []}, {name: 'Votos', data: []}];
         for (var i in jdata[0][0]) {
-            if (i == ('501_' + categoria)) {
-                arrayData.push(['1PAIS', jdata[0][0][i], ]);
-            } else if (i == ('503_' + categoria)) {
-                arrayData.push(['UC', jdata[0][0][i]]);
-            } else if (i == ('508_' + categoria)) {
-                arrayData.push(['PRO', jdata[0][0][i]]);
-            } else if (i == ('509_' + categoria)) {
-                arrayData.push(['PJ', jdata[0][0][i]]);
-            } else if (i == 'tot') {
-                cantTotal = jdata[0][0][i];
+            if (i != "tot") {
+                var lista = i.substr(0, 3);
+                if (lista == "501") {
+                    categories.push("1PAIS");
+                } else if (lista == "503") {
+                    categories.push("UC");
+                } else if (lista == "508") {
+                    categories.push("PRO");
+                } else if (lista == "509") {
+                    categories.push("PJ");
+                }
+                cantTotal += parseInt(jdata[0][0][i]);
             }
         }
-
+        for (var i in jdata[0][0]) {
+            if (i != "tot") {
+                var votos = number_format(jdata[0][0][i], 0, ",", ".");
+                var porcentaje = number_format(jdata[0][0][i] / jdata[0][0].tot * 100, 2, ",", ".");
+                var div = $('<div class="porcentaje-partido"><span class="num-votos">' + votos + '</span><span class="ml7 mr5">|</span><span class="porc-votos">' + porcentaje + '%</span></div>');
+                $("[id='porcentajes-partidos-" + categoria + "']").append(div);
+                series[0].data.push({y: jdata[0][0].tot - jdata[0][0][i], color: "#CCC"});
+                series[1].data.push({y: parseInt(jdata[0][0][i]), color: getColor(i)});
+            }
+        }
         $("[id='" + container + "']").highcharts({
             chart: {type: 'bar', style: {fontFamily: 'Gotham'}},
             exporting: {enabled: false},
             credits: {enabled: false},
             title: {text: null},
-            xAxis: {categories: ['PRO', 'UC', '1PAIS', 'PJ'], title: {text: null}},
+            xAxis: {categories: categories, title: {text: null}},
             yAxis: {min: 0, title: {text: null}, labels: {enabled: false}},
             tooltip: {enabled: false},
             plotOptions: {bar: {stacking: 'percent', dataLabels: {enabled: false}}},
             legend: {enabled: false},
-            series: [
-                {name: 'Faltante', data: [
-                        {y: 341, color: '#CCC'},
-                        {y: 773, color: '#CCC'},
-                        {y: 869, color: '#CCC'},
-                        {y: 945, color: '#CCC'}
-                    ]
-                },
-                {name: 'Votos', data: [
-                        {y: 635, color: '#FFD300'},
-                        {y: 203, color: '#A655AC'},
-                        {y: 107, color: '#F44336'},
-                        {y: 31, color: '#037DBF'}
-                    ]
-                }
-            ]
+            series: series
         });
     });
+}
+
+function getColor(field) {
+    var lista = field.substr(0, 3);
+    if (lista == "501") {
+        return "#F44336";
+    } else if (lista == "503") {
+        return "#037DBF";
+    } else if (lista == "508") {
+        return "#FFD300";
+    } else if (lista == "509") {
+        return "#A655AC";
+    }
+    return "#000";
 }
