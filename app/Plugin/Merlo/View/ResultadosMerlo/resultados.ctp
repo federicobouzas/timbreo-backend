@@ -16,12 +16,15 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active mt10" id="totales">
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                     aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                    <span class="sr-only">70% Complete</span>
+            <div class="col-sm-6 col-sm-offset-3 mb25">
+                <h3 class="text-center mt0">Porcentaje de Mesas Escrutadas</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                        <span>70%</span>
+                    </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'senadores']); ?>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'diputados']); ?>
             <?php echo $this->element('Merlo.totales', ['tipo' => 'legisladores']); ?>
