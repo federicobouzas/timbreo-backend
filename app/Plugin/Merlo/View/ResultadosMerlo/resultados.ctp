@@ -8,7 +8,7 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
     <ul class="nav nav-tabs mt15" role="tablist">
         <li role="presentation" class="active"><a href="#totales" aria-controls="totales" role="tab" data-toggle="tab">Totales</a></li>
         <li role="presentation"><a href="#senadores" aria-controls="senadores" role="tab" data-toggle="tab">Senadores</a></li>
-        <li role="presentation"><a href="#diputados" aria-controls="diputados" role="tab" data-toggle="tab">Diptuados</a></li>
+        <li role="presentation"><a href="#diputados" aria-controls="diputados" role="tab" data-toggle="tab">Diputados</a></li>
         <li role="presentation"><a href="#legisladores" aria-controls="legisladores" role="tab" data-toggle="tab">Legisladores</a></li>
         <li role="presentation"><a href="#concejales" aria-controls="concejales" role="tab" data-toggle="tab">Concejales</a></li>
     </ul>
