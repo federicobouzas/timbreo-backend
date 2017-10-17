@@ -9,14 +9,6 @@ class ResultadosMerloSL extends AbstractData {
 protected $data = array (
     'translatepath' => NULL,
     'title' => '',
-    'actions' => 
-    array (
-        0 => 
-        array (
-            'op' => 'E',
-            'action' => 'edit',
-        ),
-    ),
     'filters' => 
     array (
         0 => 

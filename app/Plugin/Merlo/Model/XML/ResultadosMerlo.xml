@@ -19,9 +19,7 @@
                 <listfield name="extranjero" label="Extranjero" presentation="SINO" />
             </column>
         </table>
-        <actions>
-            <action op="E" action="edit" />
-        </actions>
+ss
     </search_list>
   
     <tablemaint file="ResultadosMerloMaint.php">
@@ -37,231 +35,32 @@
             <field name="dif_votantes_sobres" label="Diferencia" presentation="INT" size="8" />   
         </fieldset> 
         <fieldset title="" columns="1000" id="agrupaciones"> 
-            <field name="8_a_sen" label="" presentation="INT" size="4" />
-            <field name="8_a_dip" label="" presentation="INT" size="4" />
-            <field name="8_a_leg" label="" presentation="INT" class="disabled" size="4" />   
-            <field name="8_a_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="501_1pais_sen" label="" presentation="INT" size="4" />
+            <field name="501_1pais_dip" label="" presentation="INT" size="4" />
+            <field name="501_1pais_leg" label="" presentation="INT"  size="4" />   
+            <field name="501_1pais_con" label="" presentation="INT"  size="4" />
             
-            <field name="8_b_sen" label="" presentation="INT" size="4" />
-            <field name="8_b_dip" label="" presentation="INT" size="4" />
-            <field name="8_b_leg" label="" presentation="INT" size="4" />
-            <field name="8_b_con" label="" presentation="INT" size="4" />
+            <field name="503_uc_sen" label="" presentation="INT" size="4" />
+            <field name="503_uc_dip" label="" presentation="INT" size="4" />
+            <field name="503_uc_leg" label="" presentation="INT" size="4" />
+            <field name="503_uc_con" label="" presentation="INT" size="4" />
            
-            <field name="8_c_sen" label="" presentation="INT" size="4" />
-            <field name="8_c_dip" label="" presentation="INT" size="4" />
-            <field name="8_c_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="8_c_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="508_camb_sen" label="" presentation="INT" size="4" />
+            <field name="508_camb_dip" label="" presentation="INT" size="4" />
+            <field name="508_camb_leg" label="" presentation="INT"  size="4" />
+            <field name="508_camb_con" label="" presentation="INT"  size="4" />
             
-            <field name="8_d_sen" label="" presentation="INT" size="4" />
-            <field name="8_d_dip" label="" presentation="INT" size="4" />
-            <field name="8_d_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="8_d_leg" label="" presentation="INT" class="disabled" size="4" />
+            <field name="509_fj_sen" label="" presentation="INT" size="4" />
+            <field name="509_fj_dip" label="" presentation="INT" size="4" />
+            <field name="509_fj_leg" label="" presentation="INT"  size="4" />
+            <field name="509_fj_con" label="" presentation="INT"  size="4" />
            
-            <field name="22_a_sen" label="" presentation="INT" size="4" />
-            <field name="22_a_dip" label="" presentation="INT" size="4" />
-            <field name="22_a_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="22_a_con" label="" presentation="INT" class="disabled" size="4" />
+            <field name="510_izq_sen" label="" presentation="INT" size="4" />
+            <field name="510_izq_dip" label="" presentation="INT" size="4" />
+            <field name="510_izq_leg" label="" presentation="INT"  size="4" />
+            <field name="510_izq_con" label="" presentation="INT"  size="4" />
            
-            <field name="259_a_sen" label="" presentation="INT" size="4" />
-            <field name="259_a_dip" label="" presentation="INT" size="4" />
-            <field name="259_a_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="259_a_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="259_b_sen" label="" presentation="INT" size="4" />
-            <field name="259_b_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="259_b_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="259_b_con" label="" presentation="INT" class="disabled" size="4" />
-           
-            <field name="259_c_sen" label="" presentation="INT" size="4" />
-            <field name="259_c_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="259_c_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="259_c_con" label="" presentation="INT" class="disabled" size="4" />
-           
-            <field name="268_unidad_sen" label="" presentation="INT" size="4" />
-            <field name="268_unidad_dip" label="" presentation="INT" size="4" />
-            <field name="268_unidad_leg" label="" presentation="INT" size="4" />
-            <field name="268_unidad_sen" label="" presentation="INT" class="disabled" size="4" />
-           
-            <field name="298_toba_sen" label="" presentation="INT" size="4" />
-            <field name="298_toba_dip" label="" presentation="INT" size="4" />
-            <field name="298_toba_leg" label="" presentation="INT" size="4" />
-            <field name="298_toba_con" label="" presentation="INT" size="4" />
-           
-            <field name="301_vamos_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="301_vamos_dip" label="" presentation="INT" size="4" />
-            <field name="301_vamos_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="301_vamos_con" label="" presentation="INT" class="disabled" size="4" />
-           
-            <field name="301_fuerza_de_la_gente_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="301_fuerza_de_la_gente_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="301_fuerza_de_la_gente_leg" label="" presentation="INT" size="4" />
-            <field name="301_fuerza_de_la_gente_con" label="" presentation="INT" size="4" />
-           
-            <field name="309_compromiso_ciudadano_sen" label="" presentation="INT" size="4" />
-            <field name="309_compromiso_ciudadano_dip" label="" presentation="INT" size="4" />
-            <field name="309_compromiso_ciudadano_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="309_compromiso_ciudadano_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="501_pais_unido_sen" label="" presentation="INT" size="4" />
-            <field name="501_pais_unido_dip" label="" presentation="INT" size="4" />
-            <field name="501_pais_unido_leg" label="" presentation="INT" size="4" />
-            <field name="501_pais_unido_con" label="" presentation="INT" size="4" />
-            
-            <field name="502_a_sen" label="" presentation="INT" size="4" />
-            <field name="502_a_dip" label="" presentation="INT" size="4" />
-            <field name="502_a_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_a_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="502_86_socialista_popular_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_86_socialista_popular_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_86_socialista_popular_leg" label="" presentation="INT" size="4" />
-            <field name="502_86_socialista_popular_con" label="" presentation="INT" size="4" />
-            
-            <field name="502_86_socialismo_merlense_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_86_socialismo_merlense_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_86_socialismo_merlense_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="502_86_socialismo_merlense_con" label="" presentation="INT" size="4" />
-            
-            <field name="503_celeste_blanca_u_sen" label="" presentation="INT" size="4" />
-            <field name="503_celeste_blanca_u_dip" label="" presentation="INT" size="4" />
-            <field name="503_celeste_blanca_u_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="503_celeste_blanca_u_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="503_celeste_blanca_u2_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="503_celeste_blanca_u2_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="503_celeste_blanca_u2_leg" label="" presentation="INT" size="4" />
-            <field name="503_celeste_blanca_u2_con" label="" presentation="INT" size="4" />
-            
-            <field name="504_unidad_izquierda_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="504_unidad_izquierda_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="504_unidad_izquierda_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="504_unidad_izquierda_con" label="" presentation="INT" size="4" />
-            
-            <field name="505_a_sen" label="" presentation="INT" size="4" />
-            <field name="505_a_dip" label="" presentation="INT" size="4" />
-            <field name="505_a_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_a_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="505_b_sen" label="" presentation="INT" size="4" />
-            <field name="505_b_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_b_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_b_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="505_c_sen" label="" presentation="INT" size="4" />
-            <field name="505_c_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_c_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_c_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="505_d_sen" label="" presentation="INT" size="4" />
-            <field name="505_d_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_d_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_d_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="505_e_sen" label="" presentation="INT" size="4" />
-            <field name="505_e_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_e_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_e_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="505_f_sen" label="" presentation="INT" size="4" />
-            <field name="505_f_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_f_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="505_f_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="506_mem_ver_just_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="506_mem_ver_just_dip" label="" presentation="INT" size="4" />
-            <field name="506_mem_ver_just_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="506_mem_ver_just_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="506_tierra_techo_trabajo_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="506_tierra_techo_trabajo_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="506_tierra_techo_trabajo_leg" label="" presentation="INT" size="4" />
-            <field name="506_tierra_techo_trabajo_con" label="" presentation="INT" size="4" />
-            
-            <field name="507_convicciones_sen" label="" presentation="INT" size="4" />
-            <field name="507_convicciones_dip" label="" presentation="INT" size="4" />
-            <field name="507_convicciones_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="507_convicciones_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="507_79_convicciones_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="507_79_convicciones_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="507_79_convicciones_leg" label="" presentation="INT" size="4" />
-            <field name="507_79_convicciones_con" label="" presentation="INT" size="4" />
-            
-            <field name="508_cambiando_juntos_sen" label="" presentation="INT" size="4" />
-            <field name="508_cambiando_juntos_dip" label="" presentation="INT" size="4" />
-            <field name="508_cambiando_juntos_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="508_cambiando_juntos_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="508_amarillo_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="508_amarillo_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="508_amarillo_leg" label="" presentation="INT" size="4" />
-            <field name="508_amarillo_con" label="" presentation="INT" size="4" />
-            
-            <field name="509_cumplir_sen" label="" presentation="INT" size="4" />
-            <field name="509_cumplir_dip" label="" presentation="INT" size="4" />
-            <field name="509_cumplir_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="509_cumplir_2_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_2_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_2_leg" label="" presentation="INT" size="4" />
-            <field name="509_cumplir_2_con" label="" presentation="INT" size="4" />
-            
-            <field name="509_cumplir_4_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_4_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_4_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="509_cumplir_4_con" label="" presentation="INT" size="4" />
-            
-            <field name="510_1_sen" label="" presentation="INT" size="4" />
-            <field name="510_1_dip" label="" presentation="INT" size="4" />
-            <field name="510_1_leg" label="" presentation="INT" size="4" />
-            <field name="510_1_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_autoctono_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_autoctono_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_autoctono_leg" label="" presentation="INT" size="4" />
-            <field name="1902_autoctono_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_dignidad_popular_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_dignidad_popular_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_dignidad_popular_leg" label="" presentation="INT" size="4" />
-            <field name="1902_dignidad_popular_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_frente_union_federal_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_frente_union_federal_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_frente_union_federal_leg" label="" presentation="INT" size="4" />
-            <field name="1902_frente_union_federal_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_primera_dama_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_primera_dama_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_primera_dama_leg" label="" presentation="INT" size="4" />
-            <field name="1902_primera_dama_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="1902_laborista_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_laborista_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_laborista_leg" label="" presentation="INT" size="4" />
-            <field name="1902_laborista_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_popular_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_popular_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_popular_leg" label="" presentation="INT" size="4" />
-            <field name="1902_popular_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_renovacion_federal_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_renovacion_federal_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_renovacion_federal_leg" label="" presentation="INT" size="4" />
-            <field name="1902_renovacion_federal_con" label="" presentation="INT" size="4" />
-            
-            <field name="1902_tres_banderas_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_tres_banderas_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="1902_tres_banderas_leg" label="" presentation="INT" size="4" />
-            <field name="1902_tres_banderas_con" label="" presentation="INT" class="disabled" size="4" />
-            
-            <field name="821_proyecto_local_merlense_sen" label="" presentation="INT" class="disabled" size="4" />
-            <field name="821_proyecto_local_merlense_dip" label="" presentation="INT" class="disabled" size="4" />
-            <field name="821_proyecto_local_merlense_leg" label="" presentation="INT" class="disabled" size="4" />
-            <field name="821_proyecto_local_merlense_con" label="" presentation="INT" size="4" />
-            
+            <!--TOTALES--> 
             <field name="total_agrup_sen" label="" presentation="INT" size="4" />
             <field name="total_agrup_dip" label="" presentation="INT" size="4" />
             <field name="total_agrup_leg" label="" presentation="INT" size="4" />
