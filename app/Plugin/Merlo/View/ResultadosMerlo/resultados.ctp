@@ -30,7 +30,7 @@ $this->Html->css("merlo/resultados_merlo", array('inline' => false));
         </div>
         <div role="tabpanel" class="tab-pane" id="senadores">
             <div>
-                <div class="col-lg-5">
+                <div class="col-lg-5">;
                     <?php echo $this->element('Merlo.circuitos', ['id_tabla' => 'tablaCircuitos_sen']); ?>
                 </div>
                 <div class="col-lg-7" style="max-height: 400px; overflow-y: scroll;">

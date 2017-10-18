@@ -34,42 +34,46 @@ class ResultadosMerloController extends AppController {
     }
 
     public function resultados() {
-        $mesasTotal = $this->ResultadoMerlo->find('count');   
+        $mesasTotal = $this->ResultadoMerlo->find('count');
         $mesasEscrutadas = $this->ResultadoMerlo->find('count', array(
-            'conditions' => array('508_cambiando_juntos_sen IS NOT NULL')
+            'conditions' => array('508_camb_sen IS NOT NULL')
         ));
-        $escrutadas = number_format($mesasEscrutadas/$mesasTotal * 100, 2);
+        $escrutadas = number_format($mesasEscrutadas / $mesasTotal * 100, 2);
         $this->set('escrutadas', $escrutadas);
     }
 
     public function ajax_get_resultados_colegios($categoria = null) {
         if ($categoria == "sen") {
             $fields = ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
-                "SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 AS 503_sen",
-                "SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 AS 508_sen",
-                "SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 AS 509_sen",
+                "SUM(501_1pais_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
+                "SUM(503_uc_sen)/SUM(total_agrup_sen)*100 AS 503_sen",
+                "SUM(508_camb_sen)/SUM(total_agrup_sen)*100 AS 508_sen",
+                "SUM(509_fj_sen)/SUM(total_agrup_sen)*100 AS 509_sen",
+                "SUM(510_izq_sen)/SUM(total_agrup_sen)*100 AS 510_sen",
             ];
         } elseif ($categoria == "dip") {
             $fields = ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_dip)/SUM(total_agrup_dip)*100 AS 501_dip",
-                "SUM(503_celeste_blanca_u_dip)/SUM(total_agrup_dip)*100 AS 503_dip",
-                "SUM(508_cambiando_juntos_dip)/SUM(total_agrup_dip)*100 AS 508_dip",
-                "SUM(509_cumplir_dip)/SUM(total_agrup_dip)*100 AS 509_dip",
+                "SUM(501_1pais_dip)/SUM(total_agrup_dip)*100 AS 501_dip",
+                "SUM(503_uc_dip)/SUM(total_agrup_dip)*100 AS 503_dip",
+                "SUM(508_camb_dip)/SUM(total_agrup_dip)*100 AS 508_dip",
+                "SUM(509_fj_dip)/SUM(total_agrup_dip)*100 AS 509_dip",
+                "SUM(510_izq_dip)/SUM(total_agrup_dip)*100 AS 510_dip",
             ];
         } elseif ($categoria == "leg") {
             $fields = ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_leg)/SUM(total_agrup_leg)*100 AS 501_leg",
-                "SUM(503_celeste_blanca_u2_leg)/SUM(total_agrup_leg)*100 AS 503_leg",
-                "SUM(508_amarillo_leg)/SUM(total_agrup_leg)*100 AS 508_leg",
-                "SUM(509_cumplir_2_leg)/SUM(total_agrup_leg)*100 AS 509_leg",
+                "SUM(501_1pais_leg)/SUM(total_agrup_leg)*100 AS 501_leg",
+                "SUM(503_uc_leg)/SUM(total_agrup_leg)*100 AS 503_leg",
+                "SUM(508_camb_leg)/SUM(total_agrup_leg)*100 AS 508_leg",
+                "SUM(509_fj_leg)/SUM(total_agrup_leg)*100 AS 509_leg",
+                "SUM(510_izq_leg)/SUM(total_agrup_leg)*100 AS 510_leg",
             ];
         } elseif ($categoria == "con") {
             $fields = ["ResultadoMerlo.establecimiento",
-                "SUM(501_pais_unido_con)/SUM(total_agrup_con)*100 AS 501_con",
-                "SUM(503_celeste_blanca_u2_con)/SUM(total_agrup_con)*100 AS 503_con",
-                "SUM(508_amarillo_con)/SUM(total_agrup_con)*100 AS 508_con",
-                "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(IFNULL(total_agrup_con, 0))*100 AS 509_con",
+                "SUM(501_1pais_con)/SUM(total_agrup_con)*100 AS 501_con",
+                "SUM(503_uc_con)/SUM(total_agrup_con)*100 AS 503_con",
+                "SUM(508_camb_con)/SUM(total_agrup_con)*100 AS 508_con",
+                "SUM(509_fj_con)/SUM(total_agrup_con)*100 AS 509_con",
+                "SUM(510_izq_con)/SUM(total_agrup_con)*100 AS 510_con",
             ];
         }
         $data = $this->ResultadoMerlo->find("all", [
@@ -84,31 +88,35 @@ class ResultadosMerloController extends AppController {
     public function ajax_get_resultados_circuitos($categoria = null) {
         if ($categoria == "sen") {
             $fields = ["ResultadoMerlo.circuito",
-                "SUM(501_pais_unido_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
-                "SUM(503_celeste_blanca_u_sen)/SUM(total_agrup_sen)*100 AS 503_sen",
-                "SUM(508_cambiando_juntos_sen)/SUM(total_agrup_sen)*100 AS 508_sen",
-                "SUM(509_cumplir_sen)/SUM(total_agrup_sen)*100 AS 509_sen",
+                "SUM(501_1pais_sen)/SUM(total_agrup_sen)*100 AS 501_sen",
+                "SUM(503_uc_sen)/SUM(total_agrup_sen)*100 AS 503_sen",
+                "SUM(508_camb_sen)/SUM(total_agrup_sen)*100 AS 508_sen",
+                "SUM(509_fj_sen)/SUM(total_agrup_sen)*100 AS 509_sen",
+                "SUM(510_izq_sen)/SUM(total_agrup_sen)*100 AS 510_sen",
             ];
         } elseif ($categoria == "dip") {
             $fields = ["ResultadoMerlo.circuito",
-                "SUM(501_pais_unido_dip)/SUM(total_agrup_dip)*100 AS 501_dip",
-                "SUM(503_celeste_blanca_u_dip)/SUM(total_agrup_dip)*100 AS 503_dip",
-                "SUM(508_cambiando_juntos_dip)/SUM(total_agrup_dip)*100 AS 508_dip",
-                "SUM(509_cumplir_dip)/SUM(total_agrup_dip)*100 AS 509_dip",
+                "SUM(501_1pais_dip)/SUM(total_agrup_dip)*100 AS 501_dip",
+                "SUM(503_uc_dip)/SUM(total_agrup_dip)*100 AS 503_dip",
+                "SUM(508_camb_dip)/SUM(total_agrup_dip)*100 AS 508_dip",
+                "SUM(509_fj_dip)/SUM(total_agrup_dip)*100 AS 509_dip",
+                "SUM(510_izq_dip)/SUM(total_agrup_dip)*100 AS 510_dip",
             ];
         } elseif ($categoria == "leg") {
             $fields = ["ResultadoMerlo.circuito",
-                "SUM(501_pais_unido_leg)/SUM(total_agrup_leg)*100 AS 501_leg",
-                "SUM(503_celeste_blanca_u2_leg)/SUM(total_agrup_leg)*100 AS 503_leg",
-                "SUM(508_amarillo_leg)/SUM(total_agrup_leg)*100 AS 508_leg",
-                "SUM(509_cumplir_2_leg)/SUM(total_agrup_leg)*100 AS 509_leg",
+                "SUM(501_1pais_leg)/SUM(total_agrup_leg)*100 AS 501_leg",
+                "SUM(503_uc_leg)/SUM(total_agrup_leg)*100 AS 503_leg",
+                "SUM(508_camb_leg)/SUM(total_agrup_leg)*100 AS 508_leg",
+                "SUM(509_fj_leg)/SUM(total_agrup_leg)*100 AS 509_leg",
+                "SUM(510_izq_leg)/SUM(total_agrup_leg)*100 AS 510_leg",
             ];
         } elseif ($categoria == "con") {
             $fields = ["ResultadoMerlo.circuito",
-                "SUM(501_pais_unido_con)/SUM(total_agrup_con)*100 AS 501_con",
-                "SUM(503_celeste_blanca_u2_con)/SUM(total_agrup_con)*100 AS 503_con",
-                "SUM(508_amarillo_con)/SUM(total_agrup_con)*100 AS 508_con",
-                "(SUM(IFNULL(509_cumplir_2_con, 0))+SUM(IFNULL(509_cumplir_4_con, 0)))/SUM(IFNULL(total_agrup_con, 0))*100 AS 509_con",
+                "SUM(501_1pais_con)/SUM(total_agrup_con)*100 AS 501_con",
+                "SUM(503_uc_con)/SUM(total_agrup_con)*100 AS 503_con",
+                "SUM(508_camb_con)/SUM(total_agrup_con)*100 AS 508_con",
+                "SUM(509_fj_con)/SUM(total_agrup_con)*100 AS 509_con",
+                "SUM(510_izq_con)/SUM(total_agrup_con)*100 AS 510_con",
             ];
         }
         $data = $this->ResultadoMerlo->find("all", [
@@ -141,7 +149,7 @@ class ResultadosMerloController extends AppController {
             ];
         } elseif ($categoria == "leg") {
             $fields = ["ResultadoMerlo.establecimiento",
-               "SUM(501_1pais_leg) AS 501_leg",
+                "SUM(501_1pais_leg) AS 501_leg",
                 "SUM(503_uc_leg) as 503_leg",
                 "SUM(508_camb_leg) as 508_leg",
                 "SUM(509_fj_leg) as 509_leg",
@@ -150,7 +158,7 @@ class ResultadosMerloController extends AppController {
             ];
         } elseif ($categoria == "con") {
             $fields = ["ResultadoMerlo.establecimiento",
-               "SUM(501_1pais_con) AS 501_con",
+                "SUM(501_1pais_con) AS 501_con",
                 "SUM(503_uc_con) as 503_con",
                 "SUM(508_camb_sen) as 508_con",
                 "SUM(509_fj_con) as 509_con",

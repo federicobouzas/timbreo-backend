@@ -30,84 +30,156 @@ class ResultadoMerlo extends AppModel {
         'tmp_510_con' => '510_izq_con'
     );
     public $validate = array(
-        '501_pais_unido_sen' => array(
+        '501_1pais_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo 1PAIS - SENADORES es requerido'
             )
         ),
-        '501_pais_unido_con' => array(
+        '501_1pais_dip' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo 1PAIS - CONSEJALES es requerido'
+                'message' => 'El campo 1PAIS - DIPUTADOS es requerido'
             )
         ),
-        '503_celeste_blanca_u_sen' => array(
+        '501_1pais_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo 1PAIS - LEGISLADORES es requerido'
+            )
+        ),
+        '501_1pais_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo 1PAIS - CONCEJALES es requerido'
+            )
+        ),
+        
+        '503_uc_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo UNIDAD CIUDADANA - SENADORES es requerido'
             )
         ),
-        '503_celeste_blanca_u2_con' => array(
+        '503_uc_dip' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo UNIDAD CIUDADANA - CONSEJALES es requerido'
+                'message' => 'El campo UNIDAD CIUDADANA - DIPUTADOS es requerido'
             )
         ),
-        '508_cambiando_juntos_sen' => array(
+        '503_uc_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo UNIDAD CIUDADANA - LEGISLADORES es requerido'
+            )
+        ),
+        '503_uc_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo UNIDAD CIUDADANA - CONCEJALES es requerido'
+            )
+        ),
+        
+        '508_camb_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo CAMBIEMOS - SENADORES es requerido'
             )
         ),
-        '508_amarillo_con' => array(
+        '508_camb_dip' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo CAMBIEMOS - CONSEJALES es requerido'
+                'message' => 'El campo CAMBIEMOS - DIPUTADOS es requerido'
             )
         ),
-        '509_cumplir_sen' => array(
+        '508_camb_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo CAMBIEMOS - LEGISLADORES es requerido'
+            )
+        ),
+        '508_camb_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo CAMBIEMOS - CONCEJALES es requerido'
+            )
+        ),
+        
+        '509_fj_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo FRENTE JUSTICIALISTA - SENADORES es requerido'
             )
         ),
-        '509_cumplir_2_con' => array(
+        '509_fj_dip' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo FRENTE JUSTICIALISTA (LISTA CUMPLIR 2) - CONSEJALES es requerido'
+                'message' => 'El campo FRENTE JUSTICIALISTA - DIPUTADOS es requerido'
             )
         ),
-        '509_cumplir_4_con' => array(
+        '509_fj_leg' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo FRENTE JUSTICIALISTA (LISTA CUMPLIR 4) - CONSEJALES es requerido'
+                'message' => 'El campo FRENTE JUSTICIALISTA - LEGISLADORES es requerido'
             )
         ),
+        '509_fj_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo FRENTE JUSTICIALISTA - CONCEJALES es requerido'
+            )
+        ),
+        
+        '510_izq_sen' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo FIT - SENADORES es requerido'
+            )
+        ),
+        '510_izq_dip' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo FIT - DIPUTADOS es requerido'
+            )
+        ),
+        '510_izq_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo FIT - LEGISLADORES es requerido'
+            )
+        ),
+        '510_izq_con' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo FIT - CONCEJALES es requerido'
+            )
+        ),
+
         'total_agrup_sen' => array(
             'required' => array(
                 'rule' => array('notBlank'),
                 'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - SENADORES es requerido'
             )
         ),
+        'total_agrup_dip' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - DIPUTADOS es requerido'
+            )
+        ),
+        'total_agrup_leg' => array(
+            'required' => array(
+                'rule' => array('notBlank'),
+                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - LEGISLADORES es requerido'
+            )
+        ),
         'total_agrup_con' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - CONSEJALES es requerido'
+                'message' => 'El campo TOTAL VOTOS AGRUPACIONES POLÍTICAS - CONCEJALES es requerido'
             )
         ),
-        'blanco_sen' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo VOTOS EN BLANCO - SENADORES es requerido'
-            )
-        ),
-        'blanco_con' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'El campo VOTOS EN BLANCO - CONSEJALES es requerido'
-            )
-        ),
+        
     );
 
 }

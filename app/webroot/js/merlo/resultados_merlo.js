@@ -38,6 +38,7 @@ function completar_resultados(categoria) {
             $("<td class='text-center'>").text(jdata[i][0]['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['510_' + categoria + ''] ? number_format(jdata[i][0]['510_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("#tablaColegios_" + categoria + " tbody").append(row);
         }
         grafico_dona("dona-senadores", "sen");
@@ -53,6 +54,7 @@ function completar_resultados(categoria) {
             $("<td class='text-center'>").text(jdata[i][0]['503_' + categoria + ''] ? number_format(jdata[i][0]['503_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['508_' + categoria + ''] ? number_format(jdata[i][0]['508_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("<td class='text-center'>").text(jdata[i][0]['509_' + categoria + ''] ? number_format(jdata[i][0]['509_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
+            $("<td class='text-center'>").text(jdata[i][0]['510_' + categoria + ''] ? number_format(jdata[i][0]['510_' + categoria + ''], 2, ",") + "%" : "").appendTo(row);
             $("#tablaCircuitos_" + categoria + " tbody").append(row);
         }
     });
@@ -71,6 +73,8 @@ function grafico_dona(container, categoria, title) {
                 arrayData.push(['CAMBIEMOS', parseInt(jdata[0][0][i])]);
             } else if (i == ('509_' + categoria)) {
                 arrayData.push(['PJ', parseInt(jdata[0][0][i])]);
+            } else if (i == ('510_' + categoria)) {
+                arrayData.push(['FIT', parseInt(jdata[0][0][i])]);
             }
         }
         $("[id='" + container + "']").highcharts({
@@ -78,7 +82,7 @@ function grafico_dona(container, categoria, title) {
                 margin: [0, 0, 0, 0], spacingTop: 0, spacingBottom: 0, spacingLeft: 0, spacingRight: 0,
                 plotBackgroundColor: null, plotBorderWidth: 0, plotShadow: false, style: {fontFamily: 'Gotham'}
             },
-            colors: ['#F44336', '#037DBF', '#FFD300', '#A655AC'],
+            colors: ['#F44336', '#037DBF', '#FFD300', '#A655AC', '#710000'],
             exporting: {enabled: false},
             credits: {enabled: false},
             title: {text: title},
@@ -102,6 +106,7 @@ function grafico_barras(container, categoria) {
     $.get(WWW + "merlo/resultados_merlo/ajax_get_resultados_totales/" + categoria, function (data) {
         var categories = [];
         var jdata = $.parseJSON(data);
+        console.log(jdata);
         var cantTotal = 0;
         var series = [{name: 'Faltante', data: []}, {name: 'Votos', data: []}];
         for (var i in jdata[0][0]) {
@@ -112,9 +117,11 @@ function grafico_barras(container, categoria) {
                 } else if (lista == "503") {
                     categories.push("UC");
                 } else if (lista == "508") {
-                    categories.push("PRO");
+                    categories.push("CAMBIEMOS");
                 } else if (lista == "509") {
                     categories.push("PJ");
+                } else if (lista == "510") {
+                    categories.push("FIT");
                 }
                 cantTotal += parseInt(jdata[0][0][i]);
             }
@@ -155,6 +162,8 @@ function getColor(field) {
         return "#FFD300";
     } else if (lista == "509") {
         return "#A655AC";
+    } else if (lista == "510") {
+        return "#710000";
     }
     return "#000";
 }

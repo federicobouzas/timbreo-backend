@@ -7,6 +7,7 @@
                 <th class='text-center'>UNIDAD CIUDADANA</th>
                 <th class='text-center'>CAMBIEMOS</th>
                 <th class='text-center'>PJ</th>
+                <th class='text-center'>FIT</th>
             </tr>                   
         </thead>
         <tbody></tbody>

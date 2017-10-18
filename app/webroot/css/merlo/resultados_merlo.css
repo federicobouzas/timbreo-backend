@@ -1,13 +1,13 @@
 .porcentajes-partidos {
-    margin-top: -42px;
+    margin-top: 14px;
     margin-left: -15px;
     float: left;
     font-family: Gotham;
 }
 
 .porcentaje-partido {
-    padding: 10px 0;
-    height: 32px;
+    padding: 0px;
+    height: 25px;
 }
 
 .num-votos, .porc-votos {

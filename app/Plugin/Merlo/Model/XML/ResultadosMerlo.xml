@@ -19,7 +19,9 @@
                 <listfield name="extranjero" label="Extranjero" presentation="SINO" />
             </column>
         </table>
-ss
+        <actions>
+            <action op="E" action="edit" />
+        </actions>
     </search_list>
   
     <tablemaint file="ResultadosMerloMaint.php">
